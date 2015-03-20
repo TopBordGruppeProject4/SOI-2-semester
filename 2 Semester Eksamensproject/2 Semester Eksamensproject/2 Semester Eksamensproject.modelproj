@@ -5,10 +5,10 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1c446b6d-59c4-4fd1-998f-cbd2098987fe}</ProjectGuid>
+    <ProjectGuid>{91bfdc80-93a3-470e-8697-feb42fb8e473}</ProjectGuid>
     <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
-    <Name>Modeling Project</Name>
-    <RootNamespace>Modeling Project</RootNamespace>
+    <Name>2 Semester Eksamensproject</Name>
+    <RootNamespace>2 Semester Eksamensproject</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -23,7 +23,7 @@
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
     <Folder Include="ModelDefinition\" />
-    <Content Include="ModelDefinition\Modeling Project.uml">
+    <Content Include="ModelDefinition\2 Semester Eksamensproject.uml">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>
