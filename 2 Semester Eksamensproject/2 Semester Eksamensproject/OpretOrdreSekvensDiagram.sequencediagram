@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="0a24ab25-697f-4564-a0f2-7f84e89656e1" name="OpretOrdreSekvensDiagram" linkedPackageId="a1dc6a68-90b9-48b8-b2ee-4834ced06f57" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="79356ad0-8dbb-4d44-badd-bffebbc9eef9">
-      <profileInstance Id="a75c0f01-33ea-42ca-bb9e-1d2650836334" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="0b062d49-2b9a-4e59-a2e7-7c4c075b82f6">
-      <profileInstance Id="4e7442a4-54bd-4952-882d-d0db745a7d51" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="c0af90c9-20b6-4aeb-b434-6e762713e5b6" name="OpretOrdreSekvensDiagram" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -443,7 +429,7 @@
               <messageOccurrenceSpecificationMoniker Id="09f9bd21-e17f-4a83-8091-3c025497cb16" LastKnownName="MessageOccurrenceSpecification14" />
             </receiveEvent>
           </message>
-          <message Id="f78d43e7-7c0f-49a5-a223-027de2c7f3e9" name="AddUser" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="true">
+          <message Id="f78d43e7-7c0f-49a5-a223-027de2c7f3e9" name="AddOrder" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="true">
             <elementDefinition Id="4bc5a68c-04ce-4ebf-b0c4-9466a57eb847" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="de9ff2e1-2aeb-4847-944f-213ae45d0322" LastKnownName="MessageOccurrenceSpecification15" />
@@ -554,5 +540,19 @@
   </packagedElements>
   <package Id="a1dc6a68-90b9-48b8-b2ee-4834ced06f57" name="2 Semester Eksamensproject">
     <elementDefinition Id="22affb23-e5f1-4d52-85e1-724762b0dcc1" />
+    <profileInstances>
+      <packageHasProfileInstances Id="79356ad0-8dbb-4d44-badd-bffebbc9eef9">
+        <profileInstance Id="a75c0f01-33ea-42ca-bb9e-1d2650836334" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="0b062d49-2b9a-4e59-a2e7-7c4c075b82f6">
+        <profileInstance Id="4e7442a4-54bd-4952-882d-d0db745a7d51" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </SequenceDesignerModel>

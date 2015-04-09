@@ -2204,7 +2204,7 @@
           </message>
           <message
             Id="4bc5a68c-04ce-4ebf-b0c4-9466a57eb847"
-            name="AddUser"
+            name="AddOrder"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="true">
@@ -2358,6 +2358,289 @@
     <packageHasNamedElement>
       <executionEvent
         Id="5d18f36d-7e50-40bf-ab33-11126893fe34"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="0f5f393d-41d5-43ee-a2a1-b4da149a7011"
+        name="OpretOrdreDatabaseSekvensDiagram"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="4f77d634-0459-4243-8716-fc1e5ff193a1"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="513c7820-7313-4a39-9213-6fc7e41e32c6"
+                LastKnownName="Database"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="115a8435-24cc-4607-9ed4-e3be06ceb507"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="a186c1fc-2bf8-4d2b-8078-43693483527b"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="0ddae563-163b-4313-a879-2592037abebd"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="9fd17e8b-5ad5-43d6-8580-489514ffd385"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="790a2ab8-cf02-458f-99c9-4ae4333df840"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="e2a6b5de-1305-405e-9b6a-1a88b5b72190"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="a186c1fc-2bf8-4d2b-8078-43693483527b"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="92ba1b83-5000-4bd9-95fb-4cf55cf596e9"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="2 Semester Eksamensproject.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="513c7820-7313-4a39-9213-6fc7e41e32c6"
+                LastKnownName="Database"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0f8b3e3e-75c0-47f0-8511-b0d518958c44"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="76cc4598-1188-4e49-8c45-5b49c8d10016"
+                LastKnownName=": OrderList"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0ddae563-163b-4313-a879-2592037abebd"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="513c7820-7313-4a39-9213-6fc7e41e32c6"
+                LastKnownName="Database"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9fd17e8b-5ad5-43d6-8580-489514ffd385"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="513c7820-7313-4a39-9213-6fc7e41e32c6"
+                LastKnownName="Database"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="4addf790-035c-43ac-8277-6376fa3e43fa"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="513c7820-7313-4a39-9213-6fc7e41e32c6"
+                LastKnownName="Database"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="e2a6b5de-1305-405e-9b6a-1a88b5b72190"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="790a2ab8-cf02-458f-99c9-4ae4333df840"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="a061e679-3402-4be9-b334-c32a13c173ef"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="790a2ab8-cf02-458f-99c9-4ae4333df840"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="05ae7f3e-70b4-4f00-a980-81404332f604"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="2 Semester Eksamensproject.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="513c7820-7313-4a39-9213-6fc7e41e32c6"
+                LastKnownName="Database"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a061e679-3402-4be9-b334-c32a13c173ef"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="513c7820-7313-4a39-9213-6fc7e41e32c6"
+                LastKnownName="Database"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="e2a6b5de-1305-405e-9b6a-1a88b5b72190"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="142790c0-7527-4e4b-9e0a-2b20d4dd20b4"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="2 Semester Eksamensproject.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="513c7820-7313-4a39-9213-6fc7e41e32c6"
+                LastKnownName="Database"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="115a8435-24cc-4607-9ed4-e3be06ceb507"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="16b71506-f991-4491-b352-90f38573bfcb"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="2 Semester Eksamensproject.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="513c7820-7313-4a39-9213-6fc7e41e32c6"
+                LastKnownName="Database"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="76cc4598-1188-4e49-8c45-5b49c8d10016"
+            name=": OrderList"
+            isActor="false"
+            lifelineDisplayName=": OrderList">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="0f8b3e3e-75c0-47f0-8511-b0d518958c44"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="513c7820-7313-4a39-9213-6fc7e41e32c6"
+            name="Database"
+            isActor="false"
+            lifelineDisplayName="Database">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="a186c1fc-2bf8-4d2b-8078-43693483527b"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="115a8435-24cc-4607-9ed4-e3be06ceb507"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="ec342957-5e07-4f3d-9a60-ae996b8ab0ff"
+            name="CreateOrderAsync(dateTimeCreated, Deadline, Priority, Price, Customer, Description)"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0f8b3e3e-75c0-47f0-8511-b0d518958c44"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0ddae563-163b-4313-a879-2592037abebd"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="ec8e3f41-12e0-4651-9d92-20982bc9080a"
+            name="AddOrder"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9fd17e8b-5ad5-43d6-8580-489514ffd385"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a061e679-3402-4be9-b334-c32a13c173ef"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="92ba1b83-5000-4bd9-95fb-4cf55cf596e9"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="16b71506-f991-4491-b352-90f38573bfcb"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="05ae7f3e-70b4-4f00-a980-81404332f604"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="142790c0-7527-4e4b-9e0a-2b20d4dd20b4"
         name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
