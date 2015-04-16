@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>DesignKlasseDiagram.classdiagram</DependentUpon>
     </Content>
+    <Content Include="LogIndSekvensDiagram.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="LogIndSekvensDiagram.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>LogIndSekvensDiagram.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\Package1_1039.uml">
       <SubType>Content</SubType>
     </Content>
@@ -37,6 +44,13 @@
     </Content>
     <Content Include="ModelDefinition\Package_1039.uml">
       <SubType>Content</SubType>
+    </Content>
+    <Content Include="OpretBrugerSekvensDiagram.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="OpretBrugerSekvensDiagram.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>OpretBrugerSekvensDiagram.sequencediagram</DependentUpon>
     </Content>
     <Content Include="OpretOrdreDatabaseSekvensDiagram.sequencediagram">
       <SubType>Content</SubType>
