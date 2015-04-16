@@ -22,6 +22,13 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="DCD CreateUser 1Iteration.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DCD CreateUser 1Iteration.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DCD CreateUser 1Iteration.classdiagram</DependentUpon>
+    </Content>
     <Content Include="DesignKlasseDiagram.classdiagram">
       <SubType>Content</SubType>
     </Content>
@@ -36,7 +43,19 @@
       <SubType>Content</SubType>
       <DependentUpon>LogIndSekvensDiagram.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="ModelDefinition\Package1_0935.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package1_1039.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0935.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0936.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0940.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_1038.uml">
