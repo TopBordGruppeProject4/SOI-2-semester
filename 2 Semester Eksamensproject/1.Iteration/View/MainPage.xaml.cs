@@ -24,11 +24,11 @@ namespace _1.Iteration
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public Worker SelectedWorker
-        {
-            get { return MainViewModel.SelectedWorker; }
-            set { MainViewModel.SelectedWorker = value; }
-        }
+        //public Worker SelectedWorker
+        //{
+        //    get { return MainViewModel.SelectedWorker; }
+        //    set { MainViewModel.SelectedWorker = value; }
+        //}
 
         public MainPage()
         {
@@ -38,6 +38,16 @@ namespace _1.Iteration
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             WorkerCatalogSingleton.Instance.AddWorker(Convert.ToBoolean(TextAdmin.Text), TextPass.Text, TextUser.Text, TextAddress.Text, 1, TextName.Text, TextTlf.Text);
+        }
+
+        //private void ListWorker_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    SelectedWorker = e.AddedItems[0] as Worker;
+        //}
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            WorkerCatalogSingleton.Instance.RemoveWorker((Worker)ListWorker.SelectedItem);
         }
     }
 }

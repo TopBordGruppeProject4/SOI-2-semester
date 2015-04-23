@@ -20,6 +20,7 @@
         <TextBox x:Name="TextName" HorizontalAlignment="Left" Height="33" Margin="955,334,0,0" TextWrapping="Wrap" Text="{Binding SelectedWorker.Name}" VerticalAlignment="Top" Width="117"/>
         <TextBox x:Name="TextAddress" HorizontalAlignment="Left" Height="33" Margin="955,402,0,0" TextWrapping="Wrap" Text="{Binding SelectedWorker.Address}" VerticalAlignment="Top" Width="117"/>
         <TextBox x:Name="TextTlf" HorizontalAlignment="Left" Height="33" Margin="955,492,0,0" TextWrapping="Wrap" Text="{Binding SelectedWorker.Tlf}" VerticalAlignment="Top" Width="117"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="49" Margin="1155,117,0,0" VerticalAlignment="Top" Width="88" Click="Button_Click"/>
+        <Button Content="Add" HorizontalAlignment="Left" Height="49" Margin="1155,117,0,0" VerticalAlignment="Top" Width="88" Click="Button_Click"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Height="65" Margin="67,251,0,0" VerticalAlignment="Top" Width="99" Click="Button_Click_1"/>
     </Grid>
 </Page>

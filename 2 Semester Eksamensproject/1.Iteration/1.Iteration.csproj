@@ -109,6 +109,7 @@
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\Worker.cs" />
     <Compile Include="Model\WorkerCatalogSingleton.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\CommandHandler.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="View\MainPage.xaml.cs">
