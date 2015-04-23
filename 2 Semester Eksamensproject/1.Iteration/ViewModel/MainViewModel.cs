@@ -9,6 +9,8 @@ namespace _1.Iteration.ViewModel
 {
     class MainViewModel
     {
+        public static Worker SelectedWorker { get; set; }
+
         public WorkerCatalogSingleton WorkerCatalogSingleton { get; set; }
 
         public static Worker CurrentWorker { get; set; }

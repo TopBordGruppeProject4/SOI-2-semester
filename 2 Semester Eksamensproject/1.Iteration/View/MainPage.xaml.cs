@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 using _1.Iteration.Model;
+using _1.Iteration.ViewModel;
 
 namespace _1.Iteration
 {
@@ -23,6 +24,12 @@ namespace _1.Iteration
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public Worker SelectedWorker
+        {
+            get { return MainViewModel.SelectedWorker; }
+            set { MainViewModel.SelectedWorker = value; }
+        }
+
         public MainPage()
         {
             this.InitializeComponent();
