@@ -11,7 +11,7 @@ namespace _1.Iteration.Model.Persistency
 {
     class PersistencyService
     {
-        private const string ServerUrl = "http://localhost:23089";
+        private const string ServerUrl = "http://localhost:4569";
 
         public static async Task<List<Worker>> LoadWorkersFromJsonAsync()
         {
