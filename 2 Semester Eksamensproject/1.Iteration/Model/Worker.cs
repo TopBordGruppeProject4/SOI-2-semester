@@ -28,5 +28,10 @@ namespace _1.Iteration.Model
             Name = name;
             Tlf = tlf;
         }
+
+        public override string ToString()
+        {
+            return string.Format("Name: {0}", Name);
+        }
     }
 }

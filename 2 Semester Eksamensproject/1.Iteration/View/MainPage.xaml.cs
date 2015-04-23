@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
+using _1.Iteration.Model;
 
 namespace _1.Iteration
 {
@@ -25,6 +26,11 @@ namespace _1.Iteration
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            WorkerCatalogSingleton.Instance.AddWorker(Convert.ToBoolean(TextAdmin.Text), TextPass.Text, TextUser.Text, TextAddress.Text, 1, TextName.Text, TextTlf.Text);
         }
     }
 }
