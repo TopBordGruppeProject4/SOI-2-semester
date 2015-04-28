@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
+using Windows.UI.Xaml.Controls.Primitives;
 using _1.Iteration.Annotations;
 using _1.Iteration.Model;
 
@@ -23,6 +25,18 @@ namespace _1.Iteration.ViewModel
         public WorkerCatalogSingleton WorkerCatalogSingleton { get; set; }
 
         public static Worker CurrentWorker { get; set; }
+
+        public void LoginWorker(string username, string password)
+        {
+            if (WorkerCatalogSingleton.CheckWorker(username, password))
+            {
+                CurrentWorker = WorkerCatalogSingleton.GetWorker(username);
+                
+
+            }
+
+            
+        }
 
         public MainViewModel()
         {

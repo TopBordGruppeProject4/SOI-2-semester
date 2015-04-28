@@ -25,6 +25,37 @@ namespace _1.Iteration.Model
             Workers = new ObservableCollection<Worker>();
         }
 
+
+
+        public bool CheckWorker(string username, string password)
+        {
+            var check = false;
+            foreach (var worker in Workers)
+            {
+                if (worker.Username == username && worker.Password == password)
+                {
+                    check = true;
+                    
+                }
+            }
+
+            return check;
+        }
+
+        public Worker GetWorker(string username)
+        {
+            var tempWorker= new Worker(false, "0", "0", "0", 1, "0", "0");
+            for (int i = 0; i < Workers.Count; i++)
+            {
+                if (Workers[i].Username == username)
+                {
+                    tempWorker = Workers[i];
+                }
+                
+            }
+            return tempWorker;
+        }
+
         public async void LoadWorkersAsync()
         {
             var workers1 = await PersistencyService.LoadWorkersFromJsonAsync();

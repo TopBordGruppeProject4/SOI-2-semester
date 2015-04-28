@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 using _1.Iteration.Model;
+using _1.Iteration.View;
 using _1.Iteration.ViewModel;
 
 namespace _1.Iteration
@@ -35,19 +36,17 @@ namespace _1.Iteration
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            WorkerCatalogSingleton.Instance.AddWorker(Convert.ToBoolean(TextAdmin.Text), TextPass.Text, TextUser.Text, TextAddress.Text, 1, TextName.Text, TextTlf.Text);
+            var viewmodel = (MainViewModel) this.DataContext;
+            viewmodel.LoginWorker(BoxUser.Text, BoxPass.Text);
+            if (viewmodel.WorkerCatalogSingleton.CheckWorker(BoxUser.Text, BoxPass.Text))
+            {
+                this.Frame.Navigate(typeof (Menu));
+            }
+            
         }
 
-        //private void ListWorker_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        //{
-        //    SelectedWorker = e.AddedItems[0] as Worker;
-        //}
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            WorkerCatalogSingleton.Instance.RemoveWorker((Worker)ListWorker.SelectedItem);
-        }
+        
     }
 }
