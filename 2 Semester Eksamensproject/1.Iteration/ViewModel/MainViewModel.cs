@@ -14,12 +14,14 @@ namespace _1.Iteration.ViewModel
 {
     class MainViewModel: INotifyPropertyChanged
     {
-        private static Worker _selectedWorker;
+        private static Core _core = Core.Instance;
+        public static Core Core2 { get { return _core; } }
+        
 
-        public  static Worker SelectedWorker
+        public static Worker SelectedWorker
         {
-            get { return _selectedWorker; }
-            set { _selectedWorker = value;  }
+            get { return _core.CoreSelectedWorker; }
+            set { _core.CoreSelectedWorker = value;  }
         }
 
         public WorkerCatalogSingleton WorkerCatalogSingleton { get; set; }

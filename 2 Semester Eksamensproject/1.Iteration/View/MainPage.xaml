@@ -14,8 +14,8 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock HorizontalAlignment="Left" Height="54" Margin="569,198,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="111" FontSize="36"/>
-        <TextBox x:Name="BoxUser" HorizontalAlignment="Left" Height="36" Margin="542,285,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="202"/>
-        <TextBox x:Name="BoxPass" HorizontalAlignment="Left" Height="36" Margin="542,360,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="202"/>
+        <TextBox x:Name="BoxUser" HorizontalAlignment="Left" Height="36" Margin="542,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" PlaceholderText="Username"/>
+        <TextBox x:Name="BoxPass" HorizontalAlignment="Left" Height="36" Margin="542,360,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" PlaceholderText="Password"/>
         <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Left" Height="45" Margin="566,425,0,0" VerticalAlignment="Top" Width="144" Click="LoginButton_Click"/>
     </Grid>
 </Page>

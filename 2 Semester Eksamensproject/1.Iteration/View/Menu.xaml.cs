@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
+using _1.Iteration.Model;
+using _1.Iteration.ViewModel;
 
 namespace _1.Iteration.View
 {
@@ -102,5 +104,22 @@ namespace _1.Iteration.View
         }
 
         #endregion
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //MainViewModel.Core2.CoreSelectedWorker = e.AddedItems[0] as Worker;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            WorkerCatalogSingleton.Instance.AddWorker(Convert.ToBoolean(BoxAd.Text), BoxPass.Text, BoxUser.Text, BoxAdd.Text, 1, BoxName.Text, BoxTlf.Text);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            //MainViewModel.Core2.CoreSelectedWorker = null;
+            WorkerCatalogSingleton.Instance.RemoveWorker((Worker) ListWorker.SelectedItem);
+            
+        }
     }
 }

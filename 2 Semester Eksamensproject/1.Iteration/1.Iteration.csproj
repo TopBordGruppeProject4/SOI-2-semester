@@ -115,6 +115,7 @@
     <Compile Include="Model\WorkerCatalogSingleton.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\CommandHandler.cs" />
+    <Compile Include="ViewModel\Core.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
