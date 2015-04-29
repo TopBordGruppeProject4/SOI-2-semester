@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="8d9338ff-b966-4754-9ee4-f3120cf2076f"
+  name="ViewModel" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="caad3675-9678-4367-b01d-eeed7dd04d96"
+        name="MainViewModel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="2c35d386-fc6b-476f-80c8-ed698465c950"
+            isDerived="false"
+            sourceEndRoleName="MainViewModel"
+            targetEndRoleName="Commandhandler"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f8f5863e-3c5c-46b7-a684-619e5354be7e"
+              LastKnownName="Commandhandler"
+              LastKnownLocation="Package1_0953.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1bcee58c-7080-4ce4-8f89-97f8f5139548"
+                  name="MainViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5cd14e02-8320-4471-beb9-50730cec917d"
+                  name="Commandhandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="122e12b7-ac05-4a01-bccd-5a818e1fffbd"
+            isDerived="false"
+            sourceEndRoleName="MainViewModel"
+            targetEndRoleName="CustomerCatalogSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="11c9af8e-2043-431f-95e3-26380ea03156"
+              LastKnownName="CustomerCatalogSingleton"
+              LastKnownLocation="Package_0954.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ec25e5ad-ed86-43ce-96cb-7c0a6eef523f"
+                  name="MainViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3c1ba8fe-fc60-4827-8fc5-e6de58684e76"
+                  name="CustomerCatalogSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a6088f81-5f22-4a3f-b1a3-ba20d6c63432"
+            isDerived="false"
+            sourceEndRoleName="MainViewModel"
+            targetEndRoleName="OrderCatalogSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="27fdf4b8-ca44-4ea6-9dce-ec2e9082d318"
+              LastKnownName="OrderCatalogSingleton"
+              LastKnownLocation="Package_0954.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c0efc2c5-10e5-40f3-8d0b-4b7110d550ae"
+                  name="MainViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="60d59154-47b2-4f99-a862-89b97265d106"
+                  name="OrderCatalogSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="9ffeccd1-ef7d-46e4-894c-9b9e651e3287"
+            name="AddOrderCommand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b4da520f-8b73-4118-9d99-863fdbcf1269"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="186b5d2b-1914-4dba-a23c-5177246a434b"
+                  name="double price"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e64b8406-4309-475b-b3e7-749a38b5422c"
+                  name="string description"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="42961963-c344-492a-9400-75b49edf7b3e"
+                  name="DateTime creationDate"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cd3c1fec-d3e2-4766-be5d-9dd49f0e8f47"
+                  name="DateTime deadline"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0c0d059e-871d-467a-a3bc-dd9f3baa8921"
+                  name="Customer customer"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d4ab80cb-3b62-4a7b-baf6-b0f78a4796c5"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f8929733-e377-4fe8-92e7-1ea63b1ac1bc"
+                      LastKnownName="void"
+                      LastKnownLocation="Package1_1039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="75149b81-468b-4b33-b459-7da8a908ffdc"
+            name="DeleteOrderCommand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="834e082e-ccae-40de-8012-8b21f2cd3c7f"
+                  name="Order order"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="33e69d93-75ac-4d32-a2eb-4537adebadff"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f8929733-e377-4fe8-92e7-1ea63b1ac1bc"
+                      LastKnownName="void"
+                      LastKnownLocation="Package1_1039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bff1d308-85a0-44f7-97fc-73e554c62de7"
+            name="AddCustomerCommand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ed22a03c-e4a5-4ff4-aefb-1d48317fc02c"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ec98e768-8f2c-41ac-8bea-25081135ab9e"
+                  name="string name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4a2256e2-098b-40a8-ba0f-8fb8ca072a01"
+                  name="string address"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="794b93f2-d19d-49e9-9b48-15735f7f7d4e"
+                  name="string tlf"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="612aceb5-63d3-4d8e-8d23-859683dcb780"
+                  name="string email"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="75176cf5-3249-4f0c-829a-eee445585a49"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f8929733-e377-4fe8-92e7-1ea63b1ac1bc"
+                      LastKnownName="void"
+                      LastKnownLocation="Package1_1039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="06ff0a99-dc9c-4c53-8b51-578993cc8b91"
+            name="DeleteCustomerCommand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3c36907f-9cad-4cf5-bde6-cfcc8357ced9"
+                  name="Customer customer"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a57da4a5-b4da-4add-b668-8a6b32229844"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f8929733-e377-4fe8-92e7-1ea63b1ac1bc"
+                      LastKnownName="void"
+                      LastKnownLocation="Package1_1039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f8f5863e-3c5c-46b7-a684-619e5354be7e"
+        name="Commandhandler"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="ab214375-38bb-4486-8e8b-7ac5cab4f0c0"
+            isDerived="false"
+            sourceEndRoleName="Commandhandler"
+            targetEndRoleName="OrderCatalogSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="27fdf4b8-ca44-4ea6-9dce-ec2e9082d318"
+              LastKnownName="OrderCatalogSingleton"
+              LastKnownLocation="Package_0954.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6b1b1742-0b6d-4d2a-86b4-30dedbe950d4"
+                  name="Commandhandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0b277c3f-a2ad-4bd5-9e6b-06249b639d93"
+                  name="OrderCatalogSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4541b06a-306f-4300-9d03-1aa8025bdae2"
+            isDerived="false"
+            sourceEndRoleName="Commandhandler"
+            targetEndRoleName="CustomerCatalogSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="11c9af8e-2043-431f-95e3-26380ea03156"
+              LastKnownName="CustomerCatalogSingleton"
+              LastKnownLocation="Package_0954.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b4f18e65-e51c-4ada-8d3f-3ef517a28aba"
+                  name="Commandhandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="60924c1e-ec5f-46ca-b437-693e797a8612"
+                  name="CustomerCatalogSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="bb351e2a-8cd9-4ceb-98f4-2a0781c23ba7"
+            name="InvokeAddCustomerCommand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e2effad4-ecfc-487b-97bb-b36eda2a88f6"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8f7a38d7-2ddc-4f43-8333-0b990aa9fe16"
+                  name="string name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c229fc65-b5a3-445a-add1-cc434bb9bb22"
+                  name="string address"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="64d0ec43-645b-4208-a3ea-1acd40ea7e38"
+                  name="string tlf"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bdf221cf-55fc-499c-ba5b-9aded24c028a"
+                  name="string email"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="57ae3c88-a24f-442b-bee5-ed76e20525ff"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f8929733-e377-4fe8-92e7-1ea63b1ac1bc"
+                      LastKnownName="void"
+                      LastKnownLocation="Package1_1039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8524e1ed-953b-4f22-af4d-54bf8e2c027a"
+            name="InvokeAddOrderCommand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="42f738cb-b39f-4929-9432-f04754cef3c1"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a930a42c-06f4-458c-bed8-6a95943e4ee5"
+                  name="double price"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="abc6a7e3-3472-4e7a-95d8-fdaaee20a8c7"
+                  name="string description"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a9dc4d58-bb5f-45c5-817f-652935645990"
+                  name="DateTime creationDate"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e50b0af7-3c7a-4f5e-804f-1c4250309344"
+                  name="DateTime deadline"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c147df81-975b-4e9d-896f-e711dd2fa4c4"
+                  name="Customer customer"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="636107f9-d439-4a9a-a653-21f2a62853fb"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f8929733-e377-4fe8-92e7-1ea63b1ac1bc"
+                      LastKnownName="void"
+                      LastKnownLocation="Package1_1039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6d48d82e-0daa-44a5-9eb4-fd2e690a5702"
+            name="InvokeDeleteCustomerCommand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a348cd68-3d54-48a4-a11b-c3701beeba5d"
+                  name="Customer customer"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6b94f87b-31a6-48b1-b460-431fe4b6b7fe"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f8929733-e377-4fe8-92e7-1ea63b1ac1bc"
+                      LastKnownName="void"
+                      LastKnownLocation="Package1_1039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6a8af452-217a-4213-b1c1-bc87771f12a3"
+            name="InvokeDeleteOrderCommand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2819cb08-d2c0-49da-ae5a-c080d1daf7b9"
+                  name="Order order"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d462d497-205f-47ef-ac65-be3f0531b05a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f8929733-e377-4fe8-92e7-1ea63b1ac1bc"
+                      LastKnownName="void"
+                      LastKnownLocation="Package1_1039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="068c1ccc-ebe8-4c72-8a85-4cd05c90aa0a"
+        name="RelayCommand"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

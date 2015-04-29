@@ -44,14 +44,14 @@
       </nodes>
     </returnMessageConnector>
     <lifelineShape Id="4c85a4b2-e98d-438b-9cc1-1480b6d8e5fa" absoluteBounds="7.0416665077209473, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="09f27661-b6b0-485c-a4d8-2332698d65c3" LastKnownName=": OrderList" />
+      <lifelineMoniker Id="09f27661-b6b0-485c-a4d8-2332698d65c3" LastKnownName=": OrderCatalogSingleton" />
       <relativeChildShapes>
-        <umlLifelineHeadShape Id="fb116544-f8a3-4aa8-8454-361058a4ab5c" absoluteBounds="6.6166665077209474, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="09f27661-b6b0-485c-a4d8-2332698d65c3" LastKnownName=": OrderList" />
+        <umlLifelineHeadShape Id="fb116544-f8a3-4aa8-8454-361058a4ab5c" absoluteBounds="6.2996530246734617, 0.6, 1.6340269660949707, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="09f27661-b6b0-485c-a4d8-2332698d65c3" LastKnownName=": OrderCatalogSingleton" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <lifelineHoverShape Id="bcf0e926-b536-417e-a377-c852ec89d951" absoluteBounds="7.0416665077209473, 1, 0, 7">
-          <lifelineMoniker Id="09f27661-b6b0-485c-a4d8-2332698d65c3" LastKnownName=": OrderList" />
+          <lifelineMoniker Id="09f27661-b6b0-485c-a4d8-2332698d65c3" LastKnownName=": OrderCatalogSingleton" />
         </lifelineHoverShape>
         <umlExecutionSpecificationShape Id="ad2ba380-e645-4866-b390-30ba911f785e" absoluteBounds="7.0416665077209473, 1.7375, 0.15, 3.6729166666666666" customColor="184, 204, 215" visualStyleMode="Modified">
           <behaviorExecutionSpecificationMoniker Id="780f8081-dca2-47f2-aa7c-34ded8fb97e4" LastKnownName="BehaviorExecutionSpecification2" />

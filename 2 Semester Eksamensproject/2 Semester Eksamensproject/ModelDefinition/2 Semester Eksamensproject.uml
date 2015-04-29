@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="22affb23-e5f1-4d52-85e1-724762b0dcc1"
   name="2 Semester Eksamensproject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -1498,7 +1498,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="f55aaad2-7326-4d46-8921-fe0bb633f546"
-                LastKnownName=": OrderList"
+                LastKnownName=": OrderCatalogSingleton"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </coveredLifelines>
             <finish>
@@ -1566,7 +1566,7 @@
             <covered>
               <lifelineMoniker
                 Id="f55aaad2-7326-4d46-8921-fe0bb633f546"
-                LastKnownName=": OrderList"
+                LastKnownName=": OrderCatalogSingleton"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -1586,7 +1586,7 @@
             <covered>
               <lifelineMoniker
                 Id="f55aaad2-7326-4d46-8921-fe0bb633f546"
-                LastKnownName=": OrderList"
+                LastKnownName=": OrderCatalogSingleton"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1656,7 +1656,7 @@
             <covered>
               <lifelineMoniker
                 Id="f55aaad2-7326-4d46-8921-fe0bb633f546"
-                LastKnownName=": OrderList"
+                LastKnownName=": OrderCatalogSingleton"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1676,7 +1676,7 @@
             <covered>
               <lifelineMoniker
                 Id="f55aaad2-7326-4d46-8921-fe0bb633f546"
-                LastKnownName=": OrderList"
+                LastKnownName=": OrderCatalogSingleton"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1704,7 +1704,7 @@
             <covered>
               <lifelineMoniker
                 Id="f55aaad2-7326-4d46-8921-fe0bb633f546"
-                LastKnownName=": OrderList"
+                LastKnownName=": OrderCatalogSingleton"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1714,7 +1714,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="f55aaad2-7326-4d46-8921-fe0bb633f546"
-                LastKnownName=": OrderList"
+                LastKnownName=": OrderCatalogSingleton"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </coveredLifelines>
             <finish>
@@ -1750,7 +1750,7 @@
             <covered>
               <lifelineMoniker
                 Id="f55aaad2-7326-4d46-8921-fe0bb633f546"
-                LastKnownName=": OrderList"
+                LastKnownName=": OrderCatalogSingleton"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -1760,7 +1760,7 @@
             <covered>
               <lifelineMoniker
                 Id="f55aaad2-7326-4d46-8921-fe0bb633f546"
-                LastKnownName=": OrderList"
+                LastKnownName=": OrderCatalogSingleton"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1778,7 +1778,7 @@
             <covered>
               <lifelineMoniker
                 Id="f55aaad2-7326-4d46-8921-fe0bb633f546"
-                LastKnownName=": OrderList"
+                LastKnownName=": OrderCatalogSingleton"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -1834,7 +1834,7 @@
             <covered>
               <lifelineMoniker
                 Id="f55aaad2-7326-4d46-8921-fe0bb633f546"
-                LastKnownName=": OrderList"
+                LastKnownName=": OrderCatalogSingleton"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1918,7 +1918,7 @@
             <covered>
               <lifelineMoniker
                 Id="f55aaad2-7326-4d46-8921-fe0bb633f546"
-                LastKnownName=": OrderList"
+                LastKnownName=": OrderCatalogSingleton"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1948,7 +1948,7 @@
             <covered>
               <lifelineMoniker
                 Id="f55aaad2-7326-4d46-8921-fe0bb633f546"
-                LastKnownName=": OrderList"
+                LastKnownName=": OrderCatalogSingleton"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1966,7 +1966,7 @@
             <covered>
               <lifelineMoniker
                 Id="f55aaad2-7326-4d46-8921-fe0bb633f546"
-                LastKnownName=": OrderList"
+                LastKnownName=": OrderCatalogSingleton"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2062,9 +2062,9 @@
           </lifeline>
           <lifeline
             Id="f55aaad2-7326-4d46-8921-fe0bb633f546"
-            name=": OrderList"
+            name=": OrderCatalogSingleton"
             isActor="false"
-            lifelineDisplayName=": OrderList">
+            lifelineDisplayName=": OrderCatalogSingleton">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
                 Id="7a9b3dd0-e967-4284-954b-91b8a157bf1b"
@@ -4483,6 +4483,24 @@
       <executionEvent
         Id="2564c387-e443-46eb-a429-f600b7c46a4e"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="8d745cb3-1601-4531-ac07-e31f0ab1b712"
+        LastKnownName="View"
+        LastKnownLocation="Package_0953.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="8d9338ff-b966-4754-9ee4-f3120cf2076f"
+        LastKnownName="ViewModel"
+        LastKnownLocation="Package1_0953.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="e22b137a-3117-4021-a97b-785f0e3d7a10"
+        LastKnownName="Model"
+        LastKnownLocation="Package_0954.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
