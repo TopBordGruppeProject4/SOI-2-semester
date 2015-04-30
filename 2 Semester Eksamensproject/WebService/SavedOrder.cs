@@ -6,8 +6,8 @@ namespace WebService
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Order")]
-    public partial class Order
+    [Table("SavedOrder")]
+    public partial class SavedOrder
     {
         public int Id { get; set; }
 
