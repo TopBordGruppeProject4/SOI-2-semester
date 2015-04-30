@@ -96,6 +96,89 @@ namespace _2.Iteration.Model.Persistency
 
         #endregion
 
+        #region Order
+
+        public static async Task<List<Order>> LoadOrdersFromJsonAsync()
+        {
+            var handler = new HttpClientHandler() {UseDefaultCredentials = true};
+            using (var client = new HttpClient(handler))
+            {
+
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+
+                try
+                {
+                    var response = client.GetAsync("api/Orders").Result;
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var orderList = response.Content.ReadAsAsync<IEnumerable<Order>>().Result;
+                        return orderList.ToList();
+
+                    }
+                    return null;
+
+                }
+
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
+
+            }
+
+
+        }
+
+        public static async void SaveOrdersAsJsonAsync(Order orders)
+        {
+            var handler = new HttpClientHandler() {UseDefaultCredentials = true};
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                try
+                {
+                    await client.PostAsJsonAsync("api/Orders", orders);
+                }
+                catch (Exception ex)
+                {
+
+                    new MessageDialog(ex.Message).ShowAsync();
+                }
+            }
+        }
+
+        public static async void DeleteOrdersAsync(Order orders)
+        {
+            var handler = new HttpClientHandler() {UseDefaultCredentials = true};
+
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                try
+                {
+                    await client.DeleteAsync("api/Orders/" + orders.Id);
+                }
+                catch (Exception ex)
+                {
+
+                    new MessageDialog(ex.Message).ShowAsync();
+                }
+            }
+        }
+
+        #endregion
+
         
     }
 }
