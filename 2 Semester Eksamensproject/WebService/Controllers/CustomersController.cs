@@ -12,44 +12,44 @@ using WebService;
 
 namespace WebService.Controllers
 {
-    public class WorkersController : ApiController
+    public class CustomersController : ApiController
     {
         private WorkerDBContext db = new WorkerDBContext();
 
-        // GET: api/Workers
-        public IQueryable<Worker> GetWorkers()
+        // GET: api/Customers
+        public IQueryable<Customer> GetCustomers()
         {
-            return db.Workers;
+            return db.Customers;
         }
 
-        // GET: api/Workers/5
-        [ResponseType(typeof(Worker))]
-        public IHttpActionResult GetWorker(int id)
+        // GET: api/Customers/5
+        [ResponseType(typeof(Customer))]
+        public IHttpActionResult GetCustomer(int id)
         {
-            Worker worker = db.Workers.Find(id);
-            if (worker == null)
+            Customer customer = db.Customers.Find(id);
+            if (customer == null)
             {
                 return NotFound();
             }
 
-            return Ok(worker);
+            return Ok(customer);
         }
 
-        // PUT: api/Workers/5
+        // PUT: api/Customers/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutWorker(int id, Worker worker)
+        public IHttpActionResult PutCustomer(int id, Customer customer)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != worker.Id)
+            if (id != customer.Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(worker).State = EntityState.Modified;
+            db.Entry(customer).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace WebService.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!WorkerExists(id))
+                if (!CustomerExists(id))
                 {
                     return NotFound();
                 }
@@ -70,35 +70,35 @@ namespace WebService.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Workers
-        [ResponseType(typeof(Worker))]
-        public IHttpActionResult PostWorker(Worker worker)
+        // POST: api/Customers
+        [ResponseType(typeof(Customer))]
+        public IHttpActionResult PostCustomer(Customer customer)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Workers.Add(worker);
+            db.Customers.Add(customer);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = worker.Id }, worker);
+            return CreatedAtRoute("DefaultApi", new { id = customer.Id }, customer);
         }
 
-        // DELETE: api/Workers/5
-        [ResponseType(typeof(Worker))]
-        public IHttpActionResult DeleteWorker(int id)
+        // DELETE: api/Customers/5
+        [ResponseType(typeof(Customer))]
+        public IHttpActionResult DeleteCustomer(int id)
         {
-            Worker worker = db.Workers.Find(id);
-            if (worker == null)
+            Customer customer = db.Customers.Find(id);
+            if (customer == null)
             {
                 return NotFound();
             }
 
-            db.Workers.Remove(worker);
+            db.Customers.Remove(customer);
             db.SaveChanges();
 
-            return Ok(worker);
+            return Ok(customer);
         }
 
         protected override void Dispose(bool disposing)
@@ -110,9 +110,9 @@ namespace WebService.Controllers
             base.Dispose(disposing);
         }
 
-        private bool WorkerExists(int id)
+        private bool CustomerExists(int id)
         {
-            return db.Workers.Count(e => e.Id == id) > 0;
+            return db.Customers.Count(e => e.Id == id) > 0;
         }
     }
 }

@@ -12,44 +12,44 @@ using WebService;
 
 namespace WebService.Controllers
 {
-    public class WorkersController : ApiController
+    public class OrdersController : ApiController
     {
         private WorkerDBContext db = new WorkerDBContext();
 
-        // GET: api/Workers
-        public IQueryable<Worker> GetWorkers()
+        // GET: api/Orders
+        public IQueryable<Order> GetOrders()
         {
-            return db.Workers;
+            return db.Orders;
         }
 
-        // GET: api/Workers/5
-        [ResponseType(typeof(Worker))]
-        public IHttpActionResult GetWorker(int id)
+        // GET: api/Orders/5
+        [ResponseType(typeof(Order))]
+        public IHttpActionResult GetOrder(int id)
         {
-            Worker worker = db.Workers.Find(id);
-            if (worker == null)
+            Order order = db.Orders.Find(id);
+            if (order == null)
             {
                 return NotFound();
             }
 
-            return Ok(worker);
+            return Ok(order);
         }
 
-        // PUT: api/Workers/5
+        // PUT: api/Orders/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutWorker(int id, Worker worker)
+        public IHttpActionResult PutOrder(int id, Order order)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != worker.Id)
+            if (id != order.Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(worker).State = EntityState.Modified;
+            db.Entry(order).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace WebService.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!WorkerExists(id))
+                if (!OrderExists(id))
                 {
                     return NotFound();
                 }
@@ -70,35 +70,35 @@ namespace WebService.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Workers
-        [ResponseType(typeof(Worker))]
-        public IHttpActionResult PostWorker(Worker worker)
+        // POST: api/Orders
+        [ResponseType(typeof(Order))]
+        public IHttpActionResult PostOrder(Order order)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Workers.Add(worker);
+            db.Orders.Add(order);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = worker.Id }, worker);
+            return CreatedAtRoute("DefaultApi", new { id = order.Id }, order);
         }
 
-        // DELETE: api/Workers/5
-        [ResponseType(typeof(Worker))]
-        public IHttpActionResult DeleteWorker(int id)
+        // DELETE: api/Orders/5
+        [ResponseType(typeof(Order))]
+        public IHttpActionResult DeleteOrder(int id)
         {
-            Worker worker = db.Workers.Find(id);
-            if (worker == null)
+            Order order = db.Orders.Find(id);
+            if (order == null)
             {
                 return NotFound();
             }
 
-            db.Workers.Remove(worker);
+            db.Orders.Remove(order);
             db.SaveChanges();
 
-            return Ok(worker);
+            return Ok(order);
         }
 
         protected override void Dispose(bool disposing)
@@ -110,9 +110,9 @@ namespace WebService.Controllers
             base.Dispose(disposing);
         }
 
-        private bool WorkerExists(int id)
+        private bool OrderExists(int id)
         {
-            return db.Workers.Count(e => e.Id == id) > 0;
+            return db.Orders.Count(e => e.Id == id) > 0;
         }
     }
 }

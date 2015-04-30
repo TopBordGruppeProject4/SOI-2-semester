@@ -12,44 +12,44 @@ using WebService;
 
 namespace WebService.Controllers
 {
-    public class WorkersController : ApiController
+    public class ProductsController : ApiController
     {
         private WorkerDBContext db = new WorkerDBContext();
 
-        // GET: api/Workers
-        public IQueryable<Worker> GetWorkers()
+        // GET: api/Products
+        public IQueryable<Product> GetProducts()
         {
-            return db.Workers;
+            return db.Products;
         }
 
-        // GET: api/Workers/5
-        [ResponseType(typeof(Worker))]
-        public IHttpActionResult GetWorker(int id)
+        // GET: api/Products/5
+        [ResponseType(typeof(Product))]
+        public IHttpActionResult GetProduct(int id)
         {
-            Worker worker = db.Workers.Find(id);
-            if (worker == null)
+            Product product = db.Products.Find(id);
+            if (product == null)
             {
                 return NotFound();
             }
 
-            return Ok(worker);
+            return Ok(product);
         }
 
-        // PUT: api/Workers/5
+        // PUT: api/Products/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutWorker(int id, Worker worker)
+        public IHttpActionResult PutProduct(int id, Product product)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != worker.Id)
+            if (id != product.Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(worker).State = EntityState.Modified;
+            db.Entry(product).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace WebService.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!WorkerExists(id))
+                if (!ProductExists(id))
                 {
                     return NotFound();
                 }
@@ -70,35 +70,35 @@ namespace WebService.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Workers
-        [ResponseType(typeof(Worker))]
-        public IHttpActionResult PostWorker(Worker worker)
+        // POST: api/Products
+        [ResponseType(typeof(Product))]
+        public IHttpActionResult PostProduct(Product product)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Workers.Add(worker);
+            db.Products.Add(product);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = worker.Id }, worker);
+            return CreatedAtRoute("DefaultApi", new { id = product.Id }, product);
         }
 
-        // DELETE: api/Workers/5
-        [ResponseType(typeof(Worker))]
-        public IHttpActionResult DeleteWorker(int id)
+        // DELETE: api/Products/5
+        [ResponseType(typeof(Product))]
+        public IHttpActionResult DeleteProduct(int id)
         {
-            Worker worker = db.Workers.Find(id);
-            if (worker == null)
+            Product product = db.Products.Find(id);
+            if (product == null)
             {
                 return NotFound();
             }
 
-            db.Workers.Remove(worker);
+            db.Products.Remove(product);
             db.SaveChanges();
 
-            return Ok(worker);
+            return Ok(product);
         }
 
         protected override void Dispose(bool disposing)
@@ -110,9 +110,9 @@ namespace WebService.Controllers
             base.Dispose(disposing);
         }
 
-        private bool WorkerExists(int id)
+        private bool ProductExists(int id)
         {
-            return db.Workers.Count(e => e.Id == id) > 0;
+            return db.Products.Count(e => e.Id == id) > 0;
         }
     }
 }

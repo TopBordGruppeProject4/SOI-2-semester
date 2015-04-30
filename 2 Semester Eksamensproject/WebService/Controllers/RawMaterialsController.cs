@@ -12,44 +12,44 @@ using WebService;
 
 namespace WebService.Controllers
 {
-    public class WorkersController : ApiController
+    public class RawMaterialsController : ApiController
     {
         private WorkerDBContext db = new WorkerDBContext();
 
-        // GET: api/Workers
-        public IQueryable<Worker> GetWorkers()
+        // GET: api/RawMaterials
+        public IQueryable<RawMaterial> GetRawMaterials()
         {
-            return db.Workers;
+            return db.RawMaterials;
         }
 
-        // GET: api/Workers/5
-        [ResponseType(typeof(Worker))]
-        public IHttpActionResult GetWorker(int id)
+        // GET: api/RawMaterials/5
+        [ResponseType(typeof(RawMaterial))]
+        public IHttpActionResult GetRawMaterial(int id)
         {
-            Worker worker = db.Workers.Find(id);
-            if (worker == null)
+            RawMaterial rawMaterial = db.RawMaterials.Find(id);
+            if (rawMaterial == null)
             {
                 return NotFound();
             }
 
-            return Ok(worker);
+            return Ok(rawMaterial);
         }
 
-        // PUT: api/Workers/5
+        // PUT: api/RawMaterials/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutWorker(int id, Worker worker)
+        public IHttpActionResult PutRawMaterial(int id, RawMaterial rawMaterial)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != worker.Id)
+            if (id != rawMaterial.Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(worker).State = EntityState.Modified;
+            db.Entry(rawMaterial).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace WebService.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!WorkerExists(id))
+                if (!RawMaterialExists(id))
                 {
                     return NotFound();
                 }
@@ -70,35 +70,35 @@ namespace WebService.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Workers
-        [ResponseType(typeof(Worker))]
-        public IHttpActionResult PostWorker(Worker worker)
+        // POST: api/RawMaterials
+        [ResponseType(typeof(RawMaterial))]
+        public IHttpActionResult PostRawMaterial(RawMaterial rawMaterial)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Workers.Add(worker);
+            db.RawMaterials.Add(rawMaterial);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = worker.Id }, worker);
+            return CreatedAtRoute("DefaultApi", new { id = rawMaterial.Id }, rawMaterial);
         }
 
-        // DELETE: api/Workers/5
-        [ResponseType(typeof(Worker))]
-        public IHttpActionResult DeleteWorker(int id)
+        // DELETE: api/RawMaterials/5
+        [ResponseType(typeof(RawMaterial))]
+        public IHttpActionResult DeleteRawMaterial(int id)
         {
-            Worker worker = db.Workers.Find(id);
-            if (worker == null)
+            RawMaterial rawMaterial = db.RawMaterials.Find(id);
+            if (rawMaterial == null)
             {
                 return NotFound();
             }
 
-            db.Workers.Remove(worker);
+            db.RawMaterials.Remove(rawMaterial);
             db.SaveChanges();
 
-            return Ok(worker);
+            return Ok(rawMaterial);
         }
 
         protected override void Dispose(bool disposing)
@@ -110,9 +110,9 @@ namespace WebService.Controllers
             base.Dispose(disposing);
         }
 
-        private bool WorkerExists(int id)
+        private bool RawMaterialExists(int id)
         {
-            return db.Workers.Count(e => e.Id == id) > 0;
+            return db.RawMaterials.Count(e => e.Id == id) > 0;
         }
     }
 }
