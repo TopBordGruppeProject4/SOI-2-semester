@@ -42,9 +42,9 @@ namespace _2.Iteration.Model
             PersistencyService.SaveOrdersAsJsonAsync(orderToAdd);
         }
 
-        public void AddOrder(DateTime creationDate, DateTime deadline, string description, int id, double price, int workerId, int customerId)
+        public void AddOrder(DateTime creationDate, DateTime deadline, string description, int id, double price)
         {
-            Order order = new Order(creationDate, deadline, description, id, price, workerId, customerId);
+            Order order = new Order(creationDate, deadline, description, id, price);
             Orders.Add(order);
             PersistencyService.SaveOrdersAsJsonAsync(order);
         }

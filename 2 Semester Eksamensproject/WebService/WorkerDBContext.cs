@@ -5,18 +5,18 @@ namespace WebService
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class WorkerDbContext : DbContext
+    public partial class WorkerDBContext : DbContext
     {
-        public WorkerDbContext()
-            : base("name=WorkerDbContext2")
+        public WorkerDBContext()
+            : base("name=WorkerDBContext")
         {
             base.Configuration.ProxyCreationEnabled = false;
         }
 
         public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<RawMaterial> RawMaterials { get; set; }
-        public virtual DbSet<SavedOrder> SavedOrders { get; set; }
         public virtual DbSet<Worker> Workers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -37,6 +37,14 @@ namespace WebService
                 .Property(e => e.Email)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<Order>()
+                .Property(e => e.Description)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Order>()
+                .Property(e => e.Price)
+                .HasPrecision(18, 0);
+
             modelBuilder.Entity<Product>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
@@ -56,14 +64,6 @@ namespace WebService
             modelBuilder.Entity<RawMaterial>()
                 .Property(e => e.Name)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<SavedOrder>()
-                .Property(e => e.Description)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<SavedOrder>()
-                .Property(e => e.Price)
-                .HasPrecision(18, 0);
 
             modelBuilder.Entity<Worker>()
                 .Property(e => e.Password)
