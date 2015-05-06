@@ -6,7 +6,7 @@
       <packageMoniker Id="907d517c-604c-417f-bd9d-e400c4636b15" LastKnownName="View" />
       <nestedChildShapes>
         <classShape Id="8368dab0-f4e9-41bd-a926-4f296f476485" absoluteBounds="2.875, 1.375, 1.5, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
-          <classMoniker Id="6e8098df-c59c-4369-b794-f666e7827319" LastKnownName="OrderPage" />
+          <classMoniker Id="6e8098df-c59c-4369-b794-f666e7827319" LastKnownName="MainPage" />
           <nestedChildShapes>
             <AttributeElementListCompartment Id="599e1979-48ce-4a16-97ac-a5dea5ce81c3" absoluteBounds="2.8900000000000006, 1.7650000000000001, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
             <OperationElementListCompartment Id="e051e370-33f5-42f7-9fcd-740971638de7" absoluteBounds="2.8900000000000006, 1.9761718675494193, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />

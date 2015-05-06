@@ -1,13 +1,20 @@
 ﻿<Page
-    x:Class="_2.Iteration.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:_2.Iteration"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModel="using:_2.Iteration.ViewModel"
+    x:Class="_2.Iteration.MainPage"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.DataContext>
+        <ViewModel:MainViewModel/>
+    </Page.DataContext>
 
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListView HorizontalAlignment="Left" Height="375" Margin="290,151,0,0" VerticalAlignment="Top" Width="224" ItemsSource="{Binding OrderCatalogSingleton.Instance.Orders, Mode=TwoWay}"/>
+        <ListView HorizontalAlignment="Left" Height="356" Margin="887,151,0,0" VerticalAlignment="Top" Width="261" ItemsSource="{Binding CustomerCatalogSingleton.Instance.Customers}"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="83" Margin="621,478,0,0" VerticalAlignment="Top" Width="180"/>
     </Grid>
 </Page>

@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="54096683-6e67-4558-ba39-db8ee024ebc7" name="DCD OpretOrdre 2Iteration" linkedPackageId="31e3a7e7-b27c-4d8d-95d2-867f3d6446b7" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="54096683-6e67-4558-ba39-db8ee024ebc7" name="DCD OpretOrdre 2Iteration" linkedPackageId="31e3a7e7-b27c-4d8d-95d2-867f3d6446b7" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="907d517c-604c-417f-bd9d-e400c4636b15" name="View">
         <elementDefinition Id="8d745cb3-1601-4531-ac07-e31f0ab1b712" />
         <packagedElements>
           <packageHasNamedElement>
-            <class Id="6e8098df-c59c-4369-b794-f666e7827319" name="OrderPage" isAbstract="false" isLeaf="false" isActiveClass="false">
+            <class Id="6e8098df-c59c-4369-b794-f666e7827319" name="MainPage" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="5eaba2ec-6920-4f9c-bfc5-9ea56315ca0d" />
               <targetEnds>
                 <association Id="b7bfd98a-a3cb-4eb2-9963-ee749d306a40" isDerived="false" sourceEndRoleName="OrderPage" targetEndRoleName="MainViewModel" isLeaf="false" isAbstract="false">

@@ -11,7 +11,7 @@ namespace _2.Iteration.Model.Persistency
 {
     class PersistencyService
     {
-        private const string ServerUrl = "http://localhost:4569";
+        private const string ServerUrl = "http://localhost:2941";
 
         #region Customer
 
@@ -111,7 +111,7 @@ namespace _2.Iteration.Model.Persistency
 
                 try
                 {
-                    var response = client.GetAsync("api/Orders").Result;
+                    var response = client.GetAsync("api/SavedOrders").Result;
                     if (response.IsSuccessStatusCode)
                     {
                         var orderList = response.Content.ReadAsAsync<IEnumerable<Order>>().Result;
@@ -145,7 +145,7 @@ namespace _2.Iteration.Model.Persistency
 
                 try
                 {
-                    await client.PostAsJsonAsync("api/Orders", orders);
+                    await client.PostAsJsonAsync("api/SavedOrders", orders);
                 }
                 catch (Exception ex)
                 {
@@ -167,7 +167,7 @@ namespace _2.Iteration.Model.Persistency
 
                 try
                 {
-                    await client.DeleteAsync("api/Orders/" + orders.Id);
+                    await client.DeleteAsync("api/SavedOrders/" + orders.Id);
                 }
                 catch (Exception ex)
                 {

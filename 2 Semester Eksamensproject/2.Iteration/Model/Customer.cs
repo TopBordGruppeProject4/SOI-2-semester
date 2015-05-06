@@ -23,5 +23,10 @@ namespace _2.Iteration.Model
             Tlf = tlf;
             Email = email;
         }
+
+        public override string ToString()
+        {
+            return string.Format("Address: {0}, Id: {1}, Name: {2}, Tlf: {3}, Email: {4}", Address, Id, Name, Tlf, Email);
+        }
     }
 }

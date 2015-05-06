@@ -27,5 +27,9 @@ namespace _2.Iteration.Model
             CustomerId = customerId;
         }
 
+        public override string ToString()
+        {
+            return string.Format("CreationDate: {0}, Deadline: {1}, Description: {2}, Id: {3}, Price: {4}, WorkerId: {5}, CustomerId: {6}", CreationDate, Deadline, Description, Id, Price, WorkerId, CustomerId);
+        }
     }
 }
