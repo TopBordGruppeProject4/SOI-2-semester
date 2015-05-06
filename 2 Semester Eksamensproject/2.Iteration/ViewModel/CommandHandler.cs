@@ -17,9 +17,11 @@ namespace _2.Iteration.ViewModel
 
         public void InvokeAddOrderCommand()
         {
-            MainViewModel.OrderCatalogSingleton.AddOrder(MainViewModel.CreationsDate, MainViewModel.Deadline, MainViewModel.Description, 1, MainViewModel.Price, MainViewModel.WorkerId, MainViewModel.CustomerId);
+            
+            MainViewModel.OrderCatalogSingleton.AddOrder(MainViewModel.CreationsDate, MainViewModel.Deadline, MainViewModel.Description, 2, MainViewModel.Price, MainViewModel.WorkerId, MainViewModel.CustomerId);
         }
 
 
     }
 }
+    

@@ -13,8 +13,8 @@
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView HorizontalAlignment="Left" Height="375" Margin="290,151,0,0" VerticalAlignment="Top" Width="224" ItemsSource="{Binding OrderCatalogSingleton.Instance.Orders, Mode=TwoWay}"/>
+        <ListView HorizontalAlignment="Left" Height="375" Margin="53,151,0,0" VerticalAlignment="Top" Width="545" ItemsSource="{Binding OrderCatalogSingleton.Instance.Orders, Mode=TwoWay}"/>
         <ListView HorizontalAlignment="Left" Height="356" Margin="887,151,0,0" VerticalAlignment="Top" Width="261" ItemsSource="{Binding CustomerCatalogSingleton.Instance.Customers}"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="83" Margin="621,478,0,0" VerticalAlignment="Top" Width="180"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="83" Margin="621,478,0,0" VerticalAlignment="Top" Width="180" Click="Button_Click"/>
     </Grid>
 </Page>
