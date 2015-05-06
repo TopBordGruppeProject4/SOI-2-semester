@@ -8,7 +8,7 @@ namespace WebService
     public partial class WorkerDbContext : DbContext
     {
         public WorkerDbContext()
-            : base("name=WorkerDbContext2")
+            : base("name=WorkerDbContext3")
         {
             base.Configuration.ProxyCreationEnabled = false;
         }
