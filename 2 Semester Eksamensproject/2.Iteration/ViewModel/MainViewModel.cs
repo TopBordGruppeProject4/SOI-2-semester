@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using _2.Iteration.Annotations;
 using _2.Iteration.Model;
+using _2.Iteration.View;
 
 
 namespace _2.Iteration.ViewModel
@@ -100,13 +101,22 @@ namespace _2.Iteration.ViewModel
         public ICommand AddOrderCommand
         {
             get {
-                if (_addOrderCommand == null)
-                {
-                    _addOrderCommand = new RelayCommand(CommandHandler.InvokeAddOrderCommand);
-                }
-                return _addOrderCommand;
+                return _addOrderCommand ?? (_addOrderCommand = new RelayCommand(CommandHandler.InvokeAddOrderCommand));
             }
             set { _addOrderCommand = value; }
+        }
+
+        private NavigationService _navigationService;
+
+        private ICommand _navigateToAddOrderPageCommand;
+
+        public ICommand NavigateToAddOrderPageCommand
+        {
+            get
+            {
+                return _navigateToAddOrderPageCommand ??
+                       new Common.RelayCommand(() => _navigationService.Navigate(typeof (AddOrderPage)));
+            }
         }
 
         public CommandHandler CommandHandler { get; set; }
@@ -118,6 +128,7 @@ namespace _2.Iteration.ViewModel
         public MainViewModel()
         {
             CommandHandler = new CommandHandler(this);
+            _navigationService = new NavigationService();
 
             OrderCatalogSingleton = OrderCatalogSingleton.Instance;
             OrderCatalogSingleton.Orders.Clear();
