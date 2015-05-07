@@ -107,12 +107,13 @@
     </Compile>
     <Compile Include="Common\NavigationHelper.cs" />
     <Compile Include="Common\ObservableDictionary.cs" />
+    <Compile Include="Common\RelayArgCommand.cs" />
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\CustomerCatalogSingleton.cs" />
-    <Compile Include="Model\Order.cs" />
-    <Compile Include="Model\OrderCatalogSingleton.cs" />
+    <Compile Include="Model\SavedOrder.cs" />
+    <Compile Include="Model\SavedOrderCatalogSingleton.cs" />
     <Compile Include="Model\Persistency\PersistencyService.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Properties\Annotations.cs" />

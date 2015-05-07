@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2.Iteration.Model
 {
-    class Order
+    class SavedOrder
     {
         public DateTime CreationDate { get; set; }
         public DateTime Deadline { get; set; }
@@ -16,7 +16,7 @@ namespace _2.Iteration.Model
         public int WorkerId { get; set; }
         public int CustomerId { get; set; }
 
-        public Order(DateTime creationDate, DateTime deadline, string description, int id, double price, int workerId, int customerId)
+        public SavedOrder(DateTime creationDate, DateTime deadline, string description, int id, double price, int workerId, int customerId)
         {
             CreationDate = creationDate;
             Deadline = deadline;

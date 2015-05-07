@@ -8,20 +8,20 @@ using _2.Iteration.Model.Persistency;
 
 namespace _2.Iteration.Model
 {
-    class OrderCatalogSingleton
+    class SavedOrderCatalogSingleton
     {
-        private static OrderCatalogSingleton _instance = new OrderCatalogSingleton();
+        private static SavedOrderCatalogSingleton _instance = new SavedOrderCatalogSingleton();
 
-        public static OrderCatalogSingleton Instance
+        public static SavedOrderCatalogSingleton Instance
         {
-            get { return _instance ?? (_instance = new OrderCatalogSingleton()); }
+            get { return _instance ?? (_instance = new SavedOrderCatalogSingleton()); }
         }
 
-        public ObservableCollection<Order> Orders { get; set; }
+        public ObservableCollection<SavedOrder> Orders { get; set; }
 
-        private OrderCatalogSingleton()
+        private SavedOrderCatalogSingleton()
         {
-            Orders = new ObservableCollection<Order>();
+            Orders = new ObservableCollection<SavedOrder>();
         }
 
         public async void LoadOrdersAsync()
@@ -36,7 +36,7 @@ namespace _2.Iteration.Model
             }
         }
 
-        public void AddOrder(Order orderToAdd)
+        public void AddOrder(SavedOrder orderToAdd)
         {
             Orders.Add(orderToAdd);
             PersistencyService.SaveOrdersAsJsonAsync(orderToAdd);
@@ -44,12 +44,12 @@ namespace _2.Iteration.Model
 
         public void AddOrder(DateTime creationDate, DateTime deadline, string description, int id, double price, int workerId, int customerId)
         {
-            Order order = new Order(creationDate, deadline, description, id, price, workerId, customerId);
+            SavedOrder order = new SavedOrder(creationDate, deadline, description, id, price, workerId, customerId);
             Orders.Add(order);
             PersistencyService.SaveOrdersAsJsonAsync(order);
         }
 
-        public void RemoveOrder(Order orderToRemove)
+        public void RemoveOrder(SavedOrder orderToRemove)
         {
             Orders.Remove(orderToRemove);
             PersistencyService.DeleteOrdersAsync(orderToRemove);

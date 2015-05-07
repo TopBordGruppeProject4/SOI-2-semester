@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
+using _2.Iteration.Model;
+using _2.Iteration.ViewModel;
 
 namespace _2.Iteration.View
 {
@@ -102,5 +104,16 @@ namespace _2.Iteration.View
         }
 
         #endregion
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SavedOrderCatalogSingleton.Instance.AddOrder(Convert.ToDateTime("07-05-2015"),Convert.ToDateTime("08-05-2015") , "Test", 1, 10.5, 1, 1);
+           SavedOrderCatalogSingleton.Instance.AddOrder(CreationBox.Date.Date, DeadlineBox.Date.Date, DescriptionBox.Text, 1, Convert.ToDouble(PriceBox.Text), Convert.ToInt32(WorkerBox.Text), Convert.ToInt32(CustomerBox.Text));
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            CustomerCatalogSingleton.Instance.AddCustomer(AddressBox.Text, 1, NameBox.Text, TlfBox.Text, EmailBox.Text);
+        }
     }
 }

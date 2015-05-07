@@ -98,7 +98,7 @@ namespace _2.Iteration.Model.Persistency
 
         #region Order
 
-        public static async Task<List<Order>> LoadOrdersFromJsonAsync()
+        public static async Task<List<SavedOrder>> LoadOrdersFromJsonAsync()
         {
             var handler = new HttpClientHandler() {UseDefaultCredentials = true};
             using (var client = new HttpClient(handler))
@@ -114,7 +114,7 @@ namespace _2.Iteration.Model.Persistency
                     var response = client.GetAsync("api/SavedOrders").Result;
                     if (response.IsSuccessStatusCode)
                     {
-                        var orderList = response.Content.ReadAsAsync<IEnumerable<Order>>().Result;
+                        var orderList = response.Content.ReadAsAsync<IEnumerable<SavedOrder>>().Result;
                         return orderList.ToList();
 
                     }
@@ -134,7 +134,7 @@ namespace _2.Iteration.Model.Persistency
 
         }
 
-        public static async void SaveOrdersAsJsonAsync(Order orders)
+        public static async void SaveOrdersAsJsonAsync(SavedOrder orders)
         {
             var handler = new HttpClientHandler() {UseDefaultCredentials = true};
             using (var client = new HttpClient(handler))
@@ -155,7 +155,7 @@ namespace _2.Iteration.Model.Persistency
             }
         }
 
-        public static async void DeleteOrdersAsync(Order orders)
+        public static async void DeleteOrdersAsync(SavedOrder orders)
         {
             var handler = new HttpClientHandler() {UseDefaultCredentials = true};
 
