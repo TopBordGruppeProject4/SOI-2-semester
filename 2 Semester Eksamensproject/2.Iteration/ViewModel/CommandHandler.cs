@@ -31,6 +31,11 @@ namespace _2.Iteration.ViewModel
         {
             MainViewModel.SelectedCustomer = cus;
         }
+
+        public void InvokeRemoveCustomerCommand()
+        {
+            MainViewModel.CustomerCatalogSingleton.RemoveCustomer(MainViewModel.SelectedCustomer);
+        }
     }
 }
     

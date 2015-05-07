@@ -150,6 +150,7 @@ namespace _2.Iteration.ViewModel
         private string _email;
         private ICommand _addCustomerCommand;
         private ICommand _selectCustomerCommand;
+        private ICommand _removeCustomerCommand;
 
         public ICommand NavigateToAddOrderPageCommand
         {
@@ -177,6 +178,16 @@ namespace _2.Iteration.ViewModel
                            new RelayArgCommand<Customer>(cs => CommandHandler.SetSelectedCustomer(cs)));
             }
             set { _selectCustomerCommand = value; }
+        }
+
+        public ICommand RemoveCustomerCommand
+        {
+            get
+            {
+                return _removeCustomerCommand ??
+                       (_removeCustomerCommand = new RelayCommand(CommandHandler.InvokeRemoveCustomerCommand));
+            }
+            set { _removeCustomerCommand = value; }
         }
 
         public MainViewModel()
