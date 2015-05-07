@@ -111,6 +111,13 @@
       <SubType>Content</SubType>
       <DependentUpon>SystemSekvensDiagram.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="Use Case Diagram.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Use Case Diagram.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Use Case Diagram.usecasediagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="DomainModel.classdiagram">
       <SubType>Content</SubType>

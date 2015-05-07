@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="22affb23-e5f1-4d52-85e1-724762b0dcc1"
   name="2 Semester Eksamensproject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -4501,6 +4501,546 @@
         Id="e22b137a-3117-4021-a97b-785f0e3d7a10"
         LastKnownName="Model"
         LastKnownLocation="Package_0954.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="e7edb675-0ec5-4344-98e3-2b4a77d04048"
+        name="Bruger"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="e9df6e53-b437-457b-99f5-406febd710a1"
+            isDerived="false"
+            sourceEndRoleName="Bruger"
+            targetEndRoleName="Login"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c9c133f1-62a3-4f61-8a2b-2ad3446be36d"
+              LastKnownName="Login"
+              LastKnownLocation="2 Semester Eksamensproject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="af8c75c8-ba33-431a-ace7-800f23dbab5e"
+                  name="Bruger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0ef55594-d781-432f-b49a-cda7e3059a3d"
+                  name="Login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c9c133f1-62a3-4f61-8a2b-2ad3446be36d"
+        name="Login"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="669fb0fb-0310-4966-9104-f333d6a85286"
+            isDerived="false"
+            sourceEndRoleName="Login"
+            targetEndRoleName="Admin Panel"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="85149f20-c836-453d-9dec-763b05a63d3f"
+              LastKnownName="Admin Panel"
+              LastKnownLocation="2 Semester Eksamensproject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="96ab2b03-b418-4280-bd97-9ccfd92cbf1b"
+                  name="Login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="33abbb8b-5e6c-4314-9f0f-03ae479bf79b"
+                  name="Admin Panel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9dd75340-717a-4527-81e6-d04727b2c1b2"
+            isDerived="false"
+            sourceEndRoleName="Login"
+            targetEndRoleName="Order håndtering"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="cd747574-7d94-4e58-9f4d-68cb9f4823e1"
+              LastKnownName="Order håndtering"
+              LastKnownLocation="2 Semester Eksamensproject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ee94a8fc-376b-48db-95c2-0e896041821b"
+                  name="Login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2a79ac37-3308-42e5-af5b-7b971e0508c7"
+                  name="Order håndtering"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="25400da8-12bf-4e20-89e8-46009455cc8d"
+            isDerived="false"
+            sourceEndRoleName="Login"
+            targetEndRoleName="Lager styring"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="74902a84-8ebf-4873-9b96-df2d38103330"
+              LastKnownName="Lager styring"
+              LastKnownLocation="2 Semester Eksamensproject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1805af66-5274-4243-b6f3-3bab89d13679"
+                  name="Login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2d33eeeb-5373-4a05-ae0f-ec9be493d953"
+                  name="Lager styring"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cd747574-7d94-4e58-9f4d-68cb9f4823e1"
+        name="Order håndtering"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="fac0590f-efda-4766-84f5-7f0535516a6d">
+            <useCaseMoniker
+              Id="5e1d3c85-4518-4d5b-a2ea-da46824b17ea"
+              LastKnownName="Order status"
+              LastKnownLocation="2 Semester Eksamensproject.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="b91b6451-947c-4a8e-8836-7928b3542c27"
+            isDerived="false"
+            sourceEndRoleName="Order håndtering"
+            targetEndRoleName="Søge i Ordre"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="dd40fe5e-cd9f-4674-89e6-6f906ce97dd8"
+              LastKnownName="Søge i Ordre"
+              LastKnownLocation="2 Semester Eksamensproject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8946085b-c2e2-44ab-acaa-07aab3b072d3"
+                  name="Order håndtering"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="02001071-1168-4312-a993-113c4b681148"
+                  name="Søge i Ordre"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="74902a84-8ebf-4873-9b96-df2d38103330"
+        name="Lager styring"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="f7833a42-2c63-4275-9505-335382a75036"
+            isDerived="false"
+            sourceEndRoleName="Lager styring"
+            targetEndRoleName="Sortering"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="985cd797-9948-4eea-9d50-988b6200156b"
+              LastKnownName="Sortering"
+              LastKnownLocation="2 Semester Eksamensproject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e884b3a3-051d-452e-a00c-d8af1aae197b"
+                  name="Lager styring"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4811f192-b3c6-4520-9505-ccfb4a509b33"
+                  name="Sortering"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ca12bdac-8cd6-4aad-b9d2-c191172e51f5"
+            isDerived="false"
+            sourceEndRoleName="Lager styring"
+            targetEndRoleName="Søge i Lager"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c59e9146-d0c7-4d30-bcba-7ac611697e90"
+              LastKnownName="Søge i Lager"
+              LastKnownLocation="2 Semester Eksamensproject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="adcc11f8-e581-4d0f-81cb-8d3c831c842a"
+                  name="Lager styring"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="91e1ea23-527f-450d-a69e-caee6ebfd889"
+                  name="Søge i Lager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="985cd797-9948-4eea-9d50-988b6200156b"
+        name="Sortering"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="ec301726-f5f9-42f1-9676-2c11370aa096"
+        name="Admin"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="8d71893f-a914-4c6e-b361-5eafaad5d3ae"
+            isDerived="false"
+            sourceEndRoleName="Admin"
+            targetEndRoleName="Login"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c9c133f1-62a3-4f61-8a2b-2ad3446be36d"
+              LastKnownName="Login"
+              LastKnownLocation="2 Semester Eksamensproject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="37b89bae-8f75-4847-a15d-77c5c255e204"
+                  name="Admin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d65b72f3-771d-4db4-a14e-1b8684b45c57"
+                  name="Login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e5a5b01f-93d4-47bf-98a3-d4875b8c4d4a"
+        name="Bruger håndtering"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="85149f20-c836-453d-9dec-763b05a63d3f"
+        name="Admin Panel"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="d74aa719-e068-4efd-a1bc-4835292ab194"
+            isDerived="false"
+            sourceEndRoleName="Admin Panel"
+            targetEndRoleName="Bruger håndtering"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e5a5b01f-93d4-47bf-98a3-d4875b8c4d4a"
+              LastKnownName="Bruger håndtering"
+              LastKnownLocation="2 Semester Eksamensproject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fc4f98ff-9377-41a9-bb83-441f20f2d27d"
+                  name="Admin Panel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7a87edc0-e7cf-4732-b738-77752d5452e5"
+                  name="Bruger håndtering"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="83386faa-5f6c-4314-93a4-e70f6131ae33"
+            isDerived="false"
+            sourceEndRoleName="Admin Panel"
+            targetEndRoleName="UseCase1"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5e1d3c85-4518-4d5b-a2ea-da46824b17ea"
+              LastKnownName="Order status"
+              LastKnownLocation="2 Semester Eksamensproject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="df0494c3-6649-4a89-96d1-f2e3c8c6890f"
+                  name="Admin Panel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f02ae8e4-2ec2-4264-a3b8-d2fa340f7dc6"
+                  name="UseCase1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4601b430-6ace-48c7-81de-855a883ed2c4"
+            isDerived="false"
+            sourceEndRoleName="Admin Panel"
+            targetEndRoleName="Lager styring"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="74902a84-8ebf-4873-9b96-df2d38103330"
+              LastKnownName="Lager styring"
+              LastKnownLocation="2 Semester Eksamensproject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="846fe278-beaa-4ca9-9065-9eb1d358d55c"
+                  name="Admin Panel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="95ee85be-3746-42bf-bbde-25dc16406ec7"
+                  name="Lager styring"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5e1d3c85-4518-4d5b-a2ea-da46824b17ea"
+        name="Order status"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="dd40fe5e-cd9f-4674-89e6-6f906ce97dd8"
+        name="Søge i Ordre"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c59e9146-d0c7-4d30-bcba-7ac611697e90"
+        name="Søge i Lager"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f8879210-2b2b-4c40-acae-d0a33c9512eb"
+        name="UseCase2"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

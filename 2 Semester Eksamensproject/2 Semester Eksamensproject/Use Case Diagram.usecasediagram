@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="b77853a4-69ef-4fe4-afd3-32844baea7d4" name="Use Case Diagram" linkedPackageId="3dfa6d53-782e-4b63-aff1-663ad72e0c57" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="6cf4fe4f-9cf5-4f2a-876f-87f0590045a6">
+      <profileInstance Id="a062af73-18e8-4279-81d6-6bc7c728d3e0" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="39380408-9b63-4f11-be43-3114c6401694">
+      <profileInstance Id="f863d2e8-53fa-4a27-885b-ab5c58c30eca" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="4bb67613-28f1-491c-8420-24018d7fe541" name="Bruger" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e7edb675-0ec5-4344-98e3-2b4a77d04048" />
+        <targetEnds>
+          <association Id="973e6abf-02c5-44ff-96aa-7f26f1a68dfa" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Login" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5a038f23-4f8a-4831-8528-62e7402b923c" LastKnownName="Login" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fb82b03b-28fd-4cf0-add9-272565c081bf" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="af8c75c8-ba33-431a-ace7-800f23dbab5e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c684610d-890e-49af-b3b8-8c6ec688b9ff" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0ef55594-d781-432f-b49a-cda7e3059a3d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e9df6e53-b437-457b-99f5-406febd710a1" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5a038f23-4f8a-4831-8528-62e7402b923c" name="Login" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c9c133f1-62a3-4f61-8a2b-2ad3446be36d" />
+        <targetEnds>
+          <association Id="6c4ff7b0-6ade-4874-8e47-22763b554d37" isDerived="false" sourceEndRoleName="Login" targetEndRoleName="Admin Panel" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8cf75322-9cbc-4260-9d66-678857028409" LastKnownName="Admin Panel" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c646a5ca-29c6-4c88-a3b5-1252a2136a76" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="96ab2b03-b418-4280-bd97-9ccfd92cbf1b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c81fa176-49bb-41f6-9622-6c8e7606fc73" name="Admin Panel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="33abbb8b-5e6c-4314-9f0f-03ae479bf79b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="669fb0fb-0310-4966-9104-f333d6a85286" />
+          </association>
+          <association Id="b6348fa3-166a-4a09-8d1a-dbe48f6ca5d7" isDerived="false" sourceEndRoleName="Login" targetEndRoleName="Order håndtering" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="290e28f2-0350-438f-bbcb-35a915b7fc8e" LastKnownName="Order håndtering" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ca1b79f1-e5ed-4847-bc35-06ef4aeb7a09" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ee94a8fc-376b-48db-95c2-0e896041821b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a449b0e5-95db-4a8e-b8e8-0ff7d7f1bc4c" name="Order håndtering" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2a79ac37-3308-42e5-af5b-7b971e0508c7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9dd75340-717a-4527-81e6-d04727b2c1b2" />
+          </association>
+          <association Id="0b4c86d6-c61f-4c01-8cf5-11859b6e9959" isDerived="false" sourceEndRoleName="Login" targetEndRoleName="Lager styring" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="986a007e-9a7e-4ea7-9655-f132b365cb47" LastKnownName="Lager styring" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="159377cc-5e67-4d47-8d60-35d2ac386d93" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1805af66-5274-4243-b6f3-3bab89d13679" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f3c15b4b-b241-4aee-9831-ba7056b2b2ab" name="Lager styring" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2d33eeeb-5373-4a05-ae0f-ec9be493d953" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="25400da8-12bf-4e20-89e8-46009455cc8d" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="290e28f2-0350-438f-bbcb-35a915b7fc8e" name="Order håndtering" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cd747574-7d94-4e58-9f4d-68cb9f4823e1" />
+        <suppliersInternal>
+          <dependency Id="f8a7b830-284f-48cb-be5e-5442cced3002">
+            <useCaseMoniker Id="7eeb1826-6497-4d3f-ac68-63895aa77e74" LastKnownName="Order status" />
+            <elementDefinition Id="fac0590f-efda-4766-84f5-7f0535516a6d" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="1dc9bb37-57ed-4275-8aa0-096dd5b69a77" isDerived="false" sourceEndRoleName="Order håndtering" targetEndRoleName="Søge i Ordre" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="976f68fc-46b0-4cfc-96e8-33352d1e67f8" LastKnownName="Søge i Ordre" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="946a7630-a3cf-4006-9423-1ae885d9ee99" name="Order håndtering" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8946085b-c2e2-44ab-acaa-07aab3b072d3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a3df06ac-f3a3-47ee-b750-5fe36563fc99" name="Søge i Ordre" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="02001071-1168-4312-a993-113c4b681148" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b91b6451-947c-4a8e-8836-7928b3542c27" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="986a007e-9a7e-4ea7-9655-f132b365cb47" name="Lager styring" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="74902a84-8ebf-4873-9b96-df2d38103330" />
+        <targetEnds>
+          <association Id="23fea909-25fc-4663-a678-ef7eb76a3688" isDerived="false" sourceEndRoleName="Lager styring" targetEndRoleName="Sortering" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="28b54c56-1a54-46b4-9a1a-77ae49e726aa" LastKnownName="Sortering" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0e568333-24b5-48c9-8b4b-4c3e60cfdf21" name="Lager styring" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e884b3a3-051d-452e-a00c-d8af1aae197b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8eb58e9c-c6cb-40c7-92a0-65d6d63ddbbb" name="Sortering" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4811f192-b3c6-4520-9505-ccfb4a509b33" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f7833a42-2c63-4275-9505-335382a75036" />
+          </association>
+          <association Id="2fb435b0-fb23-4f20-a2d4-5271733d161b" isDerived="false" sourceEndRoleName="Lager styring" targetEndRoleName="Søge i Lager" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="52071399-855a-43e7-9de8-d9e30d220159" LastKnownName="Søge i Lager" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d0e2d0c2-4031-4b63-a26f-399e44dd90d7" name="Lager styring" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="adcc11f8-e581-4d0f-81cb-8d3c831c842a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e859ed85-c2a0-403d-92bc-c2c36c961486" name="Søge i Lager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="91e1ea23-527f-450d-a69e-caee6ebfd889" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ca12bdac-8cd6-4aad-b9d2-c191172e51f5" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="28b54c56-1a54-46b4-9a1a-77ae49e726aa" name="Sortering" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="985cd797-9948-4eea-9d50-988b6200156b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="8873a880-c84d-4bc0-9b3f-e8d316a8b120" name="Admin" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ec301726-f5f9-42f1-9676-2c11370aa096" />
+        <targetEnds>
+          <association Id="44fd7db9-581e-4812-b400-1b12e12f3867" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Login" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5a038f23-4f8a-4831-8528-62e7402b923c" LastKnownName="Login" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="75665725-3dc9-429f-95e8-ff20e13d6296" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="37b89bae-8f75-4847-a15d-77c5c255e204" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0df48c22-9240-4d1a-a453-fe1350367054" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d65b72f3-771d-4db4-a14e-1b8684b45c57" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8d71893f-a914-4c6e-b361-5eafaad5d3ae" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="dccafa5d-0036-4287-b976-250e620a6be7" name="Bruger håndtering" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e5a5b01f-93d4-47bf-98a3-d4875b8c4d4a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8cf75322-9cbc-4260-9d66-678857028409" name="Admin Panel" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="85149f20-c836-453d-9dec-763b05a63d3f" />
+        <targetEnds>
+          <association Id="458ca92a-b6f4-4a30-8909-bd3e06f52852" isDerived="false" sourceEndRoleName="Admin Panel" targetEndRoleName="Bruger håndtering" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="dccafa5d-0036-4287-b976-250e620a6be7" LastKnownName="Bruger håndtering" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c7e6c8ae-dee8-4975-9f55-5d52c92e28f7" name="Admin Panel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fc4f98ff-9377-41a9-bb83-441f20f2d27d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0fb59f4f-dbcf-45ab-ae4a-270eaebcbcde" name="Bruger håndtering" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7a87edc0-e7cf-4732-b738-77752d5452e5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d74aa719-e068-4efd-a1bc-4835292ab194" />
+          </association>
+          <association Id="4cdb7387-da08-4b22-8f73-c79f18faf8d6" isDerived="false" sourceEndRoleName="Admin Panel" targetEndRoleName="UseCase1" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7eeb1826-6497-4d3f-ac68-63895aa77e74" LastKnownName="Order status" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8a0dcd33-cced-4bbd-8cdf-38712cac5a15" name="Admin Panel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="df0494c3-6649-4a89-96d1-f2e3c8c6890f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e97844c3-1e0e-4859-a101-27fcc4cb3126" name="UseCase1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f02ae8e4-2ec2-4264-a3b8-d2fa340f7dc6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="83386faa-5f6c-4314-93a4-e70f6131ae33" />
+          </association>
+          <association Id="7cf4445c-bf76-4586-9a56-efac4db424d2" isDerived="false" sourceEndRoleName="Admin Panel" targetEndRoleName="Lager styring" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="986a007e-9a7e-4ea7-9655-f132b365cb47" LastKnownName="Lager styring" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0fd40cd6-83d6-4c5b-9373-a4483368f34c" name="Admin Panel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="846fe278-beaa-4ca9-9065-9eb1d358d55c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="145016a3-0713-4e15-8bcc-9d791c1ffb84" name="Lager styring" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="95ee85be-3746-42bf-bbde-25dc16406ec7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4601b430-6ace-48c7-81de-855a883ed2c4" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7eeb1826-6497-4d3f-ac68-63895aa77e74" name="Order status" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5e1d3c85-4518-4d5b-a2ea-da46824b17ea" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="976f68fc-46b0-4cfc-96e8-33352d1e67f8" name="Søge i Ordre" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="dd40fe5e-cd9f-4674-89e6-6f906ce97dd8" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="52071399-855a-43e7-9de8-d9e30d220159" name="Søge i Lager" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c59e9146-d0c7-4d30-bcba-7ac611697e90" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="3dfa6d53-782e-4b63-aff1-663ad72e0c57" name="2 Semester Eksamensproject">
+    <elementDefinition Id="22affb23-e5f1-4d52-85e1-724762b0dcc1" />
+  </package>
+</useCaseModelRoot>
