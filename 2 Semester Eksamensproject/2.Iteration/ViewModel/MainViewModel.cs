@@ -22,7 +22,7 @@ namespace _2.Iteration.ViewModel
         private DateTime _deadline;
         private string _description;
         private int _id;
-        private double _price;
+        private int _price;
         private int _workerId;
         private int _customerId;
         private ICommand _addOrderCommand;
@@ -67,7 +67,7 @@ namespace _2.Iteration.ViewModel
             }
         }
 
-        public double Price
+        public int Price
         {
             get { return _price; }
             set
@@ -196,9 +196,8 @@ namespace _2.Iteration.ViewModel
             _navigationService = new NavigationService();
 
             OrderCatalogSingleton = SavedOrderCatalogSingleton.Instance;
-            OrderCatalogSingleton.Orders.Clear();
-            OrderCatalogSingleton.LoadOrdersAsync();
-
+            OrderCatalogSingleton.SavedOrders.Clear();
+            OrderCatalogSingleton.LoadSavedOrdersAsync();
             CustomerCatalogSingleton = CustomerCatalogSingleton.Instance;
             CustomerCatalogSingleton.Customers.Clear();
             CustomerCatalogSingleton.LoadCustomersAsync();

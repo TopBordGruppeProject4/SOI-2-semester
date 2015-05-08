@@ -19,7 +19,7 @@ namespace WorkerWebservice
         [StringLength(50)]
         public string Description { get; set; }
 
-        public decimal Price { get; set; }
+        public int Price { get; set; }
 
         public int? WorkerId { get; set; }
 

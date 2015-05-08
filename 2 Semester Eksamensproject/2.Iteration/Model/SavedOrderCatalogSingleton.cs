@@ -17,42 +17,43 @@ namespace _2.Iteration.Model
             get { return _instance ?? (_instance = new SavedOrderCatalogSingleton()); }
         }
 
-        public ObservableCollection<SavedOrder> Orders { get; set; }
+        public ObservableCollection<SavedOrder> SavedOrders { get; set; }
 
         private SavedOrderCatalogSingleton()
         {
-            Orders = new ObservableCollection<SavedOrder>();
+            SavedOrders = new ObservableCollection<SavedOrder>();
         }
 
-        public async void LoadOrdersAsync()
+        public async void LoadSavedOrdersAsync()
         {
-            var orders1 = await PersistencyService.LoadOrdersFromJsonAsync();
-            if (orders1 != null)
+            var savedOrders1 = await PersistencyService.LoadOrdersFromJsonAsync();
+            if (savedOrders1 != null)
             {
-                foreach (var order in orders1)
+                foreach (var savedOrder in savedOrders1)
                 {
-                    Orders.Add(order);
+                    SavedOrders.Add(savedOrder);
                 }
             }
         }
 
-        public void AddOrder(SavedOrder orderToAdd)
+        public void AddSavedOrder(SavedOrder savedOrderToAdd)
         {
-            Orders.Add(orderToAdd);
-            PersistencyService.SaveOrdersAsJsonAsync(orderToAdd);
+            SavedOrders.Add(savedOrderToAdd);
+            PersistencyService.SaveOrdersAsJsonAsync(savedOrderToAdd);
         }
 
-        public void AddOrder(DateTime creationDate, DateTime deadline, string description, int id, double price, int workerId, int customerId)
+        public void AddSavedOrder(DateTime creationdate, DateTime deadline, string description, int id, int price,
+            int workerId, int customerId)
         {
-            SavedOrder order = new SavedOrder(creationDate, deadline, description, id, price, workerId, customerId);
-            Orders.Add(order);
-            PersistencyService.SaveOrdersAsJsonAsync(order);
+            SavedOrder savedOrder = new SavedOrder(creationdate, deadline, description, id, price, workerId, customerId);
+            SavedOrders.Add(savedOrder);
+            PersistencyService.SaveOrdersAsJsonAsync(savedOrder);
         }
 
-        public void RemoveOrder(SavedOrder orderToRemove)
+        public void RemoveSavedOrder(SavedOrder savedOrderToRemove)
         {
-            Orders.Remove(orderToRemove);
-            PersistencyService.DeleteOrdersAsync(orderToRemove);
+            SavedOrders.Remove(savedOrderToRemove);
+            PersistencyService.DeleteOrdersAsync(savedOrderToRemove);
         }
     }
 }

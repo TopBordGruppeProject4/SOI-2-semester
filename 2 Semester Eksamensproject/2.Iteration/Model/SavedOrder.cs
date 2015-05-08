@@ -12,11 +12,11 @@ namespace _2.Iteration.Model
         public DateTime Deadline { get; set; }
         public string Description { get; set; }
         public int Id { get; set; }
-        public double Price { get; set; }
+        public int Price { get; set; }
         public int WorkerId { get; set; }
         public int CustomerId { get; set; }
 
-        public SavedOrder(DateTime creationDate, DateTime deadline, string description, int id, double price, int workerId, int customerId)
+        public SavedOrder(DateTime creationDate, DateTime deadline, string description, int id, int price, int workerId, int customerId)
         {
             CreationDate = creationDate;
             Deadline = deadline;

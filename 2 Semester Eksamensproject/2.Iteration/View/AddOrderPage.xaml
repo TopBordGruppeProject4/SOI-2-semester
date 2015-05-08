@@ -75,5 +75,10 @@
         <Button Content="Add Customer" HorizontalAlignment="Left" Height="51" Margin="987,474,0,0" Grid.Row="1" VerticalAlignment="Top" Width="207" Click="Button_Click_1"/>
         <FlipView HorizontalAlignment="Left" Margin="-564,303,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Button Content="Add Customer Command" HorizontalAlignment="Left" Height="52" Margin="987,542,0,0" Grid.Row="1" VerticalAlignment="Top" Width="207" Command="{Binding AddCustomerCommand}"/>
+        <ListView HorizontalAlignment="Left" Height="306" Margin="802.194,246.175,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170.075" ItemsSource="{Binding OrderCatalogSingleton.Instance.SavedOrders}" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <ListView.RenderTransform>
+                <CompositeTransform SkewY="-0.082" TranslateY="1.494"/>
+            </ListView.RenderTransform>
+        </ListView>
     </Grid>
 </Page>

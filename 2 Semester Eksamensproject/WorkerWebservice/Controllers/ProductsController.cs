@@ -14,7 +14,7 @@ namespace WorkerWebservice.Controllers
 {
     public class ProductsController : ApiController
     {
-        private WorkerContextDb db = new WorkerContextDb();
+        private WorkerDateBContext db = new WorkerDateBContext();
 
         // GET: api/Products
         public IQueryable<Product> GetProducts()

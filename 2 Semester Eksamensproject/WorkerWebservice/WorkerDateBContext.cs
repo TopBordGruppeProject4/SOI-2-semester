@@ -5,12 +5,11 @@ namespace WorkerWebservice
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class WorkerContextDb : DbContext
+    public partial class WorkerDateBContext : DbContext
     {
-        public WorkerContextDb()
-            : base("name=WorkerContextDb")
+        public WorkerDateBContext()
+            : base("name=WorkerDateBContext")
         {
-            base.Configuration.ProxyCreationEnabled = false;
         }
 
         public virtual DbSet<Customer> Customers { get; set; }
@@ -60,10 +59,6 @@ namespace WorkerWebservice
             modelBuilder.Entity<SavedOrder>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<SavedOrder>()
-                .Property(e => e.Price)
-                .HasPrecision(18, 0);
 
             modelBuilder.Entity<Worker>()
                 .Property(e => e.Password)

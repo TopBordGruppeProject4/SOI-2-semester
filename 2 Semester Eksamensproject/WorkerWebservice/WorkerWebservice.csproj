@@ -171,7 +171,7 @@
     <Compile Include="RawMaterial.cs" />
     <Compile Include="SavedOrder.cs" />
     <Compile Include="Worker.cs" />
-    <Compile Include="WorkerContextDb.cs" />
+    <Compile Include="WorkerDateBContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />

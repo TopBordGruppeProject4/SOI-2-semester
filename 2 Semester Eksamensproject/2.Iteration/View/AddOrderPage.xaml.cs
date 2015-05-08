@@ -107,8 +107,8 @@ namespace _2.Iteration.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SavedOrderCatalogSingleton.Instance.AddOrder(Convert.ToDateTime("07-05-2015"),Convert.ToDateTime("08-05-2015") , "Test", 1, 10.5, 1, 1);
-           SavedOrderCatalogSingleton.Instance.AddOrder(CreationBox.Date.Date, DeadlineBox.Date.Date, DescriptionBox.Text, 1, Convert.ToDouble(PriceBox.Text), Convert.ToInt32(WorkerBox.Text), Convert.ToInt32(CustomerBox.Text));
+           SavedOrderCatalogSingleton.Instance.AddSavedOrder(Convert.ToDateTime("2015-05-08"),Convert.ToDateTime("2015-05-09") , "Test", 1, 10, 1, 1);
+           SavedOrderCatalogSingleton.Instance.AddSavedOrder(CreationBox.Date.Date, DeadlineBox.Date.Date, DescriptionBox.Text, 1, Convert.ToInt32(PriceBox.Text), Convert.ToInt32(WorkerBox.Text), Convert.ToInt32(CustomerBox.Text));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
