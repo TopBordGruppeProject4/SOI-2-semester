@@ -24,5 +24,9 @@ namespace WorkerWebservice
         public int? WorkerId { get; set; }
 
         public int CustomerId { get; set; }
+
+        public virtual Customer Customer { get; set; }
+
+        public virtual Worker Worker { get; set; }
     }
 }

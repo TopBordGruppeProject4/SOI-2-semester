@@ -14,7 +14,7 @@ namespace WorkerWebservice.Controllers
 {
     public class RawMaterialsController : ApiController
     {
-        private WorkerDateBContext db = new WorkerDateBContext();
+        private DbWorkerContext db = new DbWorkerContext();
 
         // GET: api/RawMaterials
         public IQueryable<RawMaterial> GetRawMaterials()

@@ -14,7 +14,7 @@ namespace WorkerWebservice.Controllers
 {
     public class SavedOrdersController : ApiController
     {
-        private WorkerDateBContext db = new WorkerDateBContext();
+        private DbWorkerContext db = new DbWorkerContext();
 
         // GET: api/SavedOrders
         public IQueryable<SavedOrder> GetSavedOrders()

@@ -9,6 +9,11 @@ namespace WorkerWebservice
     [Table("Customer")]
     public partial class Customer
     {
+        public Customer()
+        {
+            SavedOrders = new HashSet<SavedOrder>();
+        }
+
         public int Id { get; set; }
 
         [Required]
@@ -26,5 +31,7 @@ namespace WorkerWebservice
         [Required]
         [StringLength(50)]
         public string Email { get; set; }
+
+        public virtual ICollection<SavedOrder> SavedOrders { get; set; }
     }
 }
