@@ -19,7 +19,7 @@ namespace _2.Iteration.ViewModel
         public void InvokeAddOrderCommand()
         {
             
-            MainViewModel.OrderCatalogSingleton.AddSavedOrder(Convert.ToString(MainViewModel.CreateDate), Convert.ToString(MainViewModel.DeadDate), MainViewModel.Description, 4057, MainViewModel.Price, MainViewModel.WorkerId, MainViewModel.SelectedCustomer.Id);
+            MainViewModel.OrderCatalogSingleton.AddSavedOrder(DateTime.Now, DateTimeConverter.DateTimeOffsetAndTimeSetToDateTime(MainViewModel.DeadDate, MainViewModel.DeadTime), MainViewModel.Description, 4057, MainViewModel.Price, MainViewModel.WorkerId, MainViewModel.SelectedCustomer.Id);
         }
 
         public void InvokeAddCustomerCommand()

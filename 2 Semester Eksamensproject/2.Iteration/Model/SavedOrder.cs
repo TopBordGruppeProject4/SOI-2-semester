@@ -8,15 +8,15 @@ namespace _2.Iteration.Model
 {
     class SavedOrder
     {
-        public string CreationDate { get; set; }
-        public string Deadline { get; set; }
+        public DateTime CreationDate { get; set; }
+        public DateTime Deadline { get; set; }
         public string Description { get; set; }
         public int Id { get; set; }
         public int Price { get; set; }
         public int WorkerId { get; set; }
         public int CustomerId { get; set; }
 
-        public SavedOrder(string creationDate, string deadline, string description, int id, int price, int workerId, int customerId)
+        public SavedOrder(DateTime creationDate, DateTime deadline, string description, int id, int price, int workerId, int customerId)
         {
             CreationDate = creationDate;
             Deadline = deadline;

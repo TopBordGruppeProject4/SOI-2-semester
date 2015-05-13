@@ -58,8 +58,8 @@
         <TextBox x:Name="WorkerBox" HorizontalAlignment="Left" Height="38" Margin="199,215,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding WorkerId, Mode=TwoWay}" VerticalAlignment="Top" Width="166"/>
         <TextBlock HorizontalAlignment="Left" Height="38" Margin="10,172,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Price" VerticalAlignment="Top" Width="194" FontSize="36"/>
         <TextBlock HorizontalAlignment="Left" Height="38" Margin="0,215,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Worker" VerticalAlignment="Top" Width="194" FontSize="36"/>
-        <DatePicker x:Name="CreationBox" HorizontalAlignment="Left" Height="35" Margin="70,362,0,0" Grid.Row="1" VerticalAlignment="Top" Width="295" Date="{Binding CreateDate, Mode=TwoWay}"/>
-        <DatePicker x:Name="DeadlineBox" HorizontalAlignment="Left" Height="35" Margin="70,446,0,0" Grid.Row="1" VerticalAlignment="Top" Width="295" Date="{Binding DeadDate, Mode=TwoWay}"/>
+        <DatePicker x:Name="CreationBox" HorizontalAlignment="Left" Height="35" Margin="70,312,0,0" Grid.Row="1" VerticalAlignment="Top" Width="295" Date="{Binding CreateDate, Mode=TwoWay}"/>
+        <DatePicker x:Name="DeadlineBox" HorizontalAlignment="Left" Height="35" Margin="322,464,0,0" Grid.Row="1" VerticalAlignment="Top" Width="295" Date="{Binding DeadDate, Mode=TwoWay}"/>
         <Button Content="Add Order Command" HorizontalAlignment="Left" Height="51" Margin="67,506,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Command="{Binding AddOrderCommand}"/>
         <Button Content="Add Order Code Behind" HorizontalAlignment="Left" Height="51" Margin="74,556,0,0" Grid.Row="1" VerticalAlignment="Top" Width="219" Click="Button_Click"/>
         <TextBox x:Name="NameBox" HorizontalAlignment="Left" Height="38" Margin="1248,71,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" PlaceholderText="Name" Text="{Binding Name, Mode=TwoWay}"/>
@@ -81,5 +81,7 @@
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </ListView>
+        <TimePicker HorizontalAlignment="Left" Height="45" Margin="85,377,0,0" Grid.Row="1" VerticalAlignment="Top" Width="303" Time="{Binding CreateTime, Mode=TwoWay}"/>
+        <TimePicker HorizontalAlignment="Left" Height="45" Margin="337,522,0,0" Grid.Row="1" VerticalAlignment="Top" Width="317" Time="{Binding DeadTime, Mode=TwoWay}"/>
     </Grid>
 </Page>

@@ -105,7 +105,11 @@ namespace _2.Iteration.ViewModel
             set { _createDate = value;OnPropertyChanged(); }
         }
 
-        public TimeSpan CreateTime { get; set; }
+        public TimeSpan CreateTime
+        {
+            get { return _createTime; }
+            set { _createTime = value; OnPropertyChanged();}
+        }
 
         public DateTimeOffset DeadDate
         {
@@ -113,7 +117,12 @@ namespace _2.Iteration.ViewModel
             set { _deadDate = value;OnPropertyChanged(); }
         }
 
-        public TimeSpan DeadTime { get; set; }
+        public TimeSpan DeadTime
+        {
+            get { return _deadTime; }
+            set { _deadTime = value;OnPropertyChanged(); }
+        }
+
         public string Address
         {
             get { return _address; }
@@ -168,6 +177,8 @@ namespace _2.Iteration.ViewModel
         private ICommand _removeCustomerCommand;
         private DateTimeOffset _createDate;
         private DateTimeOffset _deadDate;
+        private TimeSpan _deadTime;
+        private TimeSpan _createTime;
 
         public ICommand NavigateToAddOrderPageCommand
         {

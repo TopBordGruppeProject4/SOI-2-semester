@@ -12,9 +12,9 @@ namespace WorkerWebservice
         public int Id { get; set; }
 
         
-        public string CreationDate { get; set; }
+        public DateTime CreationDate { get; set; }
 
-        public string Deadline { get; set; }
+        public DateTime Deadline { get; set; }
 
         [Required]
         [StringLength(50)]
