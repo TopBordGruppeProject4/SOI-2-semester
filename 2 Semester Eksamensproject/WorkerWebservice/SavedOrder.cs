@@ -12,7 +12,7 @@ namespace WorkerWebservice
         public int Id { get; set; }
 
         
-        public string CreationsDate { get; set; }
+        public string CreationDate { get; set; }
 
         public string Deadline { get; set; }
 
