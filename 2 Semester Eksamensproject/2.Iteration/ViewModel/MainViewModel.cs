@@ -18,8 +18,8 @@ namespace _2.Iteration.ViewModel
     {
         #region OrderProps
 
-        private DateTime _creationsDate;
-        private DateTime _deadline;
+        private string _creationsDate;
+        private string _deadline;
         private string _description;
         private int _id;
         private int _price;
@@ -27,7 +27,7 @@ namespace _2.Iteration.ViewModel
         private int _customerId;
         private ICommand _addOrderCommand;
 
-        public DateTime CreationsDate
+        public string CreationsDate
         {
             get { return _creationsDate; }
             set
@@ -37,7 +37,7 @@ namespace _2.Iteration.ViewModel
             }
         }
 
-        public DateTime Deadline
+        public string Deadline
         {
             get { return _deadline; }
             set
@@ -99,6 +99,21 @@ namespace _2.Iteration.ViewModel
 
         #endregion
 
+        public DateTimeOffset CreateDate
+        {
+            get { return _createDate; }
+            set { _createDate = value;OnPropertyChanged(); }
+        }
+
+        public TimeSpan CreateTime { get; set; }
+
+        public DateTimeOffset DeadDate
+        {
+            get { return _deadDate; }
+            set { _deadDate = value;OnPropertyChanged(); }
+        }
+
+        public TimeSpan DeadTime { get; set; }
         public string Address
         {
             get { return _address; }
@@ -151,6 +166,8 @@ namespace _2.Iteration.ViewModel
         private ICommand _addCustomerCommand;
         private ICommand _selectCustomerCommand;
         private ICommand _removeCustomerCommand;
+        private DateTimeOffset _createDate;
+        private DateTimeOffset _deadDate;
 
         public ICommand NavigateToAddOrderPageCommand
         {

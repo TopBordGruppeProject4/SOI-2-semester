@@ -118,6 +118,7 @@
     <Compile Include="Model\Person.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\CommandHandler.cs" />
+    <Compile Include="ViewModel\DateTimeConverter.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\NavigationService.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />

@@ -15,7 +15,7 @@
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView HorizontalAlignment="Left" Height="375" Margin="53,151,0,0" VerticalAlignment="Top" Width="545" ItemsSource="{Binding OrderCatalogSingleton.Instance.SavedOrders}"/>
+        <ListView HorizontalAlignment="Left" Height="375" Margin="53,151,0,0" VerticalAlignment="Top" Width="709" ItemsSource="{Binding OrderCatalogSingleton.Instance.SavedOrders}"/>
         <ListView x:Name="CustomerList" HorizontalAlignment="Left" Height="356" Margin="887,151,0,0" VerticalAlignment="Top" Width="261" ItemsSource="{Binding CustomerCatalogSingleton.Instance.Customers}" SelectedItem="{Binding SelectedCustomer, Mode=TwoWay}" >
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">

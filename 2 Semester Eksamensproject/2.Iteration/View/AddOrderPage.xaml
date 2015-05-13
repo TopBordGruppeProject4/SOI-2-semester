@@ -4,6 +4,8 @@
     xmlns:local="using:_2.Iteration.View"
     xmlns:common="using:_2.Iteration.Common"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity" 
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core" 
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ViewModel="using:_2.Iteration.ViewModel"
     x:Name="pageRoot"
@@ -51,34 +53,33 @@
             <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
 				IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
         </Grid>
-        <TextBox x:Name="DescriptionBox" HorizontalAlignment="Left" Height="38" Margin="246,107,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Description, Mode=TwoWay}" VerticalAlignment="Top" Width="166" PlaceholderText="Description"/>
-        <TextBox x:Name="PriceBox" HorizontalAlignment="Left" Height="38" Margin="246,241,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Price, Mode=TwoWay}" VerticalAlignment="Top" Width="166" PlaceholderText="Price"/>
-        <TextBox x:Name="WorkerBox" HorizontalAlignment="Left" Height="38" Margin="246,329,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding WorkerId, Mode=TwoWay}" VerticalAlignment="Top" Width="166"/>
-        <TextBox x:Name="CustomerBox" HorizontalAlignment="Left" Height="38" Margin="246,440,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding CustomerId, Mode=TwoWay}" VerticalAlignment="Top" Width="166"/>
-        <TextBlock HorizontalAlignment="Left" Height="38" Margin="52,241,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Price" VerticalAlignment="Top" Width="194" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Left" Height="38" Margin="52,329,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Worker" VerticalAlignment="Top" Width="194" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Left" Height="38" Margin="47,440,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Customer" VerticalAlignment="Top" Width="194" FontSize="36"/>
-        <DatePicker x:Name="CreationBox" HorizontalAlignment="Left" Height="35" Margin="506,106,0,0" Grid.Row="1" VerticalAlignment="Top" Width="295" Date="{Binding CreationsDate}"/>
-        <DatePicker x:Name="DeadlineBox" HorizontalAlignment="Left" Height="35" Margin="506,247,0,0" Grid.Row="1" VerticalAlignment="Top" Width="295" Date="{Binding Deadline}"/>
-        <TextBlock HorizontalAlignment="Left" Height="38" Margin="543,37,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" FontSize="36">
-        	<Run Text="Creation"/>
-        	<LineBreak/>
-        	<Run/>
-        </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="38" Margin="506,176,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" FontSize="36" Text="Deadline"/>
-        <Button Content="Add Order Command" HorizontalAlignment="Left" Height="51" Margin="503,335,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Command="{Binding AddOrderCommand}"/>
-        <Button Content="Add Order Code Behind" HorizontalAlignment="Left" Height="51" Margin="503,430,0,0" Grid.Row="1" VerticalAlignment="Top" Width="219" Click="Button_Click"/>
-        <TextBox x:Name="NameBox" HorizontalAlignment="Left" Height="38" Margin="990,107,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" PlaceholderText="Name" Text="{Binding Name, Mode=TwoWay}"/>
-        <TextBox x:Name="AddressBox" HorizontalAlignment="Left" Height="38" Margin="990,204,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" PlaceholderText="Address" Text="{Binding Address, Mode=TwoWay}"/>
-        <TextBox x:Name="TlfBox" HorizontalAlignment="Left" Height="38" Margin="990,303,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" PlaceholderText="Tlf" Text="{Binding Tlf, Mode=TwoWay}"/>
-        <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Height="38" Margin="990,384,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" RenderTransformOrigin="0.435,2.348" PlaceholderText="Email" Text="{Binding Email, Mode=TwoWay}"/>
-        <Button Content="Add Customer" HorizontalAlignment="Left" Height="51" Margin="987,474,0,0" Grid.Row="1" VerticalAlignment="Top" Width="207" Click="Button_Click_1"/>
+        <TextBox x:Name="DescriptionBox" HorizontalAlignment="Left" Height="38" Margin="38,54,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Description, Mode=TwoWay}" VerticalAlignment="Top" Width="166" PlaceholderText="Description"/>
+        <TextBox x:Name="PriceBox" HorizontalAlignment="Left" Height="38" Margin="199,172,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Price, Mode=TwoWay}" VerticalAlignment="Top" Width="166" PlaceholderText="Price"/>
+        <TextBox x:Name="WorkerBox" HorizontalAlignment="Left" Height="38" Margin="199,215,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding WorkerId, Mode=TwoWay}" VerticalAlignment="Top" Width="166"/>
+        <TextBlock HorizontalAlignment="Left" Height="38" Margin="10,172,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Price" VerticalAlignment="Top" Width="194" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Height="38" Margin="0,215,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Worker" VerticalAlignment="Top" Width="194" FontSize="36"/>
+        <DatePicker x:Name="CreationBox" HorizontalAlignment="Left" Height="35" Margin="70,362,0,0" Grid.Row="1" VerticalAlignment="Top" Width="295" Date="{Binding CreateDate, Mode=TwoWay}"/>
+        <DatePicker x:Name="DeadlineBox" HorizontalAlignment="Left" Height="35" Margin="70,446,0,0" Grid.Row="1" VerticalAlignment="Top" Width="295" Date="{Binding DeadDate, Mode=TwoWay}"/>
+        <Button Content="Add Order Command" HorizontalAlignment="Left" Height="51" Margin="67,506,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Command="{Binding AddOrderCommand}"/>
+        <Button Content="Add Order Code Behind" HorizontalAlignment="Left" Height="51" Margin="74,556,0,0" Grid.Row="1" VerticalAlignment="Top" Width="219" Click="Button_Click"/>
+        <TextBox x:Name="NameBox" HorizontalAlignment="Left" Height="38" Margin="1248,71,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" PlaceholderText="Name" Text="{Binding Name, Mode=TwoWay}"/>
+        <TextBox x:Name="AddressBox" HorizontalAlignment="Left" Height="38" Margin="1248,151,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" PlaceholderText="Address" Text="{Binding Address, Mode=TwoWay}"/>
+        <TextBox x:Name="TlfBox" HorizontalAlignment="Left" Height="38" Margin="1248,232,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" PlaceholderText="Tlf" Text="{Binding Tlf, Mode=TwoWay}"/>
+        <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Height="38" Margin="1248,306,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" RenderTransformOrigin="0.435,2.348" PlaceholderText="Email" Text="{Binding Email, Mode=TwoWay}"/>
+        <Button Content="Add Customer" HorizontalAlignment="Left" Height="51" Margin="1245,396,0,0" Grid.Row="1" VerticalAlignment="Top" Width="207" Click="Button_Click_1"/>
         <FlipView HorizontalAlignment="Left" Margin="-564,303,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button Content="Add Customer Command" HorizontalAlignment="Left" Height="52" Margin="987,542,0,0" Grid.Row="1" VerticalAlignment="Top" Width="207" Command="{Binding AddCustomerCommand}"/>
-        <ListView HorizontalAlignment="Left" Height="306" Margin="802.194,246.175,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170.075" ItemsSource="{Binding OrderCatalogSingleton.Instance.SavedOrders}" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+        <Button Content="Add Customer Command" HorizontalAlignment="Left" Height="52" Margin="1215,505,0,0" Grid.Row="1" VerticalAlignment="Top" Width="207" Command="{Binding AddCustomerCommand}"/>
+        <ListView HorizontalAlignment="Left" Height="306" Margin="322.194,29.836,0,0" VerticalAlignment="Top" Width="1288.075" ItemsSource="{Binding OrderCatalogSingleton.Instance.SavedOrders}" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Grid.Row="1">
             <ListView.RenderTransform>
-                <CompositeTransform SkewY="-0.082" TranslateY="1.494"/>
+                <CompositeTransform SkewY="-0.041" TranslateY="13.493"/>
             </ListView.RenderTransform>
+        </ListView>
+        <ListView HorizontalAlignment="Left" Height="434" Margin="1570,34,0,0" Grid.Row="1" VerticalAlignment="Top" Width="248" ItemsSource="{Binding CustomerCatalogSingleton.Instance.Customers, Mode=TwoWay}" SelectedItem="{Binding SelectedCustomer, Mode=TwoWay}">
+            <interactivity:Interaction.Behaviors>
+                <core:EventTriggerBehavior EventName="SelectionChanged">
+                    <core:InvokeCommandAction Command="{Binding SelectCustomerCommand}" CommandParameter="{Binding SelectedItem, ElementName=CustomerList}"/>
+                </core:EventTriggerBehavior>
+            </interactivity:Interaction.Behaviors>
         </ListView>
     </Grid>
 </Page>
