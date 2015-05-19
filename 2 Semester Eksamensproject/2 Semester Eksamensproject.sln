@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.Iteration", "2.Iteration\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerWebservice", "WorkerWebservice\WorkerWebservice.csproj", "{1D7BCD91-F8FA-44F0-9929-3E789AD71597}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHI", "SHI\SHI.csproj", "{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,30 @@ Global
 		{1D7BCD91-F8FA-44F0-9929-3E789AD71597}.Release|ARM.ActiveCfg = Release|Any CPU
 		{1D7BCD91-F8FA-44F0-9929-3E789AD71597}.Release|x64.ActiveCfg = Release|Any CPU
 		{1D7BCD91-F8FA-44F0-9929-3E789AD71597}.Release|x86.ActiveCfg = Release|Any CPU
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Debug|ARM.ActiveCfg = Debug|ARM
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Debug|ARM.Build.0 = Debug|ARM
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Debug|ARM.Deploy.0 = Debug|ARM
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Debug|x64.ActiveCfg = Debug|x64
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Debug|x64.Build.0 = Debug|x64
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Debug|x64.Deploy.0 = Debug|x64
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Debug|x86.ActiveCfg = Debug|x86
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Debug|x86.Build.0 = Debug|x86
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Debug|x86.Deploy.0 = Debug|x86
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Release|ARM.ActiveCfg = Release|ARM
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Release|ARM.Build.0 = Release|ARM
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Release|ARM.Deploy.0 = Release|ARM
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Release|x64.ActiveCfg = Release|x64
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Release|x64.Build.0 = Release|x64
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Release|x64.Deploy.0 = Release|x64
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Release|x86.ActiveCfg = Release|x86
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Release|x86.Build.0 = Release|x86
+		{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
