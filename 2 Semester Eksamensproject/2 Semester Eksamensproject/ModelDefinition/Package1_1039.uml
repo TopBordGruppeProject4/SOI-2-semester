@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="262f778d-0fa3-46d6-be1f-c7d8bc9344a4"
   name="Model" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -8,7 +8,7 @@
       <class
         Id="9a120131-c13c-4f5b-bf44-7ef208d80dc1"
         name="Person"
-        isAbstract="false"
+        isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
         <ownedAttributesInternal>
@@ -89,25 +89,6 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="7ca90c87-91c3-403b-8189-3762c0e477fd"
-        name="Admin"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <generalsInternal>
-          <generalization
-            Id="e8f2be3c-de7a-43dd-a7e2-e9af82e78371"
-            isSubstitutable="false">
-            <classMoniker
-              Id="2d6820a3-db23-49cf-b997-2afd85652172"
-              LastKnownName="Worker"
-              LastKnownLocation="Package1_1039.uml" />
-          </generalization>
-        </generalsInternal>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
         Id="2d6820a3-db23-49cf-b997-2afd85652172"
         name="Worker"
         isAbstract="false"
@@ -160,13 +141,31 @@
                 LastKnownLocation="Package1_1039.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="99417f33-2e01-4f26-a919-d209f3301cdc"
+            name="Admin"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="efbf64df-3ed5-4adb-878f-046cbb03dbe3"
+                LastKnownName="bool"
+                LastKnownLocation="Package_0936.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
         Id="2b60675e-76c2-436a-ace9-c0434f19f2b8"
-        name="Order"
+        name="SavedOrder"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -292,8 +291,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="2ded20df-947c-4534-8f42-a4041ca57e44"
-                LastKnownName="double"
+                Id="f7365da6-45de-4b39-9073-fe846bdf82cc"
+                LastKnownName="int"
                 LastKnownLocation="Package1_1039.uml" />
             </type_NamedElement>
           </property>
@@ -321,7 +320,7 @@
     <packageHasNamedElement>
       <class
         Id="ee46b520-43dc-4e87-a4a6-12aba59155b1"
-        name="OrderCatalogSingleton"
+        name="SavedOrderCatalogSingleton"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -335,7 +334,7 @@
             isAbstract="false">
             <classMoniker
               Id="2b60675e-76c2-436a-ace9-c0434f19f2b8"
-              LastKnownName="Order"
+              LastKnownName="SavedOrder"
               LastKnownLocation="Package1_1039.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -378,52 +377,56 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="fcf730b5-abfa-4a7f-88e3-6c8a38cd05d9"
+            isDerived="false"
+            sourceEndRoleName="OrderCatalogSingleton"
+            targetEndRoleName="PersistencyService"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="1d9fc19b-fd03-42af-a190-5068a8ec5054"
+              LastKnownName="PersistencyService"
+              LastKnownLocation="Package_0919.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9968676b-d149-45ae-a19c-e7fcd71ce6bb"
+                  name="OrderCatalogSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4de4555d-f2a3-4151-8045-742b33e3e617"
+                  name="PersistencyService"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedOperationsInternal>
           <operation
             Id="c4ad1fb0-aa17-4d7c-9db0-c3d8da0c72d0"
-            name="AddOrder"
+            name="AddSavedOrder"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
             <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="896826c7-c3f3-491e-b9b7-8d8dc7146120"
-                  name="DateTime creationDate"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="ec66aa5a-d931-4b60-8f60-c5787b767b0f"
-                  name="DateTime deadline"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="5f416a26-aa86-4cca-939b-8742ab23f31d"
-                  name="string description"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="ce0e737e-3d27-4444-8b33-42b58977ffb9"
-                  name="int id"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="97d7c927-6e34-4a06-b762-96d7247802cb"
-                  name="double price"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
                   Id="ebfb2438-d7dd-43e3-b830-e90b6b4e0a9f"
@@ -437,11 +440,46 @@
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d350a93d-4904-4d28-a2e9-e8bdb26576db"
+                  name="DateTime creationDate"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4810cce9-9471-41c3-810d-2e458d6edf5c"
+                  name="DateTime deadline"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="99eb3272-537c-4493-ac3a-988d17c9940c"
+                  name="string description"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d62479ed-bbfd-46c8-a755-9906ca7eb9d6"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2cebee14-655b-4616-b1b1-81c7e61cf354"
+                  name="int price"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
           <operation
             Id="0b23d24e-c549-4d03-a595-e3ae88bce0ba"
-            name="LoadOrderAsync"
+            name="LoadSavedOrderAsync"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -465,20 +503,13 @@
           </operation>
           <operation
             Id="8ed7ea2f-f48d-423c-bd5f-fa6436d633fd"
-            name="RemoveOrder"
+            name="RemoveSavedOrder"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
             <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="8e3d1480-6328-46ad-aefd-a238946b88da"
-                  name="Order orderToRemove"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
                   Id="e74f1b52-40ff-4405-8be8-f712b3e1b9a6"
@@ -491,6 +522,13 @@
                       LastKnownLocation="Package1_1039.uml" />
                   </type_NamedElement>
                 </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1b0d4bfb-b8b2-4ea8-9eeb-217115941448"
+                  name="Order orderToRemove"
+                  direction="In"
+                  isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -558,20 +596,20 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="8c9ae012-eb1b-496c-9b6a-da3419dbf74b"
+            Id="ef470d0d-e79b-47dd-9e21-8a3fa5dde543"
             isDerived="false"
             sourceEndRoleName="WorkerCatalogSingleton"
-            targetEndRoleName="Admin"
+            targetEndRoleName="PersistencyService"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="7ca90c87-91c3-403b-8189-3762c0e477fd"
-              LastKnownName="Admin"
-              LastKnownLocation="Package1_1039.uml" />
+              Id="1d9fc19b-fd03-42af-a190-5068a8ec5054"
+              LastKnownName="PersistencyService"
+              LastKnownLocation="Package_0919.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="61560c9d-2e97-4d99-8945-90a0f5ec3d48"
+                  Id="1ab76dcb-a52b-471b-a28f-a2dcb6968223"
                   name="WorkerCatalogSingleton"
                   isLeaf="false"
                   isStatic="false"
@@ -584,28 +622,15 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="6f253cd8-cfe8-4eb3-a7e6-370fee607f8f"
-                  name="Admin"
+                  Id="3bfa7063-23c5-4cd3-bdb9-4517d927fc2d"
+                  name="PersistencyService"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="00ca7a35-65f5-4394-b8c0-fe2b1194709d"
-                      name="Lower"
-                      value="1.*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="2d402fcc-ae2b-4cb0-bc4c-90a3bfe29223"
-                      name="Upper"
-                      value="1.*" />
-                  </upperValueInternal>
-                </memberEnd>
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -763,6 +788,75 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="4c247b55-b90d-47db-9245-8cfe2359a493"
+            name="CheckWorker"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4de13a1b-a14a-4277-9f4a-e6a8b1cfbdb5"
+                  name="string username"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="32f7c073-facb-44a1-b68f-1e90acc0ac0d"
+                  name="strinf password"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="947cc0c8-d60b-4483-9348-f19f2a62f8a0"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="efbf64df-3ed5-4adb-878f-046cbb03dbe3"
+                      LastKnownName="bool"
+                      LastKnownLocation="Package_0936.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bf1fbd2c-4be9-4f21-be60-effb93507f8b"
+            name="GetWorker"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0750ab48-35e9-47dc-a285-437f5038acec"
+                  name="string username"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7eace947-e87b-4a2a-b223-03eea543c0ed"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2d6820a3-db23-49cf-b997-2afd85652172"
+                      LastKnownName="Worker"
+                      LastKnownLocation="Package1_1039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -772,73 +866,36 @@
         name="AdminCatalogSingleton"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="900b7ace-518f-48a5-841e-b1b2495697ce"
-            isDerived="false"
-            sourceEndRoleName="AdminCatalogSingleton"
-            targetEndRoleName="Admin"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="7ca90c87-91c3-403b-8189-3762c0e477fd"
-              LastKnownName="Admin"
-              LastKnownLocation="Package1_1039.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="929e8d45-1498-408b-aebf-c3e489a169e5"
-                  name="AdminCatalogSingleton"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="50504d42-3498-401b-8b76-0cf5507ebbe3"
-                  name="Admin"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="a6927bd1-7eb9-4543-8078-4c377f44710d"
-                      name="Lower"
-                      value="1.*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="3b45619b-7b64-4026-8888-fd8953990dad"
-                      name="Upper"
-                      value="1.*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
-      </class>
+        isActiveClass="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="895e0665-0e4b-4ed3-87f3-64d3c9aa86b8"
-        name="Item"
+        Id="642b194c-1c8c-4c24-a4a0-a23032055b95"
+        name="RawMaterial"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <ownedAttributesInternal>
           <property
-            Id="1b260e24-8c68-482c-af9e-658b1559a057"
+            Id="7898805c-97ef-4d32-8fba-1f7713e3ddb6"
+            name="Amount"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="f7365da6-45de-4b39-9073-fe846bdf82cc"
+                LastKnownName="int"
+                LastKnownLocation="Package1_1039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9baf1894-a0b3-4ab1-a75d-f19e44c246af"
             name="Description"
             isLeaf="false"
             isStatic="false"
@@ -856,7 +913,25 @@
             </type_NamedElement>
           </property>
           <property
-            Id="29c494d0-aca2-40a8-a60e-5f1aba08debe"
+            Id="df8600db-86a8-4ee4-967a-271b28b948ce"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="f7365da6-45de-4b39-9073-fe846bdf82cc"
+                LastKnownName="int"
+                LastKnownLocation="Package1_1039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a44193b1-996d-4617-afe5-605be0a9894d"
             name="Name"
             isLeaf="false"
             isStatic="false"
@@ -873,62 +948,7 @@
                 LastKnownLocation="Package1_1039.uml" />
             </type_NamedElement>
           </property>
-          <property
-            Id="3d2feba7-81a9-4768-a9c6-f4e7db82e4d1"
-            name="ID"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="f7365da6-45de-4b39-9073-fe846bdf82cc"
-                LastKnownName="int"
-                LastKnownLocation="Package1_1039.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="4bbde431-e769-4165-9ded-e0f34338846c"
-            name="Amount"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="f7365da6-45de-4b39-9073-fe846bdf82cc"
-                LastKnownName="int"
-                LastKnownLocation="Package1_1039.uml" />
-            </type_NamedElement>
-          </property>
         </ownedAttributesInternal>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="642b194c-1c8c-4c24-a4a0-a23032055b95"
-        name="RawMaterial"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <generalsInternal>
-          <generalization
-            Id="2e255ca2-f86f-450d-8358-782730987cfc"
-            isSubstitutable="false">
-            <classMoniker
-              Id="895e0665-0e4b-4ed3-87f3-64d3c9aa86b8"
-              LastKnownName="Item"
-              LastKnownLocation="Package1_1039.uml" />
-          </generalization>
-        </generalsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -940,11 +960,11 @@
         isActiveClass="false">
         <generalsInternal>
           <generalization
-            Id="cef10633-a0b3-49fa-b35e-1ed7e11a0312"
+            Id="70c29b1b-6cbe-497e-916c-50ceb48290ae"
             isSubstitutable="false">
             <classMoniker
-              Id="895e0665-0e4b-4ed3-87f3-64d3c9aa86b8"
-              LastKnownName="Item"
+              Id="642b194c-1c8c-4c24-a4a0-a23032055b95"
+              LastKnownName="RawMaterial"
               LastKnownLocation="Package1_1039.uml" />
           </generalization>
         </generalsInternal>
@@ -1027,6 +1047,45 @@
                       value="*" />
                   </upperValueInternal>
                 </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5c6a7063-0477-4250-a730-d1902d3f795a"
+            isDerived="false"
+            sourceEndRoleName="RawMaterialCatalogSingleton"
+            targetEndRoleName="PersistencyService"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="1d9fc19b-fd03-42af-a190-5068a8ec5054"
+              LastKnownName="PersistencyService"
+              LastKnownLocation="Package_0919.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a71173df-1a17-4f30-acfb-675834e42ccd"
+                  name="RawMaterialCatalogSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b64a269e-da0c-449b-8d89-5114e1075c78"
+                  name="PersistencyService"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -1199,6 +1258,45 @@
                       value="*" />
                   </upperValueInternal>
                 </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c24d2d85-4887-4f1e-94cf-ee30fc3a943a"
+            isDerived="false"
+            sourceEndRoleName="ProductCatalogSingleton"
+            targetEndRoleName="PersistencyService"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="1d9fc19b-fd03-42af-a190-5068a8ec5054"
+              LastKnownName="PersistencyService"
+              LastKnownLocation="Package_0919.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ce9acc97-47fb-47bd-b1c7-2367d14cd591"
+                  name="ProductCatalogSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ff7c44e1-3cd0-4f61-a70b-07802bc7708f"
+                  name="PersistencyService"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -1430,6 +1528,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="625cea83-4630-42fa-8af1-195320692216"
+            isDerived="false"
+            sourceEndRoleName="CustomerCatalogSingleton"
+            targetEndRoleName="PersistencyService"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="1d9fc19b-fd03-42af-a190-5068a8ec5054"
+              LastKnownName="PersistencyService"
+              LastKnownLocation="Package_0919.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b1d38081-f542-46f4-9707-5de3e9863b5f"
+                  name="CustomerCatalogSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b6b8b454-b078-4e53-9949-39ba8c0a987f"
+                  name="PersistencyService"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedOperationsInternal>
           <operation
@@ -1568,6 +1705,12 @@
       <undefinedType
         Id="f8929733-e377-4fe8-92e7-1ea63b1ac1bc"
         name="void" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="525371da-f21d-4b11-bd40-a0a738155f18"
+        LastKnownName="Persistency"
+        LastKnownLocation="Package_0919.uml" />
     </packageHasNamedElement>
   </packagedElements>
 </package>
