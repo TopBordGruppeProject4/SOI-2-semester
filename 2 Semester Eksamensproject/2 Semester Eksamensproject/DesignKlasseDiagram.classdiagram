@@ -1361,8 +1361,26 @@
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="16ec6420-7b57-4745-9acb-4f016411c943" name="Order orderToRemove" direction="In" isUnique="false">
-                        <elementDefinition Id="1b0d4bfb-b8b2-4ea8-9eeb-217115941448" />
+                      <parameter Id="84ad3187-422d-4b65-9388-bf0713349f32" name="Order order" direction="In" isUnique="false">
+                        <elementDefinition Id="fd2cf573-ac77-4858-a6dd-8ccc3b9c01f8" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="a7e66103-9f2a-4c94-aa85-b6b3c22a6890" name="AddSavedOrder" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="6a280988-58e0-4793-b915-ff29d315879d" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="2dd1e979-0ee0-4de5-854d-d17da14a4681" name="SavedOrder savedOrder" direction="In" isUnique="false">
+                        <elementDefinition Id="a973c641-0e66-4602-8214-57a95675fc6b" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="a262875e-5608-4924-824a-eb043a809560" direction="Return" isUnique="false">
+                        <elementDefinition Id="56bdc215-cbd2-4d50-aae4-ac20df00289f" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="54d39da4-0458-4271-8c4c-0c355fdc93d2" LastKnownName="void" />
+                        </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
@@ -1443,8 +1461,8 @@
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="09730191-f39a-4d12-8ea8-689b3f8ba59c" name="Worker workerToAdd" direction="In" isUnique="false">
-                        <elementDefinition Id="aeab98b4-7488-45ef-91c4-c8f3b45c049d" />
+                      <parameter Id="be36af70-f167-4538-8ed9-a36721dfd912" name="Worker worker" direction="In" isUnique="false">
+                        <elementDefinition Id="b5f53d32-5496-4c44-bd7b-bd1b433d6808" />
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
@@ -1496,16 +1514,16 @@
                   <elementDefinition Id="93ea200d-a500-41ca-8aab-5ff75fea6102" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="93af91a1-0b44-4b51-b44c-da59c5be8138" name="Worker workerToRemove" direction="In" isUnique="false">
-                        <elementDefinition Id="81597fa5-f351-4ff0-9355-5cc443e13694" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
                       <parameter Id="a43bfd0a-14ce-46e0-abc4-707f61f27c6c" direction="Return" isUnique="false">
                         <elementDefinition Id="4a54f9b3-3bf8-4dfb-b7ac-1d371cd18f17" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="54d39da4-0458-4271-8c4c-0c355fdc93d2" LastKnownName="void" />
                         </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="4af13608-bd26-4ca9-9393-e7a724baaf2d" name="Worker worker" direction="In" isUnique="false">
+                        <elementDefinition Id="e429bffd-29e1-4c17-a296-1acac85d949f" />
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
@@ -1720,13 +1738,31 @@
                   <elementDefinition Id="36e2f381-9764-4fb8-9e5b-e4e188932b3a" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="29ce0f20-6a17-47f2-8d2a-11d009c5a1e4" name="RawMaterial rawmaterialToRemove" direction="In" isUnique="false">
-                        <elementDefinition Id="c7957dac-436a-4830-908a-f94a4825b182" />
+                      <parameter Id="b283f7b7-40c7-49fd-80d1-0f3421a6cfd0" direction="Return" isUnique="false">
+                        <elementDefinition Id="2858c265-90cd-4fba-bc3b-35faedcdd63a" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="54d39da4-0458-4271-8c4c-0c355fdc93d2" LastKnownName="void" />
+                        </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="b283f7b7-40c7-49fd-80d1-0f3421a6cfd0" direction="Return" isUnique="false">
-                        <elementDefinition Id="2858c265-90cd-4fba-bc3b-35faedcdd63a" />
+                      <parameter Id="8b5d0536-3bf3-4c0d-8035-73ee77dde00e" name="RawMaterial rawmaterial" direction="In" isUnique="false">
+                        <elementDefinition Id="5d1c7199-9bdc-43fc-b9fb-85dc95b2ac11" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="d22284b0-c120-4e66-a4ad-8d174ab9a9c0" name="AddRawMaterial" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="037fbc94-4e6a-41cc-ba2a-da1691e6af3d" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="abef07ba-6119-4c04-b78d-c663db31fd02" name="RawMaterial rawMaterial" direction="In" isUnique="false">
+                        <elementDefinition Id="79d759cc-86cc-499b-a621-01e563b176c9" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="43bd1fe7-821a-4698-bb38-27dd9f1777c2" direction="Return" isUnique="false">
+                        <elementDefinition Id="24d22764-7703-4bff-af25-a26e124ad67b" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="54d39da4-0458-4271-8c4c-0c355fdc93d2" LastKnownName="void" />
                         </type_NamedElement>
@@ -1840,13 +1876,31 @@
                   <elementDefinition Id="f3ffefa9-2d79-4d61-94c6-9d6bc2d4aed5" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="d1f7652f-402c-44a4-b5b9-40bc637252e4" name="Product productToRemove" direction="In" isUnique="false">
-                        <elementDefinition Id="0edf378b-7b9a-4987-b840-b869fa7793b3" />
+                      <parameter Id="9e511e24-6edb-486c-9160-8047b1751f70" direction="Return" isUnique="false">
+                        <elementDefinition Id="452a9ce8-0d37-40fd-a9bc-4ad306805fcf" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="54d39da4-0458-4271-8c4c-0c355fdc93d2" LastKnownName="void" />
+                        </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="9e511e24-6edb-486c-9160-8047b1751f70" direction="Return" isUnique="false">
-                        <elementDefinition Id="452a9ce8-0d37-40fd-a9bc-4ad306805fcf" />
+                      <parameter Id="0828a454-7050-47c7-a623-47605622d562" name="Product product" direction="In" isUnique="false">
+                        <elementDefinition Id="d899f857-0254-4544-b40b-140028f07c87" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="4b3b81ef-075e-46a0-b0b4-9223886855e6" name="AddProduct" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="c282c08e-5f4b-4978-b05c-d4237595657a" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="2468bccb-d589-45ec-8c94-f70f85b023ba" name="Product product" direction="In" isUnique="false">
+                        <elementDefinition Id="709d6e2c-ef76-4d3f-b561-0dce7b6288f4" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="cba81074-c603-49cc-ae08-c54736d60e33" direction="Return" isUnique="false">
+                        <elementDefinition Id="a0bdad5d-f91a-4301-a0e7-d4f1038c832a" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="54d39da4-0458-4271-8c4c-0c355fdc93d2" LastKnownName="void" />
                         </type_NamedElement>
@@ -1979,13 +2033,31 @@
                   <elementDefinition Id="93e13384-1791-468a-a928-70eaa63fac7a" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="63554f65-f51c-4c42-b677-14094dad269f" name="Customer customerToRemove" direction="In" isUnique="false">
-                        <elementDefinition Id="19f19321-c716-4edc-a619-1b497ae020a5" />
+                      <parameter Id="6f665b67-5c3d-49e0-b555-b4d5fd0645cc" direction="Return" isUnique="false">
+                        <elementDefinition Id="24538f38-9c53-4a5a-a5cd-734173537545" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="54d39da4-0458-4271-8c4c-0c355fdc93d2" LastKnownName="void" />
+                        </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="6f665b67-5c3d-49e0-b555-b4d5fd0645cc" direction="Return" isUnique="false">
-                        <elementDefinition Id="24538f38-9c53-4a5a-a5cd-734173537545" />
+                      <parameter Id="4f788155-5b08-4ee1-be05-641677520ce7" name="Customer customer" direction="In" isUnique="false">
+                        <elementDefinition Id="ab0f05b9-5ee5-454e-8f7b-ae99df125195" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="0a14a08d-de9a-42da-b7ef-8efc44c27d5d" name="AddCustomer" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="a2490dda-71e6-445e-864b-d49e82595dd5" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="0bc14717-3aa0-4750-a017-459db8960b25" name="Customer customer" direction="In" isUnique="false">
+                        <elementDefinition Id="daf5de31-8392-47f0-83fe-4a4624eab8eb" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="cb76c3b3-3c8b-4431-906a-fe4858ff15cf" direction="Return" isUnique="false">
+                        <elementDefinition Id="80a6b269-40c8-4000-a07e-982a3a216d48" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="54d39da4-0458-4271-8c4c-0c355fdc93d2" LastKnownName="void" />
                         </type_NamedElement>

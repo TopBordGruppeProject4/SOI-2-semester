@@ -564,10 +564,41 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="1b0d4bfb-b8b2-4ea8-9eeb-217115941448"
-                  name="Order orderToRemove"
+                  Id="fd2cf573-ac77-4858-a6dd-8ccc3b9c01f8"
+                  name="Order order"
                   direction="In"
                   isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6a280988-58e0-4793-b915-ff29d315879d"
+            name="AddSavedOrder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a973c641-0e66-4602-8214-57a95675fc6b"
+                  name="SavedOrder savedOrder"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="56bdc215-cbd2-4d50-aae4-ac20df00289f"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f8929733-e377-4fe8-92e7-1ea63b1ac1bc"
+                      LastKnownName="void"
+                      LastKnownLocation="Package1_1039.uml" />
+                  </type_NamedElement>
+                </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -723,8 +754,8 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="aeab98b4-7488-45ef-91c4-c8f3b45c049d"
-                  name="Worker workerToAdd"
+                  Id="b5f53d32-5496-4c44-bd7b-bd1b433d6808"
+                  name="Worker worker"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -807,13 +838,6 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="81597fa5-f351-4ff0-9355-5cc443e13694"
-                  name="Worker workerToRemove"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
                   Id="4a54f9b3-3bf8-4dfb-b7ac-1d371cd18f17"
                   direction="Return"
                   isUnique="false">
@@ -824,6 +848,13 @@
                       LastKnownLocation="Package1_1039.uml" />
                   </type_NamedElement>
                 </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e429bffd-29e1-4c17-a296-1acac85d949f"
+                  name="Worker worker"
+                  direction="In"
+                  isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -1279,14 +1310,45 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="c7957dac-436a-4830-908a-f94a4825b182"
-                  name="RawMaterial rawmaterialToRemove"
+                  Id="2858c265-90cd-4fba-bc3b-35faedcdd63a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f8929733-e377-4fe8-92e7-1ea63b1ac1bc"
+                      LastKnownName="void"
+                      LastKnownLocation="Package1_1039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5d1c7199-9bdc-43fc-b9fb-85dc95b2ac11"
+                  name="RawMaterial rawmaterial"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="037fbc94-4e6a-41cc-ba2a-da1691e6af3d"
+            name="AddRawMaterial"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="79d759cc-86cc-499b-a621-01e563b176c9"
+                  name="RawMaterial rawMaterial"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="2858c265-90cd-4fba-bc3b-35faedcdd63a"
+                  Id="24d22764-7703-4bff-af25-a26e124ad67b"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>
@@ -1497,14 +1559,45 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="0edf378b-7b9a-4987-b840-b869fa7793b3"
-                  name="Product productToRemove"
+                  Id="452a9ce8-0d37-40fd-a9bc-4ad306805fcf"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f8929733-e377-4fe8-92e7-1ea63b1ac1bc"
+                      LastKnownName="void"
+                      LastKnownLocation="Package1_1039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d899f857-0254-4544-b40b-140028f07c87"
+                  name="Product product"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c282c08e-5f4b-4978-b05c-d4237595657a"
+            name="AddProduct"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="709d6e2c-ef76-4d3f-b561-0dce7b6288f4"
+                  name="Product product"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="452a9ce8-0d37-40fd-a9bc-4ad306805fcf"
+                  Id="a0bdad5d-f91a-4301-a0e7-d4f1038c832a"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>
@@ -1764,14 +1857,45 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="19f19321-c716-4edc-a619-1b497ae020a5"
-                  name="Customer customerToRemove"
+                  Id="24538f38-9c53-4a5a-a5cd-734173537545"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f8929733-e377-4fe8-92e7-1ea63b1ac1bc"
+                      LastKnownName="void"
+                      LastKnownLocation="Package1_1039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ab0f05b9-5ee5-454e-8f7b-ae99df125195"
+                  name="Customer customer"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a2490dda-71e6-445e-864b-d49e82595dd5"
+            name="AddCustomer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="daf5de31-8392-47f0-83fe-4a4624eab8eb"
+                  name="Customer customer"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="24538f38-9c53-4a5a-a5cd-734173537545"
+                  Id="80a6b269-40c8-4000-a07e-982a3a216d48"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>
