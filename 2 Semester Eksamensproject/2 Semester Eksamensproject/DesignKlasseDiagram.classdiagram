@@ -1199,6 +1199,22 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="78e0df2e-46c8-4da3-85bd-aee54618bcbb" />
                 </association>
+                <association Id="1fbed530-193e-4626-869a-450e9a8ee45c" isDerived="false" sourceEndRoleName="SavedOrder" targetEndRoleName="Worker" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="ddbb5fa1-6943-4b0b-9849-41a99e127e00" LastKnownName="Worker" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="51344e8d-f286-44d4-897e-a3cef00c1f0c" name="SavedOrder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="54c3106e-a983-43ec-bc4d-5411c700cd6b" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="b1b1aa8e-76c6-473a-a37f-0cbc64ead294" name="Worker" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="f2555de6-bbcb-4972-9183-3d5de7f566be" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="4797cc3f-ba74-4298-8198-153f95af2555" />
+                </association>
               </targetEnds>
               <ownedAttributesInternal>
                 <property Id="d9f7271c-4bdc-46ea-bf80-00863012d370" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -1572,17 +1588,35 @@
           <packageHasNamedElement>
             <class Id="e3db8e0c-fafe-43a9-8c06-9f90737b8942" name="Product" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="8882d065-7912-4671-a68f-1190f37aafdc" />
-              <generalsInternal>
-                <generalization Id="a95ad6c1-b6eb-46bb-a2e7-192f6a6c18e3" isSubstitutable="false">
-                  <classMoniker Id="207dc6a4-d68d-4444-89c6-908004f03b3d" LastKnownName="RawMaterial" />
-                  <elementDefinition Id="70c29b1b-6cbe-497e-916c-50ceb48290ae" />
-                </generalization>
-              </generalsInternal>
               <ownedAttributesInternal>
                 <property Id="bafcc104-7053-4cfd-92f4-b8d9699469a3" name="Price" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="666cb30e-0988-43b9-9e2b-2ad6345cdf83" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="30c7ed1e-39ec-4b13-9233-26644c7adf7a" LastKnownName="Double" />
+                  </type_NamedElement>
+                </property>
+                <property Id="ff454ffb-a761-4843-83a0-40ac6978fee0" name="Amount" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5ed4684d-1b74-4d91-9ec4-a642d82b8d5d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b313d075-2328-4a90-ba7c-c2f476014da6" LastKnownName="int" />
+                  </type_NamedElement>
+                </property>
+                <property Id="8325dfe6-0f53-4518-bf3b-4f54f8b1ed49" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="016ce5ee-d4a6-4570-8f57-079d4772e686" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3020ecaa-4138-46b3-8be0-927819f6556e" LastKnownName="string" />
+                  </type_NamedElement>
+                </property>
+                <property Id="ce6ff220-2873-4e94-a6e8-3c5e0ff5ddef" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6a31ffba-c5e0-4148-ab6e-9d1867d18d0b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b313d075-2328-4a90-ba7c-c2f476014da6" LastKnownName="int" />
+                  </type_NamedElement>
+                </property>
+                <property Id="5df5d616-0cd6-42d6-b9c8-56a6423ffaa0" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a153a628-40ca-4ef1-be40-0bd22844dddd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3020ecaa-4138-46b3-8be0-927819f6556e" LastKnownName="string" />
                   </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
@@ -2352,6 +2386,16 @@
     <packageHasNamedElement>
       <referencedType Id="6362ba5e-4b40-4172-9a26-fbe77b4cec29" name="ICommand" isAbstract="false" isLeaf="false" cachedFullName="ICommand">
         <elementDefinition Id="4f487114-0cbb-40dc-a2f3-70e14fda94f9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b313d075-2328-4a90-ba7c-c2f476014da6" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="f7365da6-45de-4b39-9073-fe846bdf82cc" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3020ecaa-4138-46b3-8be0-927819f6556e" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="06cb5ed0-dd67-40b2-bf46-0875a397bb45" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

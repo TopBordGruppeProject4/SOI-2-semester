@@ -222,6 +222,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="4797cc3f-ba74-4298-8198-153f95af2555"
+            isDerived="false"
+            sourceEndRoleName="SavedOrder"
+            targetEndRoleName="Worker"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2d6820a3-db23-49cf-b997-2afd85652172"
+              LastKnownName="Worker"
+              LastKnownLocation="Package1_1039.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="54c3106e-a983-43ec-bc4d-5411c700cd6b"
+                  name="SavedOrder"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f2555de6-bbcb-4972-9183-3d5de7f566be"
+                  name="Worker"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -958,16 +997,6 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <generalsInternal>
-          <generalization
-            Id="70c29b1b-6cbe-497e-916c-50ceb48290ae"
-            isSubstitutable="false">
-            <classMoniker
-              Id="642b194c-1c8c-4c24-a4a0-a23032055b95"
-              LastKnownName="RawMaterial"
-              LastKnownLocation="Package1_1039.uml" />
-          </generalization>
-        </generalsInternal>
         <ownedAttributesInternal>
           <property
             Id="666cb30e-0988-43b9-9e2b-2ad6345cdf83"
@@ -984,6 +1013,78 @@
               <undefinedTypeMoniker
                 Id="c62f31d7-d708-45ac-bd17-8942a4e78526"
                 LastKnownName="Double"
+                LastKnownLocation="Package1_1039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5ed4684d-1b74-4d91-9ec4-a642d82b8d5d"
+            name="Amount"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="f7365da6-45de-4b39-9073-fe846bdf82cc"
+                LastKnownName="int"
+                LastKnownLocation="Package1_1039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="016ce5ee-d4a6-4570-8f57-079d4772e686"
+            name="Description"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="06cb5ed0-dd67-40b2-bf46-0875a397bb45"
+                LastKnownName="string"
+                LastKnownLocation="Package1_1039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6a31ffba-c5e0-4148-ab6e-9d1867d18d0b"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="f7365da6-45de-4b39-9073-fe846bdf82cc"
+                LastKnownName="int"
+                LastKnownLocation="Package1_1039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a153a628-40ca-4ef1-be40-0bd22844dddd"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="06cb5ed0-dd67-40b2-bf46-0875a397bb45"
+                LastKnownName="string"
                 LastKnownLocation="Package1_1039.uml" />
             </type_NamedElement>
           </property>
