@@ -1,14 +1,24 @@
 ﻿<Page
-    x:Class="SHI.View.AdminMainMenu"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:SHI.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModel="using:SHI.ViewModel"
+    x:Class="SHI.View.AdminMainMenu"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button Content="AdminMainMenu" HorizontalAlignment="Left" Height="107" Margin="214,104,0,0" VerticalAlignment="Top" Width="277"/>
+    <Page.DataContext>
+        <ViewModel:MainViewModel/>
+    </Page.DataContext>
 
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button Content="Log Ud" HorizontalAlignment="Left" Height="57" Margin="876,7,0,0" VerticalAlignment="Top" Width="263" Command="{Binding LogOutCommand}"/>
+        <TextBlock HorizontalAlignment="Left" Height="51" Margin="1172,10,0,0" TextWrapping="Wrap" Text="{Binding CurrentWorker.Name}" VerticalAlignment="Top" Width="189"/>
+        <Button Content="Opret Ordre" Height="72" Margin="575,373,0,326" Width="257" Command="{Binding NavigateToCreateOrderPageCommand, Mode=OneWay}"/>
+        <Button Content="Se Ordre" Height="72" Margin="575,262.214,0,436.786" Width="257" Command="{Binding NavigateToOrderCatalogPageCommand, Mode=OneWay}"/>
+        <Button Content="Lager" Height="72" Margin="575,485,0,214" Width="257" Command="{Binding NavigateToStoragePageCommand, Mode=OneWay}"/>
+        <Button Content="Admin Menu" Height="72" Margin="575,595,0,104" Width="257" Command="{Binding NavigateToAdminMenuCommand, Mode=OneWay}"/>
+        <Button Content="Min Ordre" HorizontalAlignment="Left" Height="72" Margin="1164,373,0,0" VerticalAlignment="Top" Width="200" Command="{Binding NavigateToOrderInformationPageCommand}"/>
     </Grid>
 </Page>

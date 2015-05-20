@@ -364,6 +364,16 @@ namespace SHI.ViewModel
 
         }
 
+        public ICommand NavigateToOrderInformationPageCommand
+        {
+            get
+            {
+                return _navigateToOrderInformationPageCommand ??
+                       new RelayCommand(() => _navigationService.Navigate(typeof (OrderInformationPage)));
+            }
+            set { _navigateToOrderInformationPageCommand = value; }
+        }
+
 
         private NavigationService _navigationService;
         private ICommand _navigateBackCommand;
@@ -376,6 +386,7 @@ namespace SHI.ViewModel
         private ICommand _navigateToWorkerMainMenuCommand;
         private ICommand _navigateToStoragePageCommand;
         private ICommand _navigateToUserCreatePageCommand;
+        private ICommand _navigateToOrderInformationPageCommand;
         
 
         #endregion
@@ -592,6 +603,7 @@ namespace SHI.ViewModel
 
         private ICommand _loginWorkerCommand;
         private ICommand _logOutCommand;
+        
 
         public ICommand LoginWorkerCommand
         {

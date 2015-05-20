@@ -31,7 +31,8 @@ namespace SHI.Model
 
         public override string ToString()
         {
-            return string.Format("Address: {0}, Id: {1}, Name: {2}, Tlf: {3}, Admin: {4}, Username: {5}, Password: {6}", Address, Id, Name, Tlf, Admin, Username, Password);
+            //return string.Format("Address: {0}, Id: {1}, Name: {2}, Tlf: {3}, Admin: {4}, Username: {5}, Password: {6}", Address, Id, Name, Tlf, Admin, Username, Password);
+            return Name;
         }
     }
 }
