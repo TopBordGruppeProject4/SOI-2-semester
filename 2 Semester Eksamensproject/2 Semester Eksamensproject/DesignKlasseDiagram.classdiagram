@@ -624,6 +624,12 @@
                     <referencedTypeMoniker Id="bffb6a03-2e89-4762-a96c-64f3942e9669" LastKnownName="Customer" />
                   </type_NamedElement>
                 </property>
+                <property Id="2531d2a4-d6c0-4190-bc71-a600881dc359" name="NavigateBackCommand" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="03d053a9-aeda-436a-a7ec-8452f9b0e6b1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="14198bad-16eb-4c0c-870a-07b2b44d5c94" LastKnownName="ICommand" />
+                  </type_NamedElement>
+                </property>
               </ownedAttributesInternal>
             </class>
           </packageHasNamedElement>

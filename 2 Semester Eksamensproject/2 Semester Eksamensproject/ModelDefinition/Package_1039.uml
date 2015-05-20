@@ -1107,6 +1107,24 @@
                 LastKnownLocation="Package_1039.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="03d053a9-aeda-436a-a7ec-8452f9b0e6b1"
+            name="NavigateBackCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="4f487114-0cbb-40dc-a2f3-70e14fda94f9"
+                LastKnownName="ICommand"
+                LastKnownLocation="Package_1039.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>

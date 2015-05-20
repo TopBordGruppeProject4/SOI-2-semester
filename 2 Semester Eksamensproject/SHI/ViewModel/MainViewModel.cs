@@ -5,8 +5,11 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Windows.Storage.FileProperties;
 using SHI.Annotations;
+using SHI.View;
+using _2.Iteration.ViewModel;
 
 namespace SHI.ViewModel
 {
@@ -35,6 +38,7 @@ namespace SHI.ViewModel
         private string _workerTlf;
         private string _workerPassword;
         private string _workerUsername;
+        
 
         public string CustomerAddress
         {
@@ -248,7 +252,122 @@ namespace SHI.ViewModel
 
         #endregion
 
+        #region Navigation
 
+        public ICommand NavigateToWorkerMainMenuCommand
+        {
+            get
+            {
+                return _navigateToWorkerMainMenuCommand ??
+                       new RelayCommand(() => _navigationService.Navigate(typeof (WorkerMainMenu)));
+            }
+
+        }
+
+        public ICommand NavigateBackCommand
+        {
+            get { return _navigateBackCommand ?? new RelayCommand(() => _navigationService.GoBack()); }
+
+        }
+
+        public ICommand NavigateToAdminMainMenuCommand
+        {
+            get
+            {
+                return _navigateToAdminMainMenuCommand ??
+                       new RelayCommand(() => _navigationService.Navigate(typeof (AdminMainMenu)));
+            }
+
+        }
+
+        public ICommand NavigateToAdminMenuCommand
+        {
+            get
+            {
+                return _navigateToAdminMenuCommand ??
+                       new RelayCommand(() => _navigationService.Navigate(typeof (AdminMenu)));
+            }
+
+        }
+
+        public ICommand NavigateToAdminStoragePageCommand
+        {
+            get
+            {
+                return _navigateToAdminStoragePageCommand ??
+                       new RelayCommand(() => _navigationService.Navigate(typeof (AdminStoragePage)));
+            }
+
+        }
+
+        public ICommand NavigateToCreateOrderPageCommand
+        {
+            get
+            {
+                return _navigateToCreateOrderPageCommand ??
+                       new RelayCommand(() => _navigationService.Navigate(typeof (CreateOrderPage)));
+            }
+
+        }
+
+        public ICommand NavigateToLoginCommand
+        {
+            get
+            {
+                return _navigateToLoginCommand ?? new RelayCommand(() => _navigationService.Navigate(typeof (Login)));
+            }
+
+        }
+
+        public ICommand NavigateToOrderCatalogPageCommand
+        {
+            get
+            {
+                return _navigateToOrderCatalogPageCommand ??
+                       new RelayCommand(() => _navigationService.Navigate(typeof (OrderCatalogPage)));
+            }
+
+        }
+
+        public ICommand NavigateToStoragePageCommand
+        {
+            get
+            {
+                return _navigateToStoragePageCommand ??
+                       new RelayCommand(() => _navigationService.Navigate(typeof (StoragePage)));
+            }
+
+        }
+
+        public ICommand NavigateToUserCreatePageCommand
+        {
+            get
+            {
+                return _navigateToUserCreatePageCommand ??
+                       new RelayCommand(() => _navigationService.Navigate(typeof (UserCreatePage)));
+            }
+
+        }
+
+
+        private NavigationService _navigationService;
+        private ICommand _navigateBackCommand;
+        private ICommand _navigateToAdminMainMenuCommand;
+        private ICommand _navigateToAdminMenuCommand;
+        private ICommand _navigateToAdminStoragePageCommand;
+        private ICommand _navigateToCreateOrderPageCommand;
+        private ICommand _navigateToLoginCommand;
+        private ICommand _navigateToOrderCatalogPageCommand;
+        private ICommand _navigateToWorkerMainMenuCommand;
+        private ICommand _navigateToStoragePageCommand;
+        private ICommand _navigateToUserCreatePageCommand;
+
+        #endregion
+
+        public MainViewModel()
+        {
+            _navigationService = new NavigationService();
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
