@@ -130,7 +130,7 @@ namespace SHI.ViewModel
                     MainViewModel.WorkerCatalogSingleton.GetWorker(MainViewModel.LoginWorkerUsername);
                 if (MainViewModel.CurrentWorker.Admin)
                 {
-                    MainViewModel.NavigateToAdminMenuCommand.Execute(true);
+                    MainViewModel.NavigateToAdminMainMenuCommand.Execute(true);
                 }
                 else
                 {

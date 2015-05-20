@@ -12,5 +12,7 @@
         <ViewModel:MainViewModel/>
     </Page.DataContext>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"/>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button Content="Worker" HorizontalAlignment="Left" Height="66" Margin="201,109,0,0" VerticalAlignment="Top" Width="183"/>
+    </Grid>
 </Page>
