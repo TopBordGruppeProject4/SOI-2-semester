@@ -39,7 +39,20 @@ namespace SHI.ViewModel
         private string _workerTlf;
         private string _workerPassword;
         private string _workerUsername;
-        
+        private string _loginWorkerUsername;
+        private string _loginWorkerPassword;
+
+        public string LoginWorkerUsername
+        {
+            get { return _loginWorkerUsername; }
+            set { _loginWorkerUsername = value;OnPropertyChanged(); }
+        }
+
+        public string LoginWorkerPassword
+        {
+            get { return _loginWorkerPassword; }
+            set { _loginWorkerPassword = value;OnPropertyChanged(); }
+        }
 
         public string CustomerAddress
         {
@@ -362,6 +375,7 @@ namespace SHI.ViewModel
         private ICommand _navigateToWorkerMainMenuCommand;
         private ICommand _navigateToStoragePageCommand;
         private ICommand _navigateToUserCreatePageCommand;
+        
 
         #endregion
 
@@ -389,9 +403,11 @@ namespace SHI.ViewModel
 
         public CommandHandler CommandHandler { get; set; }
 
+        public static Worker CurrentWorker { get; set; }
+
         public MainViewModel()
         {
-            CommandHandler = new CommandHandler();
+            CommandHandler = new CommandHandler(this);
             _navigationService = new NavigationService();
 
             SavedOrderCatalogSingleton = SavedOrderCatalogSingleton.Instance;

@@ -672,6 +672,12 @@
                     <referencedTypeMoniker Id="07fb5d16-a6ac-4d8a-96a4-a046d8c8aa63" LastKnownName="NavigationService" />
                   </type_NamedElement>
                 </property>
+                <property Id="ec67f45c-0772-4f3b-a923-3a6397a900e6" name="CurrentWorker" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d316d9a9-986b-434c-b832-38deee4b1803" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ee2edb1b-830e-405c-8b3a-6cc2982cb006" LastKnownName="Worker" />
+                  </type_NamedElement>
+                </property>
               </ownedAttributesInternal>
             </class>
           </packageHasNamedElement>
@@ -981,16 +987,6 @@
                         <type_NamedElement>
                           <referencedTypeMoniker Id="a0b319b5-c733-4018-a9a2-9b8fbb409889" LastKnownName="void" />
                         </type_NamedElement>
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="00da4095-6f65-40bf-99a1-87357a83b2a6" name="string username" direction="In" isUnique="false">
-                        <elementDefinition Id="081480ba-f81c-4646-9cea-cbae657ba518" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="dac53a6c-9165-4a07-8a80-d494683b708d" name="string password" direction="In" isUnique="false">
-                        <elementDefinition Id="10972462-7b6e-41b0-93ab-9aa65651df09" />
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
