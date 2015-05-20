@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="acff90d3-7043-4078-b4a3-fb50a51e4f80"
   name="ViewModel" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -1125,6 +1125,133 @@
                 LastKnownLocation="Package_1039.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="34d0f801-1a21-408d-8155-7bf296604617"
+            name="CommandHandler"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="c160d5e0-68bb-4e10-b62e-efe78dec4ba6"
+                LastKnownName="CommandHandler"
+                LastKnownLocation="Package_1039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b6a9dd5d-7277-4b99-b4a8-509e4144d800"
+            name="CustomerCatalogSingleton"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="4cf7b45d-eded-42ec-83d3-860574f72037"
+                LastKnownName="CustomerCatalogSingleton"
+                LastKnownLocation="Package_1039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="57f49b30-ff96-4601-8db8-fd8a0e660481"
+            name="WorkerCatalogSingleton"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="30e8f8d3-36b6-4892-8051-102f813aa383"
+                LastKnownName="WorkerCatalogSingleton"
+                LastKnownLocation="Package_1039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="30e1de35-5ba2-4ae2-805c-203f1f2072f9"
+            name="SavedOrderCatalogSingleton"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="670088dd-18ec-45df-84ba-2e03d3ec4df4"
+                LastKnownName="SavedOrderCatalogSingleton"
+                LastKnownLocation="Package_1039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9ee108f9-d6a0-4f08-af96-036c0c9b607c"
+            name="ProductCatalogSingleton"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="145eefdc-1d0d-4d7e-831b-465832618411"
+                LastKnownName="ProductCatalogSingleton"
+                LastKnownLocation="Package_1039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ab3d6778-6504-401d-a2a3-003502b074f8"
+            name="RawMaterialCatalogSingleton"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="f6dd3016-3855-4911-ae21-63031be0d668"
+                LastKnownName="RawMaterialCatalogSingleton"
+                LastKnownLocation="Package_1039.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a282862c-f9aa-4569-b1dd-775919503cfa"
+            name="_navigationService"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="ff35e1a0-5c00-4c4c-a4e4-397688a775aa"
+                LastKnownName="NavigationService"
+                LastKnownLocation="Package_1039.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
@@ -2089,6 +2216,31 @@
       <undefinedType
         Id="0df024e2-11cc-4671-8bc8-ff3c0faea933"
         name="SavedOrder" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="4cf7b45d-eded-42ec-83d3-860574f72037"
+        name="CustomerCatalogSingleton" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="30e8f8d3-36b6-4892-8051-102f813aa383"
+        name="WorkerCatalogSingleton" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="670088dd-18ec-45df-84ba-2e03d3ec4df4"
+        name="SavedOrderCatalogSingleton" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="145eefdc-1d0d-4d7e-831b-465832618411"
+        name="ProductCatalogSingleton" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="f6dd3016-3855-4911-ae21-63031be0d668"
+        name="RawMaterialCatalogSingleton" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

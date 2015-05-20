@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.Storage.FileProperties;
 using SHI.Annotations;
+using SHI.Model;
 using SHI.View;
 using _2.Iteration.ViewModel;
 
@@ -364,9 +365,54 @@ namespace SHI.ViewModel
 
         #endregion
 
+        #region Selected Properties
+
+        public static Customer SelectedCustomer { get; set; }
+
+        public static Worker SelectedWorker { get; set; }
+
+        public static Product SelectedProduct { get; set; }
+        public static RawMaterial SelectedRawMaterial { get; set; }
+        public static SavedOrder SelectedSavedOrder { get; set; }
+
+        #endregion
+
+        #region CatalogSingletons
+
+        public CustomerCatalogSingleton CustomerCatalogSingleton { get; set; }
+        public WorkerCatalogSingleton WorkerCatalogSingleton { get; set; }
+        public SavedOrderCatalogSingleton SavedOrderCatalogSingleton { get; set; }
+        public ProductCatalogSingleton ProductCatalogSingleton { get; set; }
+        public RawMaterialCatalogSingleton RawMaterialCatalogSingleton { get; set; }
+
+        #endregion
+
+        public CommandHandler CommandHandler { get; set; }
+
         public MainViewModel()
         {
+            CommandHandler = new CommandHandler();
             _navigationService = new NavigationService();
+
+            SavedOrderCatalogSingleton = SavedOrderCatalogSingleton.Instance;
+            SavedOrderCatalogSingleton.SavedOrders.Clear();
+            SavedOrderCatalogSingleton.LoadSavedOrdersAsync();
+
+            CustomerCatalogSingleton = CustomerCatalogSingleton.Instance;
+            CustomerCatalogSingleton.Customers.Clear();
+            CustomerCatalogSingleton.LoadCustomersAsync();
+
+            WorkerCatalogSingleton = WorkerCatalogSingleton.Instance;
+            WorkerCatalogSingleton.Workers.Clear();
+            WorkerCatalogSingleton.LoadWorkersAsync();
+
+            ProductCatalogSingleton = ProductCatalogSingleton.Instance;
+            ProductCatalogSingleton.Products.Clear();
+            ProductCatalogSingleton.LoadProductsAsync();
+
+            RawMaterialCatalogSingleton = RawMaterialCatalogSingleton.Instance;
+            RawMaterialCatalogSingleton.RawMaterials.Clear();
+            RawMaterialCatalogSingleton.LoadRawMaterialsAsync();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

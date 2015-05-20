@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="99585da8-a0ce-42ba-afc0-93744c08f1d5" name="DesignKlasseDiagram" linkedPackageId="5ff06043-052c-4668-8ee7-b0ead26506bc" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="99585da8-a0ce-42ba-afc0-93744c08f1d5" name="DesignKlasseDiagram" linkedPackageId="5ff06043-052c-4668-8ee7-b0ead26506bc" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="ebea207e-ddf9-4b01-a274-3db3a0f9e93c" name="View">
@@ -628,6 +628,48 @@
                   <elementDefinition Id="03d053a9-aeda-436a-a7ec-8452f9b0e6b1" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="14198bad-16eb-4c0c-870a-07b2b44d5c94" LastKnownName="ICommand" />
+                  </type_NamedElement>
+                </property>
+                <property Id="43d7605f-530b-49ab-98dc-4c0845d19392" name="CommandHandler" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="34d0f801-1a21-408d-8155-7bf296604617" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="23177611-f57f-4ca5-b38f-adbd7cec1f99" LastKnownName="CommandHandler" />
+                  </type_NamedElement>
+                </property>
+                <property Id="5c521af2-811c-4d7a-a03c-ef6c2d2ff0d8" name="CustomerCatalogSingleton" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b6a9dd5d-7277-4b99-b4a8-509e4144d800" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b2e9e6ce-7e89-4f7f-9131-127778625c7c" LastKnownName="CustomerCatalogSingleton" />
+                  </type_NamedElement>
+                </property>
+                <property Id="ab58970d-33ba-45de-98a2-aaaf079282dc" name="WorkerCatalogSingleton" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="57f49b30-ff96-4601-8db8-fd8a0e660481" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="53fedb5d-84fe-462f-8b4a-9dd1b1e09cec" LastKnownName="WorkerCatalogSingleton" />
+                  </type_NamedElement>
+                </property>
+                <property Id="eb3ec3a0-6a14-4328-b809-1a4f2ed7f23b" name="SavedOrderCatalogSingleton" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="30e1de35-5ba2-4ae2-805c-203f1f2072f9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6885981-6908-4a41-a65b-05707259a0a8" LastKnownName="SavedOrderCatalogSingleton" />
+                  </type_NamedElement>
+                </property>
+                <property Id="444136d8-125c-4b84-a047-2e8f178e9eec" name="ProductCatalogSingleton" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9ee108f9-d6a0-4f08-af96-036c0c9b607c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e7c92106-3273-47a3-8f0f-e353be6e769a" LastKnownName="ProductCatalogSingleton" />
+                  </type_NamedElement>
+                </property>
+                <property Id="d9bdf036-e8ed-4272-9e14-db9cb35fc29a" name="RawMaterialCatalogSingleton" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ab3d6778-6504-401d-a2a3-003502b074f8" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bb95bcfc-e8ca-465a-a04b-ae043fe6efce" LastKnownName="RawMaterialCatalogSingleton" />
+                  </type_NamedElement>
+                </property>
+                <property Id="bb8dbf02-140c-436f-9285-171ad14cc73a" name="_navigationService" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a282862c-f9aa-4569-b1dd-775919503cfa" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="07fb5d16-a6ac-4d8a-96a4-a046d8c8aa63" LastKnownName="NavigationService" />
                   </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
@@ -2474,6 +2516,41 @@
     <packageHasNamedElement>
       <referencedType Id="3020ecaa-4138-46b3-8be0-927819f6556e" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
         <elementDefinition Id="06cb5ed0-dd67-40b2-bf46-0875a397bb45" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="23177611-f57f-4ca5-b38f-adbd7cec1f99" name="CommandHandler" isAbstract="false" isLeaf="false" cachedFullName="2 Semester Eksamensproject::ViewModel::CommandHandler">
+        <elementDefinition Id="c160d5e0-68bb-4e10-b62e-efe78dec4ba6" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b2e9e6ce-7e89-4f7f-9131-127778625c7c" name="CustomerCatalogSingleton" isAbstract="false" isLeaf="false" cachedFullName="CustomerCatalogSingleton">
+        <elementDefinition Id="4cf7b45d-eded-42ec-83d3-860574f72037" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="53fedb5d-84fe-462f-8b4a-9dd1b1e09cec" name="WorkerCatalogSingleton" isAbstract="false" isLeaf="false" cachedFullName="WorkerCatalogSingleton">
+        <elementDefinition Id="30e8f8d3-36b6-4892-8051-102f813aa383" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f6885981-6908-4a41-a65b-05707259a0a8" name="SavedOrderCatalogSingleton" isAbstract="false" isLeaf="false" cachedFullName="SavedOrderCatalogSingleton">
+        <elementDefinition Id="670088dd-18ec-45df-84ba-2e03d3ec4df4" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e7c92106-3273-47a3-8f0f-e353be6e769a" name="ProductCatalogSingleton" isAbstract="false" isLeaf="false" cachedFullName="ProductCatalogSingleton">
+        <elementDefinition Id="145eefdc-1d0d-4d7e-831b-465832618411" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="bb95bcfc-e8ca-465a-a04b-ae043fe6efce" name="RawMaterialCatalogSingleton" isAbstract="false" isLeaf="false" cachedFullName="RawMaterialCatalogSingleton">
+        <elementDefinition Id="f6dd3016-3855-4911-ae21-63031be0d668" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="07fb5d16-a6ac-4d8a-96a4-a046d8c8aa63" name="NavigationService" isAbstract="false" isLeaf="false" cachedFullName="2 Semester Eksamensproject::ViewModel::NavigationService">
+        <elementDefinition Id="ff35e1a0-5c00-4c4c-a4e4-397688a775aa" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
