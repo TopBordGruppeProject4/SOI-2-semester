@@ -1,7 +1,7 @@
 ﻿<Page
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:SHI"
+    xmlns:local="using:SHI.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ViewModel="using:SHI.ViewModel"
@@ -12,5 +12,9 @@
         <ViewModel:MainViewModel/>
     </Page.DataContext>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"/>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox HorizontalAlignment="Left" Height="38" Margin="569,291,0,0" TextWrapping="Wrap" Text="{Binding LoginWorkerUsername, Mode=TwoWay}" VerticalAlignment="Top" Width="212" PlaceholderText="Username"/>
+        <TextBox HorizontalAlignment="Left" Height="38" Margin="569,358,0,0" TextWrapping="Wrap" Text="{Binding LoginWorkerPassword, Mode=TwoWay}" VerticalAlignment="Top" Width="212" PlaceholderText="Password"/>
+        <Button Content="Login" HorizontalAlignment="Left" Height="43" Margin="651,420,0,0" VerticalAlignment="Top" Width="133" Command="{Binding LoginWorkerCommand}"/>
+    </Grid>
 </Page>
