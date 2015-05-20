@@ -117,6 +117,7 @@
     <Compile Include="Model\SavedOrderCatalogSingleton.cs" />
     <Compile Include="Model\Worker.cs" />
     <Compile Include="Model\WorkerCatalogSingleton.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\Commandhandler.cs" />
     <Compile Include="ViewModel\DateTimeConverter.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
