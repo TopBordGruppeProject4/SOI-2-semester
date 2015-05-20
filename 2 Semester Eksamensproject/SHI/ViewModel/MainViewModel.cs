@@ -10,6 +10,7 @@ using Windows.Storage.FileProperties;
 using SHI.Annotations;
 using SHI.Model;
 using SHI.View;
+using _2.Iteration.Common;
 using _2.Iteration.ViewModel;
 
 namespace SHI.ViewModel
@@ -400,6 +401,216 @@ namespace SHI.ViewModel
         public RawMaterialCatalogSingleton RawMaterialCatalogSingleton { get; set; }
 
         #endregion
+
+        #region Add Commands
+
+        private ICommand _addCustomerCommand;
+        private ICommand _addWorkerCommand;
+        private ICommand _addProductCommand;
+        private ICommand _addRawMaterialCommand;
+        private ICommand _addSavedOrderCommand;
+        
+
+        public ICommand AddCustomerCommand
+        {
+            get
+            {
+                return _addCustomerCommand ??
+                       (_addCustomerCommand = new RelayCommand(CommandHandler.InvokeAddCustomerCommand));
+            }
+            set { _addCustomerCommand = value; }
+        }
+
+        public ICommand AddWorkerCommand
+        {
+            get
+            {
+                return _addWorkerCommand ?? (_addWorkerCommand = new RelayCommand(CommandHandler.InvokeAddWorkerCommand));
+            }
+            set { _addWorkerCommand = value; }
+        }
+
+        public ICommand AddProductCommand
+        {
+            get
+            {
+                return _addProductCommand ??
+                       (_addProductCommand = new RelayCommand(CommandHandler.InvokeAddProductCommand));
+            }
+            set { _addProductCommand = value; }
+        }
+
+        public ICommand AddRawMaterialCommand
+        {
+            get
+            {
+                return _addRawMaterialCommand ??
+                       (_addRawMaterialCommand = new RelayCommand(CommandHandler.InvokeAddRawMaterialCommand));
+            }
+            set { _addRawMaterialCommand = value; }
+        }
+
+        public ICommand AddSavedOrderCommand
+        {
+            get
+            {
+                return _addSavedOrderCommand ??
+                       (_addSavedOrderCommand = new RelayCommand(CommandHandler.InvokeAddSavedOrderCommand));
+            }
+            set { _addSavedOrderCommand = value; }
+        }
+
+        #endregion
+
+        #region Select Commands
+
+        private ICommand _selectCustomerCommand;
+        private ICommand _selectWorkerCommand;
+        private ICommand _selectProductCommand;
+        private ICommand _selectRawMaterialCommand;
+        private ICommand _selectSavedOrderCommand;
+        
+
+        public ICommand SelectCustomerCommand
+        {
+            get
+            {
+                return _selectCustomerCommand ??
+                       (_selectCustomerCommand =
+                           new RelayArgCommand<Customer>(cs => CommandHandler.SetSelectedCustomer(cs)));
+            }
+            set { _selectCustomerCommand = value; }
+        }
+
+        public ICommand SelectWorkerCommand
+        {
+            get
+            {
+                return _selectWorkerCommand ??
+                       (_selectWorkerCommand = new RelayArgCommand<Worker>(wr => CommandHandler.SetSelectedWorker(wr)));
+            }
+            set { _selectWorkerCommand = value; }
+        }
+
+        public ICommand SelectProductCommand
+        {
+            get
+            {
+                return _selectProductCommand ??
+                       (_selectProductCommand =
+                           new RelayArgCommand<Product>(pr => CommandHandler.SetSelectedProduct(pr)));
+            }
+            set { _selectProductCommand = value; }
+        }
+
+        public ICommand SelectRawMaterialCommand
+        {
+            get
+            {
+                return _selectRawMaterialCommand ??
+                       (_selectRawMaterialCommand =
+                           new RelayArgCommand<RawMaterial>(rm => CommandHandler.SetSelectedRawMaterial(rm)));
+            }
+            set { _selectRawMaterialCommand = value; }
+        }
+
+        public ICommand SelectSavedOrderCommand
+        {
+            get
+            {
+                return _selectSavedOrderCommand ??
+                       (_selectSavedOrderCommand =
+                           new RelayArgCommand<SavedOrder>(so => CommandHandler.SetSelectedSavedOrder(so)));
+            }
+            set { _selectSavedOrderCommand = value; }
+        }
+
+        #endregion
+
+        #region Remove Commands
+
+        private ICommand _removeCustomerCommand;
+        private ICommand _removeWorkerCommand;
+        private ICommand _removeProductCommand;
+        private ICommand _removeRawMaterialCommand;
+        private ICommand _removeSavedOrderCommand;
+        
+
+        public ICommand RemoveCustomerCommand
+        {
+            get
+            {
+                return _removeCustomerCommand ??
+                       (_removeCustomerCommand = new RelayCommand(CommandHandler.InvokeRemoveCustomerCommand));
+            }
+            set { _removeCustomerCommand = value; }
+        }
+
+        public ICommand RemoveWorkerCommand
+        {
+            get
+            {
+                return _removeWorkerCommand ??
+                       (_removeWorkerCommand = new RelayCommand(CommandHandler.InvokeRemoveWorkerCommand));
+            }
+            set { _removeWorkerCommand = value; }
+        }
+
+        public ICommand RemoveProductCommand
+        {
+            get
+            {
+                return _removeProductCommand ??
+                       (_removeProductCommand = new RelayCommand(CommandHandler.InvokeRemoveProductCommand));
+            }
+            set { _removeProductCommand = value; }
+        }
+
+        public ICommand RemoveRawMaterialCommand
+        {
+            get
+            {
+                return _removeRawMaterialCommand ??
+                       (_removeRawMaterialCommand = new RelayCommand(CommandHandler.InvokeRemoveRawMaterialCommand));
+            }
+            set { _removeRawMaterialCommand = value; }
+        }
+
+        public ICommand RemoveSavedOrderCommand
+        {
+            get
+            {
+                return _removeSavedOrderCommand ??
+                       (_removeSavedOrderCommand = new RelayCommand(CommandHandler.InvokeRemoveSavedOrderCommand));
+            }
+            set { _removeSavedOrderCommand = value; }
+        }
+
+        #endregion
+
+        #region Log Commands
+
+        private ICommand _loginWorkerCommand;
+        private ICommand _logOutCommand;
+
+        public ICommand LoginWorkerCommand
+        {
+            get
+            {
+                return _loginWorkerCommand ??
+                       (_loginWorkerCommand = new RelayCommand(CommandHandler.InvokeLoginWorkerCommand));
+            }
+            set { _loginWorkerCommand = value; }
+        }
+
+        public ICommand LogOutCommand
+        {
+            get { return _logOutCommand ?? (_logOutCommand = new RelayCommand(CommandHandler.InvokeLogOutCommand)); }
+            set { _logOutCommand = value; }
+        }
+
+        #endregion
+
 
         public CommandHandler CommandHandler { get; set; }
 
