@@ -36,6 +36,32 @@ namespace SHI.Model
             }
         }
 
+        
+
+        public void AddOrdersToList(ObservableCollection<SavedOrder> savedOrders, int id)
+        {
+            foreach (var savedOrder in SavedOrders)
+            {
+                if (savedOrder.WorkerId == id)
+                {
+                    savedOrders.Add(savedOrder);
+                }
+            }
+        }
+
+        public void AddOrdersToList(ObservableCollection<SavedOrder> savedOrders, int id1, int id2)
+        {
+            foreach (var savedOrder in SavedOrders)
+            {
+                if (savedOrder.WorkerId != id1 && savedOrder.WorkerId != id2)
+                {
+                    savedOrders.Add(savedOrder);
+                }
+            }
+        }
+
+        
+
         public void AddSavedOrder(SavedOrder savedOrderToAdd)
         {
             SavedOrders.Add(savedOrderToAdd);

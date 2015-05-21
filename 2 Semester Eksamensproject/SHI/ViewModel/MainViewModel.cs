@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -410,6 +411,7 @@ namespace SHI.ViewModel
         public SavedOrderCatalogSingleton SavedOrderCatalogSingleton { get; set; }
         public ProductCatalogSingleton ProductCatalogSingleton { get; set; }
         public RawMaterialCatalogSingleton RawMaterialCatalogSingleton { get; set; }
+        
 
         #endregion
 
@@ -545,7 +547,7 @@ namespace SHI.ViewModel
         private ICommand _removeProductCommand;
         private ICommand _removeRawMaterialCommand;
         private ICommand _removeSavedOrderCommand;
-        
+        private ICommand _finishOrderCommand;
 
         public ICommand RemoveCustomerCommand
         {
@@ -597,6 +599,16 @@ namespace SHI.ViewModel
             set { _removeSavedOrderCommand = value; }
         }
 
+        public ICommand FinishOrderCommand
+        {
+            get
+            {
+                return _finishOrderCommand ??
+                       (_finishOrderCommand = new RelayCommand(CommandHandler.InvokeFinishOrderCommand));
+            }
+            set { _finishOrderCommand = value; }
+        }
+
         #endregion
 
         #region Log Commands
@@ -629,6 +641,8 @@ namespace SHI.ViewModel
 
         private ICommand _changeProductCommand;
         private ICommand _changeRawMaterialCommand;
+        private ICommand _assignOrderCommand;
+        
 
         public ICommand ChangeProductCommand
         {
@@ -650,12 +664,29 @@ namespace SHI.ViewModel
             set { _changeRawMaterialCommand = value; }
         }
 
+        public ICommand AssignOrderCommand
+        {
+            get
+            {
+                return _assignOrderCommand ??
+                       (_assignOrderCommand = new RelayCommand(CommandHandler.InvokeAssignOrderCommand));
+            }
+            set { _assignOrderCommand = value; }
+        }
+
         #endregion
 
 
         public CommandHandler CommandHandler { get; set; }
 
         public static Worker CurrentWorker { get; set; }
+        
+         
+        public ObservableCollection<SavedOrder> CurrentWorkerOrders { get; set; }
+        public ObservableCollection<SavedOrder> NewOrders { get; set; }
+        public ObservableCollection<SavedOrder> OldOrders { get; set; }
+        public ObservableCollection<SavedOrder> TakenOrders { get; set; }
+        
 
         public MainViewModel()
         {
@@ -681,6 +712,48 @@ namespace SHI.ViewModel
             RawMaterialCatalogSingleton = RawMaterialCatalogSingleton.Instance;
             RawMaterialCatalogSingleton.RawMaterials.Clear();
             RawMaterialCatalogSingleton.LoadRawMaterialsAsync();
+
+            OldOrders = new ObservableCollection<SavedOrder>();
+            NewOrders = new ObservableCollection<SavedOrder>();
+            TakenOrders = new ObservableCollection<SavedOrder>();
+            CurrentWorkerOrders = new ObservableCollection<SavedOrder>();
+
+            if (OldOrders != null)
+            {
+                OldOrders.Clear();
+                SavedOrderCatalogSingleton.AddOrdersToList(OldOrders, 2003);
+                
+            }
+
+            if (NewOrders != null)
+            {
+                NewOrders.Clear();
+                SavedOrderCatalogSingleton.AddOrdersToList(NewOrders, 2);
+                
+            }
+
+            if (TakenOrders != null)
+            {
+                TakenOrders.Clear();
+                SavedOrderCatalogSingleton.AddOrdersToList(TakenOrders, 2, 2003);
+                
+            }
+
+            if (CurrentWorkerOrders != null)
+            {
+                CurrentWorkerOrders.Clear();
+                
+            }
+            if (CurrentWorker != null)
+            {
+                SavedOrderCatalogSingleton.AddOrdersToList(CurrentWorkerOrders, CurrentWorker.Id);
+            }
+
+            
+            
+            
+            
+            
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -24,6 +24,7 @@ namespace SHI.ViewModel
                 DateTimeConverter.DateTimeOffsetAndTimeSetToDateTime(MainViewModel.SavedOrderDeadlineDate,
                     MainViewModel.SavedORderDeadlineTime), MainViewModel.SavedOrderDescription, 1,
                 MainViewModel.SavedOrderPrice, 2, MainViewModel.SelectedCustomer.Id);
+            
         }
 
         public void InvokeAddCustomerCommand()
@@ -139,7 +140,25 @@ namespace SHI.ViewModel
             MainViewModel.RawMaterialCatalogSingleton.RemoveRawMaterial(MainViewModel.SelectedRawMaterial);
         }
 
+        
+
         #endregion
+
+        public void InvokeAssignOrderCommand()
+        {
+            MainViewModel.SavedOrderCatalogSingleton.AddSavedOrder(MainViewModel.SelectedSavedOrder.CreationDate, MainViewModel.SelectedSavedOrder.Deadline, MainViewModel.SelectedSavedOrder.Description, MainViewModel.SelectedSavedOrder.Id, MainViewModel.SelectedSavedOrder.Price, MainViewModel.CurrentWorker.Id, MainViewModel.SelectedSavedOrder.CustomerId);
+            MainViewModel.SavedOrderCatalogSingleton.RemoveSavedOrder(MainViewModel.SelectedSavedOrder);
+            MainViewModel.TakenOrders.Add(MainViewModel.SelectedSavedOrder);
+            MainViewModel.NewOrders.Remove(MainViewModel.SelectedSavedOrder);
+            
+        }
+
+        public void InvokeFinishOrderCommand()
+        {
+            MainViewModel.SavedOrderCatalogSingleton.AddSavedOrder(MainViewModel.SelectedSavedOrder.CreationDate, MainViewModel.SelectedSavedOrder.Deadline, MainViewModel.SelectedSavedOrder.Description, MainViewModel.SelectedSavedOrder.Id, MainViewModel.SelectedSavedOrder.Price, 2003, MainViewModel.SelectedSavedOrder.CustomerId);
+            MainViewModel.SavedOrderCatalogSingleton.RemoveSavedOrder(MainViewModel.SelectedSavedOrder);
+            MainViewModel.CurrentWorkerOrders.Remove(MainViewModel.SelectedSavedOrder);
+        }
 
         public void InvokeLogOutCommand()
         {

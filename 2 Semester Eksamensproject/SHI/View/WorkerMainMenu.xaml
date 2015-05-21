@@ -13,6 +13,11 @@
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button Content="Worker" HorizontalAlignment="Left" Height="66" Margin="201,109,0,0" VerticalAlignment="Top" Width="183"/>
+        <Button Content="Log Ud" HorizontalAlignment="Left" Height="57" Margin="876,7,0,0" VerticalAlignment="Top" Width="263" Command="{Binding LogOutCommand}"/>
+        <TextBlock HorizontalAlignment="Left" Height="51" Margin="1172,10,0,0" TextWrapping="Wrap" Text="{Binding CurrentWorker.Name}" VerticalAlignment="Top" Width="189"/>
+        <Button Content="Opret Ordre" Height="72" Margin="575,371.5,0,324.5" Width="257" Command="{Binding NavigateToCreateOrderPageCommand, Mode=OneWay}"/>
+        <Button Content="Se Ordre" Height="72" Margin="575,260.714,0,435.286" Width="257" Command="{Binding NavigateToOrderCatalogPageCommand, Mode=OneWay}"/>
+        <Button Content="Lager" Height="72" Margin="575,483.5,0,212.5" Width="257" Command="{Binding NavigateToStoragePageCommand, Mode=OneWay}"/>
+        <Button Content="Min Ordre" HorizontalAlignment="Left" Height="72" Margin="1164,373,0,0" VerticalAlignment="Top" Width="200" Command="{Binding NavigateToOrderInformationPageCommand}"/>
     </Grid>
 </Page>
