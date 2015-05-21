@@ -23,7 +23,7 @@ namespace SHI.ViewModel
             MainViewModel.SavedOrderCatalogSingleton.AddSavedOrder(DateTime.Now,
                 DateTimeConverter.DateTimeOffsetAndTimeSetToDateTime(MainViewModel.SavedOrderDeadlineDate,
                     MainViewModel.SavedORderDeadlineTime), MainViewModel.SavedOrderDescription, 1,
-                MainViewModel.SavedOrderPrice, 0, MainViewModel.SelectedCustomer.Id);
+                MainViewModel.SavedOrderPrice, 2, MainViewModel.SelectedCustomer.Id);
         }
 
         public void InvokeAddCustomerCommand()
@@ -34,13 +34,13 @@ namespace SHI.ViewModel
 
         public void InvokeAddProductCommand()
         {
-            MainViewModel.ProductCatalogSingleton.AddProduct(MainViewModel.ProductAmount,
-                MainViewModel.ProductDescription, 1, MainViewModel.ProductName, MainViewModel.ProductPrice);
+            MainViewModel.ProductCatalogSingleton.AddProduct(Convert.ToInt32(MainViewModel.ProductAmount),
+                MainViewModel.ProductDescription, 1, MainViewModel.ProductName, Convert.ToDouble(MainViewModel.ProductPrice));
         }
 
         public void InvokeAddRawMaterialCommand()
         {
-            MainViewModel.RawMaterialCatalogSingleton.AddRawMaterial(MainViewModel.RawMaterialAmount,
+            MainViewModel.RawMaterialCatalogSingleton.AddRawMaterial(Convert.ToInt32(MainViewModel.RawMaterialAmount),
                 MainViewModel.RawMaterialDescription, 1, MainViewModel.RawMaterialName);
         }
 
@@ -96,7 +96,11 @@ namespace SHI.ViewModel
 
         public void InvokeRemoveWorkerCommand()
         {
-            MainViewModel.WorkerCatalogSingleton.RemoveWorker(MainViewModel.SelectedWorker);
+            if (MainViewModel.CurrentWorker.Admin)
+            {
+                MainViewModel.WorkerCatalogSingleton.RemoveWorker(MainViewModel.SelectedWorker);
+            }
+            
         }
 
         public void InvokeRemoveProductCommand()
@@ -112,6 +116,27 @@ namespace SHI.ViewModel
         public void InvokeRemoveSavedOrderCommand()
         {
             MainViewModel.SavedOrderCatalogSingleton.RemoveSavedOrder(MainViewModel.SelectedSavedOrder);
+        }
+
+        #endregion
+
+        #region ChangeCommands
+
+
+        public void InvokeChangeProductCommand()
+        {
+            MainViewModel.ProductCatalogSingleton.AddProduct(Convert.ToInt32(MainViewModel.ProductAmount),
+                MainViewModel.SelectedProduct.Description, MainViewModel.SelectedProduct.Id,
+                MainViewModel.SelectedProduct.Name, MainViewModel.SelectedProduct.Price);
+            MainViewModel.ProductCatalogSingleton.RemoveProduct(MainViewModel.SelectedProduct);
+        }
+
+        public void InvokeChangeRawMaterialCommand()
+        {
+            MainViewModel.RawMaterialCatalogSingleton.AddRawMaterial(Convert.ToInt32(MainViewModel.ProductAmount),
+                MainViewModel.SelectedRawMaterial.Description, MainViewModel.SelectedRawMaterial.Id,
+                MainViewModel.SelectedRawMaterial.Name);
+            MainViewModel.RawMaterialCatalogSingleton.RemoveRawMaterial(MainViewModel.SelectedRawMaterial);
         }
 
         #endregion

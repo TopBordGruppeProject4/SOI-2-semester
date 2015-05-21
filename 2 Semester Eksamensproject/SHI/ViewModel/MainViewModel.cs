@@ -605,6 +605,7 @@ namespace SHI.ViewModel
         private ICommand _logOutCommand;
         
 
+
         public ICommand LoginWorkerCommand
         {
             get
@@ -619,6 +620,34 @@ namespace SHI.ViewModel
         {
             get { return _logOutCommand ?? (_logOutCommand = new RelayCommand(CommandHandler.InvokeLogOutCommand)); }
             set { _logOutCommand = value; }
+        }
+
+        #endregion
+
+        #region ChangeCommands
+
+
+        private ICommand _changeProductCommand;
+        private ICommand _changeRawMaterialCommand;
+
+        public ICommand ChangeProductCommand
+        {
+            get
+            {
+                return _changeProductCommand ??
+                       (_changeProductCommand = new RelayCommand(CommandHandler.InvokeChangeProductCommand));
+            }
+            set { _changeProductCommand = value; }
+        }
+
+        public ICommand ChangeRawMaterialCommand
+        {
+            get
+            {
+                return _changeRawMaterialCommand ??
+                       (_changeRawMaterialCommand = new RelayCommand(CommandHandler.InvokeChangeRawMaterialCommand));
+            }
+            set { _changeRawMaterialCommand = value; }
         }
 
         #endregion

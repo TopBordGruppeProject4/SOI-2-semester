@@ -18,25 +18,14 @@
         <Button Content="Tilbage" HorizontalAlignment="Left" Height="73" Margin="10,10,0,0" VerticalAlignment="Top" Width="201" Command="{Binding NavigateBackCommand, Mode=OneWay}"/>
         <Button Content="Log Ud" HorizontalAlignment="Left" Height="57" Margin="876,7,0,0" VerticalAlignment="Top" Width="263" Command="{Binding LogOutCommand}"/>
         <TextBlock HorizontalAlignment="Left" Height="51" Margin="1172,10,0,0" TextWrapping="Wrap" Text="{Binding CurrentWorker.Name}" VerticalAlignment="Top" Width="189"/>
-        <ListView x:Name="WorkerList" HorizontalAlignment="Left" Height="508" Margin="1105,103,0,0" VerticalAlignment="Top" Width="235" ItemsSource="{Binding WorkerCatalogSingleton.Instance.Workers, Mode=TwoWay}">
+        <ListView x:Name="WorkerList" HorizontalAlignment="Left" Height="508" Margin="497,134,0,0" VerticalAlignment="Top" Width="235" ItemsSource="{Binding WorkerCatalogSingleton.Instance.Workers, Mode=TwoWay}">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
                     <core:InvokeCommandAction Command="{Binding SelectWorkerCommand}" CommandParameter="{Binding SelectedItem, ElementName=WorkerList}"/>
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </ListView>
-        <Button Content="Slet Bruger" HorizontalAlignment="Left" Height="56" Margin="1140,648,0,0" VerticalAlignment="Top" Width="178" Command="{Binding RemoveWorkerCommand, Mode=TwoWay}"/>
-        <TextBlock HorizontalAlignment="Left" Height="41" Margin="655,173,0,0" TextWrapping="Wrap" Text="{Binding SelectedWorker.Name, Mode=TwoWay}" VerticalAlignment="Top" Width="144" FontSize="18"/>
-        <TextBlock HorizontalAlignment="Left" Height="41" Margin="832,173,0,0" TextWrapping="Wrap" Text="{Binding SelectedWorker.Tlf, Mode=TwoWay}" VerticalAlignment="Top" Width="170" FontSize="18"/>
-        <TextBlock HorizontalAlignment="Left" Height="41" Margin="655,93,0,0" TextWrapping="Wrap" Text="Bruger Informationer" VerticalAlignment="Top" Width="347" FontSize="24"/>
-        <TextBlock HorizontalAlignment="Left" Height="41" Margin="655,255,0,0" TextWrapping="Wrap" Text="{Binding SelectedWorker.Address, Mode=TwoWay}" VerticalAlignment="Top" Width="319" FontSize="18"/>
-        <TextBlock HorizontalAlignment="Left" Height="41" Margin="655,360,0,0" TextWrapping="Wrap" Text="{Binding SelectedWorker.Username, Mode=TwoWay}" VerticalAlignment="Top" Width="144" FontSize="18"/>
-        <TextBlock HorizontalAlignment="Left" Height="41" Margin="830,360,0,0" TextWrapping="Wrap" Text="{Binding SelectedWorker.Password, Mode=TwoWay}" VerticalAlignment="Top" Width="144" FontSize="18"/>
-        <TextBlock HorizontalAlignment="Left" Height="31" Margin="832,134,0,0" TextWrapping="Wrap" Text="Telefonnummer" VerticalAlignment="Top" Width="105"/>
-        <TextBlock HorizontalAlignment="Left" Height="31" Margin="655,134,0,0" TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top" Width="105"/>
-        <TextBlock HorizontalAlignment="Left" Height="31" Margin="655,219,0,0" TextWrapping="Wrap" Text="Adresse" VerticalAlignment="Top" Width="105"/>
-        <TextBlock HorizontalAlignment="Left" Height="31" Margin="655,324,0,0" TextWrapping="Wrap" Text="Brugernavn" VerticalAlignment="Top" Width="105"/>
-        <TextBlock HorizontalAlignment="Left" Height="31" Margin="830,324,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="105"/>
+        <Button Content="Slet Bruger" HorizontalAlignment="Left" Height="56" Margin="139,608,0,0" VerticalAlignment="Top" Width="178" Command="{Binding RemoveWorkerCommand, Mode=TwoWay}"/>
         <TextBlock HorizontalAlignment="Left" Height="41" Margin="142,93,0,0" TextWrapping="Wrap" Text="Opret Ny Bruger" VerticalAlignment="Top" Width="347" FontSize="24"/>
         <TextBlock HorizontalAlignment="Left" Height="31" Margin="142,134,0,0" TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top" Width="105"/>
         <TextBlock HorizontalAlignment="Left" Height="31" Margin="276,134,0,0" TextWrapping="Wrap" Text="Telefonnummer" VerticalAlignment="Top" Width="105"/>
@@ -50,5 +39,14 @@
         <TextBox HorizontalAlignment="Left" Height="0" Margin="294,355,0,0" TextWrapping="Wrap" Text="{Binding WorkerPassword, Mode=TwoWay}" VerticalAlignment="Top" Width="110"/>
         <CheckBox Content="Admin" HorizontalAlignment="Left" Height="36" Margin="139,438,0,0" VerticalAlignment="Top" Width="110" IsChecked="{Binding WorkerAdmin, Mode=TwoWay}"/>
         <Button Content="Opret Bruger" HorizontalAlignment="Left" Height="52" Margin="142,541,0,0" VerticalAlignment="Top" Width="147" Command="{Binding AddWorkerCommand, Mode=TwoWay}"/>
+        <ListView x:Name="CustomerList" HorizontalAlignment="Left" Height="456" Margin="914,134,0,0" VerticalAlignment="Top" Width="222" ItemsSource="{Binding CustomerCatalogSingleton.Instance.Customers, Mode=TwoWay}">
+            <interactivity:Interaction.Behaviors>
+                <core:EventTriggerBehavior EventName="SelectionChanged">
+                    <core:InvokeCommandAction Command="{Binding SelectCustomerCommand}" CommandParameter="{Binding SelectedItem, ElementName=CustomerList}"/>
+                </core:EventTriggerBehavior>
+            </interactivity:Interaction.Behaviors>
+        </ListView>
+        <TextBlock HorizontalAlignment="Left" Height="37" Margin="914,92,0,0" TextWrapping="Wrap" Text="Kunder" VerticalAlignment="Top" Width="138" FontSize="22"/>
+        <Button Content="Slet Kunde" HorizontalAlignment="Left" Height="48" Margin="911,631,0,0" VerticalAlignment="Top" Width="145" Command="{Binding RemoveCustomerCommand}"/>
     </Grid>
 </Page>
