@@ -36,6 +36,20 @@ namespace SHI.Model
             }
         }
 
+        public bool CheckCustomer(string name)
+        {
+            var check = true;
+            foreach (var customer in Customers)
+            {
+                if (customer.Name == name)
+                {
+                    check = false;
+                }
+            }
+
+            return check;
+        }
+
         public void AddCustomer(Customer customer)
         {
             Customers.Add(customer);

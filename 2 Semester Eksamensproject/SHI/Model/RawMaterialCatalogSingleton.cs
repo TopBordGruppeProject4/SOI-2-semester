@@ -36,6 +36,18 @@ namespace SHI.Model
             }
         }
 
+        public bool CheckRawMaterial(string name)
+        {
+            var check = true;
+            foreach (var rawMaterial in RawMaterials)
+            {
+                if (rawMaterial.Name == name)
+                {
+                    check = false;
+                }
+            }
+            return check;
+        }
         public void AddRawMaterial(RawMaterial rawMaterial)
         {
             RawMaterials.Add(rawMaterial);

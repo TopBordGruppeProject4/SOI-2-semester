@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Devices.SmartCards;
 using SHI.Model.Persistency;
 
 namespace SHI.Model
@@ -41,6 +42,18 @@ namespace SHI.Model
             return check;
         }
 
+        public bool CheckWorker(string username)
+        {
+            var check = true;
+            foreach (var worker in Workers)
+            {
+                if (worker.Username == username)
+                {
+                    check = false;
+                }
+            }
+            return check;
+        }
         public Worker GetWorker(string username)
         {
             var tempWorker = new Worker("0", 0, "0", "0", false, "0", "0");

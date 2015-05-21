@@ -29,27 +29,44 @@ namespace SHI.ViewModel
 
         public void InvokeAddCustomerCommand()
         {
-            MainViewModel.CustomerCatalogSingleton.AddCustomer(MainViewModel.CustomerAddress, 1,
+            if (MainViewModel.CustomerCatalogSingleton.CheckCustomer(MainViewModel.CustomerName))
+            {
+                MainViewModel.CustomerCatalogSingleton.AddCustomer(MainViewModel.CustomerAddress, 1,
                 MainViewModel.CustomerName, MainViewModel.CustomerTlf, MainViewModel.CustomerEmail);
+            }
+            
         }
 
         public void InvokeAddProductCommand()
         {
-            MainViewModel.ProductCatalogSingleton.AddProduct(Convert.ToInt32(MainViewModel.ProductAmount),
+            if (MainViewModel.ProductCatalogSingleton.CheckProduct(MainViewModel.ProductName))
+            {
+                MainViewModel.ProductCatalogSingleton.AddProduct(Convert.ToInt32(MainViewModel.ProductAmount),
                 MainViewModel.ProductDescription, 1, MainViewModel.ProductName, Convert.ToDouble(MainViewModel.ProductPrice));
+            }
+            
         }
 
         public void InvokeAddRawMaterialCommand()
         {
-            MainViewModel.RawMaterialCatalogSingleton.AddRawMaterial(Convert.ToInt32(MainViewModel.RawMaterialAmount),
+            if (MainViewModel.RawMaterialCatalogSingleton.CheckRawMaterial(MainViewModel.RawMaterialName))
+            {
+                MainViewModel.RawMaterialCatalogSingleton.AddRawMaterial(Convert.ToInt32(MainViewModel.RawMaterialAmount),
                 MainViewModel.RawMaterialDescription, 1, MainViewModel.RawMaterialName);
+            }
+            
         }
 
         public void InvokeAddWorkerCommand()
         {
-            MainViewModel.WorkerCatalogSingleton.AddWorker(MainViewModel.WorkerAdmin, MainViewModel.WorkerPassword,
+            if (MainViewModel.WorkerCatalogSingleton.CheckWorker(MainViewModel.WorkerUsername))
+            {
+                MainViewModel.WorkerCatalogSingleton.AddWorker(MainViewModel.WorkerAdmin, MainViewModel.WorkerPassword,
                 MainViewModel.WorkerUsername, MainViewModel.WorkerAddress, 1, MainViewModel.WorkerName,
                 MainViewModel.WorkerTlf);
+            }
+            
+            //Exception
         }
 
         #endregion

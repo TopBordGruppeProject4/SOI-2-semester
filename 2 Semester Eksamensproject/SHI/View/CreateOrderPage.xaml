@@ -42,7 +42,7 @@
         <TextBox HorizontalAlignment="Left" Height="33" Margin="140,501,0,0" TextWrapping="Wrap" Text="{Binding SavedOrderPrice, Mode=TwoWay}" VerticalAlignment="Top" Width="119"/>
         <TextBlock HorizontalAlignment="Left" Height="37" Margin="123,574,0,0" TextWrapping="Wrap" Text="Deadline" VerticalAlignment="Top" Width="133" FontSize="22"/>
         <DatePicker HorizontalAlignment="Left" Height="36" Margin="123,616,0,0" VerticalAlignment="Top" Width="289" Date="{Binding SavedOrderDeadlineDate, Mode=TwoWay}"/>
-        <TimePicker HorizontalAlignment="Left" Height="31" Margin="123,678,0,0" VerticalAlignment="Top" Width="287" Time="{Binding SavedORderDeadlineTime, Mode=TwoWay}"/>
+        <TimePicker HorizontalAlignment="Left" Height="31" Margin="123,671,0,0" VerticalAlignment="Top" Width="287" Time="{Binding SavedORderDeadlineTime, Mode=TwoWay}" ClockIdentifier="24HourClock" RenderTransformOrigin="0.666,0.121"/>
         <Button Content="Opret Ordre" HorizontalAlignment="Left" Height="43" Margin="487,629,0,0" VerticalAlignment="Top" Width="125" Command="{Binding AddSavedOrderCommand}"/>
     </Grid>
 </Page>

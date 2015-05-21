@@ -36,6 +36,18 @@ namespace SHI.Model
             }
         }
 
+        public bool CheckProduct(string name)
+        {
+            var check = true;
+            foreach (var product in Products)
+            {
+                if (product.Name == name)
+                {
+                    check = false;
+                }
+            }
+            return check;
+        }
         public void AddProduct(Product product)
         {
             Products.Add(product);
