@@ -15,16 +15,22 @@
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button Content="Tilbage" HorizontalAlignment="Left" Height="73" Margin="10,10,0,0" VerticalAlignment="Top" Width="201" Command="{Binding NavigateBackCommand, Mode=OneWay}"/>
-        <Button Content="Log Ud" HorizontalAlignment="Left" Height="57" Margin="876,7,0,0" VerticalAlignment="Top" Width="263" Command="{Binding LogOutCommand}"/>
-        <TextBlock HorizontalAlignment="Left" Height="51" Margin="1172,10,0,0" TextWrapping="Wrap" Text="{Binding CurrentWorker.Name}" VerticalAlignment="Top" Width="189"/>
-        <ListView x:Name="OrderList" HorizontalAlignment="Left" Height="361" Margin="569,175,0,0" VerticalAlignment="Top" Width="398" ItemsSource="{Binding CurrentWorkerOrders, Mode=TwoWay}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <AppBarButton Style="{StaticResource AppBackButtonStyle}" Icon="Back" Command="{Binding NavigateBackCommand, Mode=OneWay}" />
+        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Text="{Binding CurrentWorker.Name}" Grid.Row="0" />
+        <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Icon="Clear" Grid.Row="0" Command="{Binding LogOutCommand}"/>
+        
+        <ListView x:Name="OrderList" HorizontalAlignment="Left" Height="361" Margin="569,80.597,0,0" VerticalAlignment="Top" Width="398" ItemsSource="{Binding CurrentWorkerOrders, Mode=TwoWay}" Grid.Row="1">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
                     <core:InvokeCommandAction Command="{Binding SelectSavedOrderCommand}" CommandParameter="{Binding SelectedItem, ElementName=OrderList}"/>
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </ListView>
-        <Button Content="Afslut Ordre" HorizontalAlignment="Left" Height="47" Margin="569,578,0,0" VerticalAlignment="Top" Width="132" Command="{Binding FinishOrderCommand, Mode=TwoWay}"/>
+        <Button Content="Afslut Ordre" HorizontalAlignment="Left" Height="47" Margin="569,483.597,0,0" VerticalAlignment="Top" Width="132" Command="{Binding FinishOrderCommand, Mode=TwoWay}" Grid.Row="1"/>
     </Grid>
 </Page>

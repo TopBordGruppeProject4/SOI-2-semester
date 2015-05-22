@@ -13,8 +13,10 @@
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBox HorizontalAlignment="Left" Height="38" Margin="569,291,0,0" TextWrapping="Wrap" Text="{Binding LoginWorkerUsername, Mode=TwoWay}" VerticalAlignment="Top" Width="212" PlaceholderText="Username"/>
-        <TextBox HorizontalAlignment="Left" Height="38" Margin="569,358,0,0" TextWrapping="Wrap" Text="{Binding LoginWorkerPassword, Mode=TwoWay}" VerticalAlignment="Top" Width="212" PlaceholderText="Password"/>
-        <Button Content="Login" HorizontalAlignment="Left" Height="43" Margin="651,420,0,0" VerticalAlignment="Top" Width="133" Command="{Binding LoginWorkerCommand}"/>
+        <StackPanel Style="{StaticResource AppLoginStackpanelStyle}">
+            <TextBox Style="{StaticResource AppLoginTextBoxStyle}" Text="{Binding LoginWorkerUsername, Mode=TwoWay}" PlaceholderText="Username"/>
+            <TextBox Style="{StaticResource AppLoginTextBoxStyle}" Text="{Binding LoginWorkerPassword, Mode=TwoWay}" PlaceholderText="Password"/>
+            <Button Style="{StaticResource AppLoginButtonStyle}" Content="Login" Height="43" VerticalAlignment="Top" Width="133" Command="{Binding LoginWorkerCommand}"/>
+        </StackPanel>
     </Grid>
 </Page>

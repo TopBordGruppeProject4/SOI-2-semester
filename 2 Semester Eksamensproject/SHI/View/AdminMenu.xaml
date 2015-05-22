@@ -13,10 +13,16 @@
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button Content="Tilbage" HorizontalAlignment="Left" Height="73" Margin="10,10,0,0" VerticalAlignment="Top" Width="201" Command="{Binding NavigateBackCommand, Mode=OneWay}"/>
-        <Button Content="Bruger Administration" HorizontalAlignment="Left" Height="102" Margin="545,254,0,0" VerticalAlignment="Top" Width="305" Command="{Binding NavigateToUserCreatePageCommand, Mode=OneWay}"/>
-        <Button Content="Lager Administration" HorizontalAlignment="Left" Height="102" Margin="545,386,0,0" VerticalAlignment="Top" Width="305" Command="{Binding NavigateToAdminStoragePageCommand, Mode=OneWay}"/>
-        <Button Content="Log Ud" HorizontalAlignment="Left" Height="57" Margin="876,7,0,0" VerticalAlignment="Top" Width="263" Command="{Binding LogOutCommand}"/>
-        <TextBlock HorizontalAlignment="Left" Height="51" Margin="1172,10,0,0" TextWrapping="Wrap" Text="{Binding CurrentWorker.Name}" VerticalAlignment="Top" Width="189"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <AppBarButton Style="{StaticResource AppBackButtonStyle}" Icon="Back" Command="{Binding NavigateBackCommand, Mode=OneWay}"/>
+        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0" Text="{Binding CurrentWorker.Name}" />
+        <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Grid.Row="0" Icon="Clear" Command="{Binding LogOutCommand}" />
+        
+        <Button Content="Bruger Administration" HorizontalAlignment="Left" Height="102" Margin="545,150.642,0,0" VerticalAlignment="Top" Width="305" Command="{Binding NavigateToUserCreatePageCommand, Mode=OneWay}" Grid.Row="1"/>
+        <Button Content="Lager Administration" HorizontalAlignment="Left" Height="102" Margin="545,282.642,0,0" VerticalAlignment="Top" Width="305" Command="{Binding NavigateToAdminStoragePageCommand, Mode=OneWay}" Grid.Row="1"/>
     </Grid>
 </Page>

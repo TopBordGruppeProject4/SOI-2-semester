@@ -13,12 +13,18 @@
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button Content="Log Ud" HorizontalAlignment="Left" Height="57" Margin="876,7,0,0" VerticalAlignment="Top" Width="263" Command="{Binding LogOutCommand}"/>
-        <TextBlock HorizontalAlignment="Left" Height="51" Margin="1172,10,0,0" TextWrapping="Wrap" Text="{Binding CurrentWorker.Name}" VerticalAlignment="Top" Width="189"/>
-        <Button Content="Opret Ordre" Height="72" Margin="575,373,0,326" Width="257" Command="{Binding NavigateToCreateOrderPageCommand, Mode=OneWay}"/>
-        <Button Content="Se Ordre" Height="72" Margin="575,262.214,0,436.786" Width="257" Command="{Binding NavigateToOrderCatalogPageCommand, Mode=OneWay}"/>
-        <Button Content="Lager" Height="72" Margin="575,485,0,214" Width="257" Command="{Binding NavigateToStoragePageCommand, Mode=OneWay}"/>
-        <Button Content="Admin Menu" Height="72" Margin="575,595,0,104" Width="257" Command="{Binding NavigateToAdminMenuCommand, Mode=OneWay}"/>
-        <Button Content="Min Ordre" HorizontalAlignment="Left" Height="72" Margin="1164,373,0,0" VerticalAlignment="Top" Width="200" Command="{Binding NavigateToOrderInformationPageCommand}"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Grid.Row="0" Icon="Clear" Command="{Binding LogOutCommand}"/>
+        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0" Text="{Binding CurrentWorker.Name}" />
+
+        <Button Content="Se Ordre" Height="72" Margin="575,159.507,0,435" Width="257" Command="{Binding NavigateToOrderCatalogPageCommand, Mode=OneWay}" Grid.Row="1"/>
+        <Button Content="Opret Ordre" Height="72" Margin="575,270.507,0,324" Width="257" Command="{Binding NavigateToCreateOrderPageCommand, Mode=OneWay}" Grid.Row="1"/>
+        <Button Content="Lager" Height="72" Margin="575,385,0,211" Width="257" Command="{Binding NavigateToStoragePageCommand, Mode=OneWay}" Grid.Row="1"/>
+        <Button Content="Admin Menu" Height="72" Margin="575,492.507,0,102" Width="257" Command="{Binding NavigateToAdminMenuCommand, Mode=OneWay}" Grid.Row="1"/>
+        <Button Content="Min Ordre" HorizontalAlignment="Left" Height="72" Margin="1164,271.507,0,0" VerticalAlignment="Top" Width="200" Command="{Binding NavigateToOrderInformationPageCommand}" Grid.Row="1"/>
     </Grid>
 </Page>
