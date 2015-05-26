@@ -25,14 +25,14 @@
         <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Grid.Row="0" Icon="Clear" Command="{Binding LogOutCommand}" />
         
         
-        <ListView x:Name="RawList" HorizontalAlignment="Left" Height="410" Margin="400,57.731,0,0" VerticalAlignment="Top" Width="242" ItemsSource="{Binding RawMaterialCatalogSingleton.Instance.RawMaterials}" Grid.Row="1">
+        <ListView x:Name="RawList" HorizontalAlignment="Left" Height="410" Margin="400,57.731,0,0" VerticalAlignment="Top" Width="242" ItemsSource="{Binding RawMaterialCatalogSingleton.Instance.RawMaterials}" ItemTemplate="{StaticResource RawMaterialTemplate}" Grid.Row="1">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
                     <core:InvokeCommandAction Command="{Binding SelectRawMaterialCommand}" CommandParameter="{Binding SelectedItem, ElementName=RawList}"/>
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </ListView>
-        <ListView x:Name="ProductList" HorizontalAlignment="Left" Height="410" Margin="698,57.731,0,0" VerticalAlignment="Top" Width="242" ItemsSource="{Binding ProductCatalogSingleton.Instance.Products}" Grid.Row="1">
+        <ListView x:Name="ProductList" HorizontalAlignment="Left" Height="410" Margin="698,57.731,0,0" VerticalAlignment="Top" Width="242" ItemsSource="{Binding ProductCatalogSingleton.Instance.Products}" ItemTemplate="{StaticResource ProductTemplate}" Grid.Row="1">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
                     <core:InvokeCommandAction Command="{Binding SelectProductCommand}" CommandParameter="{Binding SelectedItem, ElementName=ProductList}"/>

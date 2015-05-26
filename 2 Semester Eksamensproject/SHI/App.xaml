@@ -19,7 +19,7 @@
             <Setter Property="Margin" Value="5"/>
         </Style>
         <Style x:Name="AppTemplateTitleTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource AppTemplateTextBlockStyle}">
-            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontSize" Value="18"/>
             <Setter Property="FontWeight" Value="Bold" />
         </Style>
         
@@ -68,6 +68,33 @@
                     <LineBreak/>
                     <Run Text="Beskrivelse: "/>
                     <Run Text="{Binding Description}" />
+                </TextBlock>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Name="RawMaterialTemplate">
+            <StackPanel>
+                <TextBlock Style="{StaticResource AppTemplateTitleTextBlockStyle}" Text="{Binding Amount}"/>
+                <TextBlock Style="{StaticResource AppTemplateTextBlockStyle}">
+                    <Run Text="Navn: "/>
+                    <Run Text="{Binding Name}"/>
+                    <LineBreak/>
+                    <Run Text="Beskrivelse: "></Run>
+                    <Run Text="{Binding Description}"/>
+                </TextBlock>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Name="ProductTemplate">
+            <StackPanel>
+                <TextBlock Style="{StaticResource AppTemplateTitleTextBlockStyle}" Text="{Binding Price}"/>
+                <TextBlock Style="{StaticResource AppTemplateTextBlockStyle}">
+                    <Run Text="Navn: "/>
+                    <Run Text="{Binding Name}"/>
+                    <LineBreak/>
+                    <Run Text="Antal: "/>
+                    <Run Text="{Binding Amount}"/>
+                    <LineBreak/>
+                    <Run Text="Beskrivelse: "/>
+                    <Run Text="{Binding Description}"/>
                 </TextBlock>
             </StackPanel>
         </DataTemplate>
