@@ -62,7 +62,7 @@
         <DataTemplate x:Name="OrderTemplate">
             <StackPanel>
                 <TextBlock Style="{StaticResource AppTemplateTitleTextBlockStyle}" Text="{Binding Deadline}"/>
-                <TextBlock Style="{StaticResource AppStandardTextBlockStyle}">
+                <TextBlock Style="{StaticResource AppTemplateTextBlockStyle}">
                     <Run Text="Oprettelsesdato: "/>
                     <Run Text="{Binding CreationDate}" />
                     <LineBreak/>
