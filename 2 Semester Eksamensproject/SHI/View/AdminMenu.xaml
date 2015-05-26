@@ -25,7 +25,9 @@
         </TextBlock>
         <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Grid.Row="0" Icon="Clear" Command="{Binding LogOutCommand}" />
         
-        <Button Content="Bruger Administration" HorizontalAlignment="Left" Height="102" Margin="545,150.642,0,0" VerticalAlignment="Top" Width="305" Command="{Binding NavigateToUserCreatePageCommand, Mode=OneWay}" Grid.Row="1"/>
-        <Button Content="Lager Administration" HorizontalAlignment="Left" Height="102" Margin="545,282.642,0,0" VerticalAlignment="Top" Width="305" Command="{Binding NavigateToAdminStoragePageCommand, Mode=OneWay}" Grid.Row="1"/>
+        <StackPanel Style="{StaticResource AppCenteredStackPanelStyle}" Grid.Row="1">
+            <Button Content="Bruger Administration" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToUserCreatePageCommand, Mode=OneWay}" Grid.Row="1" Margin="0,0,0,10"/>
+            <Button Content="Lager Administration" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToAdminStoragePageCommand, Mode=OneWay}" Grid.Row="1"/>
+        </StackPanel>
     </Grid>
 </Page>

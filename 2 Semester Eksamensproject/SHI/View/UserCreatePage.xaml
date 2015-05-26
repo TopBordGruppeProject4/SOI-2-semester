@@ -34,7 +34,7 @@
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </ListView>
-        <Button Content="Slet Bruger" HorizontalAlignment="Left" Height="56" Margin="139,513.597,0,0" VerticalAlignment="Top" Width="178" Command="{Binding RemoveWorkerCommand, Mode=TwoWay}" Grid.Row="1"/>
+        <Button Content="Slet Bruger" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="56" Margin="139,513.597,0,0" VerticalAlignment="Top" Width="178" Command="{Binding RemoveWorkerCommand, Mode=TwoWay}" Grid.Row="1"/>
         <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="41" Margin="142,10,0,0" Text="Opret Ny Bruger" Width="347" FontSize="24" Grid.Row="1"/>
         <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="31" Margin="142,53,0,0" Text="Navn" Width="105" Grid.Row="1"/>
         <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="31" Margin="281,51,0,0" Text="Telefonnummer" Width="105" Grid.Row="1"/>
@@ -47,7 +47,7 @@
         <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="0" Margin="142,305,0,0" Text="{Binding WorkerUsername, Mode=TwoWay}" Width="110" Grid.Row="1"/>
         <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="0" Margin="294,305,0,0" Text="{Binding WorkerPassword, Mode=TwoWay}" Width="110" Grid.Row="1"/>
         <CheckBox Content="Admin" HorizontalAlignment="Left" Height="36" Margin="139,364,0,0" VerticalAlignment="Top" Width="110" IsChecked="{Binding WorkerAdmin, Mode=TwoWay}" Grid.Row="1"/>
-        <Button Content="Opret Bruger" HorizontalAlignment="Left" Height="52" Margin="142,446.597,0,0" VerticalAlignment="Top" Width="147" Command="{Binding AddWorkerCommand, Mode=TwoWay}" Grid.Row="1"/>
+        <Button Content="Opret Bruger" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="52" Margin="142,446.597,0,0" VerticalAlignment="Top" Width="147" Command="{Binding AddWorkerCommand, Mode=TwoWay}" Grid.Row="1"/>
         <ListView x:Name="CustomerList" HorizontalAlignment="Left" Height="456" Margin="914,53,0,0" VerticalAlignment="Top" Width="222" ItemsSource="{Binding CustomerCatalogSingleton.Instance.Customers, Mode=TwoWay}" ItemTemplate="{StaticResource CustomerTemplate}" Grid.Row="1">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
@@ -56,6 +56,6 @@
             </interactivity:Interaction.Behaviors>
         </ListView>
         <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="37" Margin="915,10,0,0" Text="Kunder" Width="138" FontSize="22" Grid.Row="1"/>
-        <Button Content="Slet Kunde" HorizontalAlignment="Left" Height="48" Margin="911,536.597,0,0" VerticalAlignment="Top" Width="145" Command="{Binding RemoveCustomerCommand}" Grid.Row="1"/>
+        <Button Content="Slet Kunde" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="48" Margin="911,536.597,0,0" VerticalAlignment="Top" Width="145" Command="{Binding RemoveCustomerCommand}" Grid.Row="1"/>
     </Grid>
 </Page>

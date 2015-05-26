@@ -34,8 +34,8 @@
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </ListView>
-        <TextBlock HorizontalAlignment="Left" Height="36" Margin="946,5.493,0,0" TextWrapping="Wrap" Text="Kunder" VerticalAlignment="Top" Width="146" FontSize="22" Grid.Row="1"/>
-        <Button Content="Opret Kunde" HorizontalAlignment="Left" Height="41" Margin="943,492.493,0,0" VerticalAlignment="Top" Width="136" Command="{Binding AddCustomerCommand, Mode=TwoWay}" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="36" Margin="946,5.493,0,0" Text="Kunder" Width="146" FontSize="22" Grid.Row="1"/>
+        <Button Content="Opret Kunde" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="41" Margin="943,492.493,0,0" VerticalAlignment="Top" Width="136" Command="{Binding AddCustomerCommand, Mode=TwoWay}" Grid.Row="1"/>
         <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="31" Margin="649,41.493,0,0" Text="Navn" Width="128" FontSize="22" Grid.Row="1"/>
         <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="31" Margin="649,140.493,0,0" Text="Adresse" Width="128" FontSize="22" Grid.Row="1"/>
         <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="31" Margin="649,241.493,0,0" Text="Telefonnummer" Width="169" FontSize="22" Grid.Row="1"/>
@@ -54,6 +54,6 @@
         <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="37" Margin="123,475.493,0,0" Text="Deadline" Width="133" FontSize="22" Grid.Row="1"/>
         <DatePicker HorizontalAlignment="Left" Height="36" Margin="123,517.493,0,0" VerticalAlignment="Top" Width="289" Date="{Binding SavedOrderDeadlineDate, Mode=TwoWay}" Grid.Row="1"/>
         <TimePicker HorizontalAlignment="Left" Height="31" Margin="123,572.493,0,0" VerticalAlignment="Top" Width="287" Time="{Binding SavedORderDeadlineTime, Mode=TwoWay}" ClockIdentifier="24HourClock" RenderTransformOrigin="0.666,0.121" Grid.Row="1"/>
-        <Button Content="Opret Ordre" HorizontalAlignment="Left" Height="43" Margin="487,530.493,0,0" VerticalAlignment="Top" Width="125" Command="{Binding AddSavedOrderCommand}" Grid.Row="1"/>
+        <Button Content="Opret Ordre" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="43" Margin="487,530.493,0,0" VerticalAlignment="Top" Width="125" Command="{Binding AddSavedOrderCommand}" Grid.Row="1"/>
     </Grid>
 </Page>

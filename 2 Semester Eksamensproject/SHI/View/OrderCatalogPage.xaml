@@ -34,8 +34,8 @@
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </ListView>
-        <Button Content="Fjern Ordre" HorizontalAlignment="Left" Height="45" Margin="898,509.388,0,0" VerticalAlignment="Top" Width="153" Command="{Binding RemoveSavedOrderCommand}" Grid.Row="1"/>
-        <Button Content="Tag Ordre" HorizontalAlignment="Left" Height="45" Margin="1079,509.388,0,0" VerticalAlignment="Top" Width="130" Command="{Binding AssignOrderCommand}" Grid.Row="1"/>
+        <Button Content="Fjern Ordre" Style="{StaticResource AppStandardButtonStyle}" Height="45" Margin="898,509.388,0,0" VerticalAlignment="Top" Width="153" Command="{Binding RemoveSavedOrderCommand}" Grid.Row="1"/>
+        <Button Content="Tag Ordre" Style="{StaticResource AppStandardButtonStyle}" Height="45" Margin="1079,509.388,0,0" VerticalAlignment="Top" Width="130" Command="{Binding AssignOrderCommand}" Grid.Row="1"/>
         <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="33" Margin="901,19.388,0,0" Text="Nye Ordre" Width="153" FontSize="22" Grid.Row="1"/>
         <ListView HorizontalAlignment="Left" Height="427" Margin="484,57.388,0,0" VerticalAlignment="Top" Width="234" ItemsSource="{Binding TakenOrders, Mode=TwoWay}" ItemTemplate="{StaticResource OrderTemplate}" Grid.Row="1"/>
         <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="33" Margin="484,19.388,0,0" Text="Iganværende Ordre" Width="200" FontSize="22" Grid.Row="1"/>

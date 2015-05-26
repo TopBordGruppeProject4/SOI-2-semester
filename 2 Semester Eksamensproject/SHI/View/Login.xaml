@@ -13,6 +13,7 @@
 
     <Grid Style="{StaticResource AppMainGrid}">
         <StackPanel Style="{StaticResource AppLoginStackpanelStyle}">
+            <Image Style="{StaticResource AppLogoStyle}" Height="100" Margin="0,0,0,10"/>
             <TextBox Style="{StaticResource AppLoginTextBoxStyle}" Text="{Binding LoginWorkerUsername, Mode=TwoWay}" PlaceholderText="Username"/>
             <TextBox Style="{StaticResource AppLoginTextBoxStyle}" Text="{Binding LoginWorkerPassword, Mode=TwoWay}" PlaceholderText="Password"/>
             <Button Style="{StaticResource AppLoginButtonStyle}" Content="Login" Height="43" VerticalAlignment="Top" Width="133" Command="{Binding LoginWorkerCommand}"/>

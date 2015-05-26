@@ -43,8 +43,8 @@
         </ListView>
         <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="39" Margin="976,95.134,0,0" Text="Ændre Antal" Width="160" FontSize="22" Grid.Row="1"/>
         <TextBox Style="{StaticResource AppLoginTextBoxStyle}" Height="40" Margin="1091,152.134,115,0" Text="{Binding ProductAmount, Mode=TwoWay}" Width="160" RenderTransformOrigin="0.476,-0.343" Grid.Row="1"/>
-        <Button Content="Rå Materiale" HorizontalAlignment="Left" Height="51" Margin="976,250.134,0,0" VerticalAlignment="Top" Width="160" Command="{Binding ChangeRawMaterialCommand}" Grid.Row="1"/>
-        <Button Content="Færdigt Produkt" HorizontalAlignment="Left" Height="51" Margin="976,334.134,0,0" VerticalAlignment="Top" Width="160" Command="{Binding ChangeProductCommand}" Grid.Row="1"/>
+        <Button Content="Rå Materiale" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="51" Margin="976,250.134,0,0" VerticalAlignment="Top" Width="160" Command="{Binding ChangeRawMaterialCommand}" Grid.Row="1"/>
+        <Button Content="Færdigt Produkt" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="51" Margin="976,334.134,0,0" VerticalAlignment="Top" Width="160" Command="{Binding ChangeProductCommand}" Grid.Row="1"/>
         <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="39" Margin="230,33.134,0,0" Text="Rå Materialer" Width="160" FontSize="22" Grid.Row="1"/>
         <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="39" Margin="541,33.134,0,0" Text="Færdige Produkter" Width="191" FontSize="22" Grid.Row="1"/>
     </Grid>

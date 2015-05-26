@@ -23,11 +23,12 @@
             <LineBreak/>
             <Run Text="{Binding CurrentWorker.Name}"></Run>
         </TextBlock>
-
-        <Button Content="Se Ordre" Height="72" Margin="575,159.507,0,435" Width="257" Command="{Binding NavigateToOrderCatalogPageCommand, Mode=OneWay}" Grid.Row="1"/>
-        <Button Content="Opret Ordre" Height="72" Margin="575,270.507,0,324" Width="257" Command="{Binding NavigateToCreateOrderPageCommand, Mode=OneWay}" Grid.Row="1"/>
-        <Button Content="Lager" Height="72" Margin="575,385,0,211" Width="257" Command="{Binding NavigateToStoragePageCommand, Mode=OneWay}" Grid.Row="1"/>
-        <Button Content="Admin Menu" Height="72" Margin="575,492.507,0,102" Width="257" Command="{Binding NavigateToAdminMenuCommand, Mode=OneWay}" Grid.Row="1"/>
-        <Button Content="Min Ordre" HorizontalAlignment="Left" Height="72" Margin="1164,271.507,0,0" VerticalAlignment="Top" Width="200" Command="{Binding NavigateToOrderInformationPageCommand}" Grid.Row="1"/>
+        <StackPanel Style="{StaticResource AppCenteredStackPanelStyle}" Grid.Row="1">
+            <Button Content="Min Ordre" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToOrderInformationPageCommand}" Margin="0,0,0,10"/>
+            <Button Content="Se Ordre" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToOrderCatalogPageCommand, Mode=OneWay}" Margin="0,0,0,10" />
+            <Button Content="Opret Ordre" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToCreateOrderPageCommand, Mode=OneWay}" Margin="0,0,0,10"/>
+            <Button Content="Lager" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToStoragePageCommand, Mode=OneWay}" Margin="0,0,0,10"/>
+            <Button Content="Admin Menu" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToAdminMenuCommand, Mode=OneWay}"/>
+        </StackPanel>
     </Grid>
 </Page>

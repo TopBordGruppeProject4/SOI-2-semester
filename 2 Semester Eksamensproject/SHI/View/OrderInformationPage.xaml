@@ -34,6 +34,6 @@
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </ListView>
-        <Button Content="Afslut Ordre" HorizontalAlignment="Left" Height="47" Margin="569,483.597,0,0" VerticalAlignment="Top" Width="132" Command="{Binding FinishOrderCommand, Mode=TwoWay}" Grid.Row="1"/>
+        <Button Content="Afslut Ordre" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="47" Margin="569,483.597,0,0" VerticalAlignment="Top" Width="132" Command="{Binding FinishOrderCommand, Mode=TwoWay}" Grid.Row="1"/>
     </Grid>
 </Page>
