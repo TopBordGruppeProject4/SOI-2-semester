@@ -58,6 +58,14 @@
             <Setter Property="Height" Value="150"/>
         </Style>
         
+        <Style x:Name="AppMainGrid" TargetType="Panel">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="Assets/Billeder/bg.png" Stretch="UniformToFill"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
         <!-- Templates -->
         <DataTemplate x:Name="OrderTemplate">
             <StackPanel>

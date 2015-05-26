@@ -7,12 +7,11 @@
     xmlns:ViewModel="using:SHI.ViewModel"
     x:Class="SHI.View.AdminMenu"
     mc:Ignorable="d">
-
     <Page.DataContext>
         <ViewModel:MainViewModel/>
     </Page.DataContext>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Style="{StaticResource AppMainGrid}">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition/>

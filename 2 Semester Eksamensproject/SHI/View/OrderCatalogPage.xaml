@@ -13,7 +13,7 @@
         <ViewModel:MainViewModel/>
     </Page.DataContext>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Style="{StaticResource AppMainGrid}">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition/>

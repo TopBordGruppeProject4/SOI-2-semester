@@ -11,7 +11,7 @@
         <ViewModel:MainViewModel/>
     </Page.DataContext>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Style="{StaticResource AppMainGrid}">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition/>
@@ -22,8 +22,8 @@
             <LineBreak/>
             <Run Text="{Binding CurrentWorker.Name}"/>
         </TextBlock>
-        <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Icon="Clear" Grid.Row="0" Command="{Binding LogOutCommand}" />
-        
+        <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Grid.Row="0" Icon="Clear" Command="{Binding LogOutCommand}" />
+
         <Button Content="Opret Ordre" Height="72" Margin="575,277.597,0,324" Width="257" Command="{Binding NavigateToCreateOrderPageCommand, Mode=OneWay}" Grid.Row="1"/>
         <Button Content="Se Ordre" Height="72" Margin="575,166.597,0,435" Width="257" Command="{Binding NavigateToOrderCatalogPageCommand, Mode=OneWay}" Grid.Row="1"/>
         <Button Content="Lager" Height="72" Margin="575,389.597,0,212" Width="257" Command="{Binding NavigateToStoragePageCommand, Mode=OneWay}" Grid.Row="1"/>
