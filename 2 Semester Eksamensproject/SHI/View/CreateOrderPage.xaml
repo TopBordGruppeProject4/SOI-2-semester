@@ -9,7 +9,6 @@
     xmlns:ViewModel="using:SHI.ViewModel"
     x:Class="SHI.View.CreateOrderPage"
     mc:Ignorable="d">
-
     <Page.DataContext>
         <ViewModel:MainViewModel/>
     </Page.DataContext>
@@ -24,7 +23,7 @@
         <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Text="{Binding CurrentWorker.Name}" Grid.Row="0" />
         <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Grid.Row="0" Icon="Clear" Command="{Binding LogOutCommand}" />
         
-        <ListView x:Name="CustomerList" HorizontalAlignment="Left" Height="418" Margin="946,41.493,0,0" VerticalAlignment="Top" Width="227" ItemsSource="{Binding CustomerCatalogSingleton.Instance.Customers, Mode=TwoWay}" Grid.Row="1">
+        <ListView x:Name="CustomerList" HorizontalAlignment="Left" Height="418" Margin="946,41.493,0,0" VerticalAlignment="Top" Width="227" ItemsSource="{Binding CustomerCatalogSingleton.Instance.Customers, Mode=TwoWay}" ItemTemplate="{StaticResource OrderTemplate}" Grid.Row="1">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
                     <core:InvokeCommandAction Command="{Binding SelectCustomerCommand}" CommandParameter="{Binding SelectedItem, ElementName=CustomerList}"/>

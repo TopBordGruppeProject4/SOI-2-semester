@@ -24,7 +24,7 @@
         <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Text="{Binding CurrentWorker.Name}" Grid.Row="0" />
         <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Icon="Clear" Grid.Row="0" Command="{Binding LogOutCommand}"/>
         
-        <ListView x:Name="OrderList" HorizontalAlignment="Left" Height="361" Margin="569,80.597,0,0" VerticalAlignment="Top" Width="398" ItemsSource="{Binding CurrentWorkerOrders, Mode=TwoWay}" Grid.Row="1">
+        <ListView x:Name="OrderList" HorizontalAlignment="Left" Height="361" Margin="569,80.597,0,0" VerticalAlignment="Top" Width="398" ItemsSource="{Binding CurrentWorkerOrders, Mode=TwoWay}" ItemTemplate="{StaticResource OrderTemplate}" Grid.Row="1">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
                     <core:InvokeCommandAction Command="{Binding SelectSavedOrderCommand}" CommandParameter="{Binding SelectedItem, ElementName=OrderList}"/>
