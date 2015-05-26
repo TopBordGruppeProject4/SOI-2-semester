@@ -73,10 +73,10 @@
         </DataTemplate>
         <DataTemplate x:Name="RawMaterialTemplate">
             <StackPanel>
-                <TextBlock Style="{StaticResource AppTemplateTitleTextBlockStyle}" Text="{Binding Amount}"/>
+                <TextBlock Style="{StaticResource AppTemplateTitleTextBlockStyle}" Text="{Binding Name}"/>
                 <TextBlock Style="{StaticResource AppTemplateTextBlockStyle}">
-                    <Run Text="Navn: "/>
-                    <Run Text="{Binding Name}"/>
+                    <Run Text="Antal: "/>
+                    <Run Text="{Binding Amount}"/>
                     <LineBreak/>
                     <Run Text="Beskrivelse: "></Run>
                     <Run Text="{Binding Description}"/>
@@ -85,10 +85,10 @@
         </DataTemplate>
         <DataTemplate x:Name="ProductTemplate">
             <StackPanel>
-                <TextBlock Style="{StaticResource AppTemplateTitleTextBlockStyle}" Text="{Binding Price}"/>
+                <TextBlock Style="{StaticResource AppTemplateTitleTextBlockStyle}" Text="{Binding Name}"/>
                 <TextBlock Style="{StaticResource AppTemplateTextBlockStyle}">
-                    <Run Text="Navn: "/>
-                    <Run Text="{Binding Name}"/>
+                    <Run Text="Pris: "/>
+                    <Run Text="{Binding Price}"/>
                     <LineBreak/>
                     <Run Text="Antal: "/>
                     <Run Text="{Binding Amount}"/>
@@ -98,7 +98,7 @@
                 </TextBlock>
             </StackPanel>
         </DataTemplate>
-        <DataTemplate x:Name="UserTemplate">
+        <DataTemplate x:Name="WorkerTemplate">
             <StackPanel>
                 <TextBlock Style="{StaticResource AppTemplateTitleTextBlockStyle}" Text="{Binding Name}"/>
                 <TextBlock Style="{StaticResource AppTemplateTextBlockStyle}">
@@ -107,6 +107,21 @@
                     <LineBreak/>
                     <Run Text="Admin: "/>
                     <Run Text="{Binding Admin}"/>
+                </TextBlock>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Name="CustomerTemplate">
+            <StackPanel>
+                <TextBlock Style="{StaticResource AppTemplateTitleTextBlockStyle}" Text="{Binding Name}"/>
+                <TextBlock Style="{StaticResource AppTemplateTextBlockStyle}">
+                    <Run Text="Adresse: "/>
+                    <Run Text="{Binding Address}"/>
+                    <LineBreak/>
+                    <Run Text="Tlf: "/>
+                    <Run Text="{Binding Tlf}"/>
+                    <LineBreak/>
+                    <Run Text="Email: "/>
+                    <Run Text="{Binding Email}"/>
                 </TextBlock>
             </StackPanel>
         </DataTemplate>

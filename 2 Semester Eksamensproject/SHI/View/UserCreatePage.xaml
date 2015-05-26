@@ -24,7 +24,7 @@
         <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Text="{Binding CurrentWorker.Name}" Grid.Row="0" />
         <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Icon="Clear" Grid.Row="0" Command="{Binding LogOutCommand}" />
 
-        <ListView x:Name="WorkerList" HorizontalAlignment="Left" Height="508" Margin="497,39.597,0,0" VerticalAlignment="Top" Width="235" ItemsSource="{Binding WorkerCatalogSingleton.Instance.Workers, Mode=TwoWay}" ItemTemplate="{StaticResource UserTemplate}" Grid.Row="1">
+        <ListView x:Name="WorkerList" HorizontalAlignment="Left" Height="508" Margin="497,39.597,0,0" VerticalAlignment="Top" Width="235" ItemsSource="{Binding WorkerCatalogSingleton.Instance.Workers, Mode=TwoWay}" ItemTemplate="{StaticResource WorkerTemplate}" Grid.Row="1">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
                     <core:InvokeCommandAction Command="{Binding SelectWorkerCommand}" CommandParameter="{Binding SelectedItem, ElementName=WorkerList}"/>
@@ -45,7 +45,7 @@
         <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="0" Margin="294,305,0,0" Text="{Binding WorkerPassword, Mode=TwoWay}" Width="110" Grid.Row="1"/>
         <CheckBox Content="Admin" HorizontalAlignment="Left" Height="36" Margin="139,364,0,0" VerticalAlignment="Top" Width="110" IsChecked="{Binding WorkerAdmin, Mode=TwoWay}" Grid.Row="1"/>
         <Button Content="Opret Bruger" HorizontalAlignment="Left" Height="52" Margin="142,446.597,0,0" VerticalAlignment="Top" Width="147" Command="{Binding AddWorkerCommand, Mode=TwoWay}" Grid.Row="1"/>
-        <ListView x:Name="CustomerList" HorizontalAlignment="Left" Height="456" Margin="914,53,0,0" VerticalAlignment="Top" Width="222" ItemsSource="{Binding CustomerCatalogSingleton.Instance.Customers, Mode=TwoWay}" Grid.Row="1">
+        <ListView x:Name="CustomerList" HorizontalAlignment="Left" Height="456" Margin="914,53,0,0" VerticalAlignment="Top" Width="222" ItemsSource="{Binding CustomerCatalogSingleton.Instance.Customers, Mode=TwoWay}" ItemTemplate="{StaticResource CustomerTemplate}" Grid.Row="1">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
                     <core:InvokeCommandAction Command="{Binding SelectCustomerCommand}" CommandParameter="{Binding SelectedItem, ElementName=CustomerList}"/>
