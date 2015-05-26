@@ -9,7 +9,6 @@
     xmlns:ViewModel="using:SHI.ViewModel"
     x:Class="SHI.View.UserCreatePage"
     mc:Ignorable="d">
-
     <Page.DataContext>
         <ViewModel:MainViewModel/>
     </Page.DataContext>
@@ -21,7 +20,11 @@
         </Grid.RowDefinitions>
 
         <AppBarButton Style="{StaticResource AppBackButtonStyle}" Icon="Back" Command="{Binding NavigateBackCommand, Mode=OneWay}" />
-        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Text="{Binding CurrentWorker.Name}" Grid.Row="0" />
+        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0">
+            <Run Text="Logget ind som: "/>
+            <LineBreak/>
+            <Run Text="{Binding CurrentWorker.Name}"/>
+        </TextBlock>
         <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Icon="Clear" Grid.Row="0" Command="{Binding LogOutCommand}" />
 
         <ListView x:Name="WorkerList" HorizontalAlignment="Left" Height="508" Margin="497,39.597,0,0" VerticalAlignment="Top" Width="235" ItemsSource="{Binding WorkerCatalogSingleton.Instance.Workers, Mode=TwoWay}" ItemTemplate="{StaticResource WorkerTemplate}" Grid.Row="1">

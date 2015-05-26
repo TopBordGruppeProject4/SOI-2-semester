@@ -19,7 +19,11 @@
         </Grid.RowDefinitions>
         
         <AppBarButton Style="{StaticResource AppBackButtonStyle}" Icon="Back" Command="{Binding NavigateBackCommand, Mode=OneWay}"/>
-        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0" Text="{Binding CurrentWorker.Name}" />
+        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0">
+            <Run Text="Logget ind som: "/>
+            <LineBreak/>
+            <Run Text="{Binding CurrentWorker.Name}"/>
+        </TextBlock>
         <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Grid.Row="0" Icon="Clear" Command="{Binding LogOutCommand}" />
         
         <Button Content="Bruger Administration" HorizontalAlignment="Left" Height="102" Margin="545,150.642,0,0" VerticalAlignment="Top" Width="305" Command="{Binding NavigateToUserCreatePageCommand, Mode=OneWay}" Grid.Row="1"/>

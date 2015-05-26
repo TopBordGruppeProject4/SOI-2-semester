@@ -19,7 +19,11 @@
         </Grid.RowDefinitions>
 
         <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Grid.Row="0" Icon="Clear" Command="{Binding LogOutCommand}"/>
-        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0" Text="{Binding CurrentWorker.Name}" />
+        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0">
+            <Run Text="Logget ind som:"/>
+            <LineBreak/>
+            <Run Text="{Binding CurrentWorker.Name}"></Run>
+        </TextBlock>
 
         <Button Content="Se Ordre" Height="72" Margin="575,159.507,0,435" Width="257" Command="{Binding NavigateToOrderCatalogPageCommand, Mode=OneWay}" Grid.Row="1"/>
         <Button Content="Opret Ordre" Height="72" Margin="575,270.507,0,324" Width="257" Command="{Binding NavigateToCreateOrderPageCommand, Mode=OneWay}" Grid.Row="1"/>

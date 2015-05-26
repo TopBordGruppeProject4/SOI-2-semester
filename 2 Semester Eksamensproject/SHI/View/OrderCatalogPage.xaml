@@ -9,7 +9,6 @@
     xmlns:ViewModel="using:SHI.ViewModel"
     x:Class="SHI.View.OrderCatalogPage"
     mc:Ignorable="d">
-
     <Page.DataContext>
         <ViewModel:MainViewModel/>
     </Page.DataContext>
@@ -21,7 +20,11 @@
         </Grid.RowDefinitions>
         
         <AppBarButton Style="{StaticResource AppBackButtonStyle}" Icon="Back" Command="{Binding NavigateBackCommand, Mode=OneWay}"/>
-        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Text="{Binding CurrentWorker.Name}" Grid.Row="0" />
+        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0">
+            <Run Text="Logget ind som: "/>
+            <LineBreak/>
+            <Run Text="{Binding CurrentWorker.Name}"/>
+        </TextBlock>
         <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Grid.Row="0" Icon="Clear" Command="{Binding LogOutCommand}" />
         
         <ListView x:Name="OrderList" HorizontalAlignment="Left" Height="427" Margin="901,57.388,0,0" VerticalAlignment="Top" Width="235" ItemsSource="{Binding NewOrders, Mode=TwoWay}" ItemTemplate="{StaticResource OrderTemplate}" Grid.Row="1">
