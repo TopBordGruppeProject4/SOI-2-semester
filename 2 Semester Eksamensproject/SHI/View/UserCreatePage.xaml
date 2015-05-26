@@ -14,48 +14,52 @@
     </Page.DataContext>
 
     <Grid Style="{StaticResource AppMainGrid}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
         <AppBarButton Style="{StaticResource AppBackButtonStyle}" Icon="Back" Command="{Binding NavigateBackCommand, Mode=OneWay}" />
-        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0">
+        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0" Grid.ColumnSpan="2" Margin="605,25,604,24">
             <Run Text="Logget ind som: "/>
             <LineBreak/>
             <Run Text="{Binding CurrentWorker.Name}"/>
         </TextBlock>
-        <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Icon="Clear" Grid.Row="0" Command="{Binding LogOutCommand}" />
+        <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Icon="Clear" Grid.Row="0" Command="{Binding LogOutCommand}" Grid.Column="1" />
 
-        <ListView x:Name="WorkerList" HorizontalAlignment="Left" Height="508" Margin="497,39.597,0,0" VerticalAlignment="Top" Width="235" ItemsSource="{Binding WorkerCatalogSingleton.Instance.Workers, Mode=TwoWay}" ItemTemplate="{StaticResource WorkerTemplate}" Grid.Row="1">
+        <ListView x:Name="WorkerList" HorizontalAlignment="Left" Height="508" Margin="497,40,0,0" VerticalAlignment="Top" Width="235" ItemsSource="{Binding WorkerCatalogSingleton.Instance.Workers, Mode=TwoWay}" ItemTemplate="{StaticResource WorkerTemplate}" Grid.Row="1" Grid.ColumnSpan="2">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
                     <core:InvokeCommandAction Command="{Binding SelectWorkerCommand}" CommandParameter="{Binding SelectedItem, ElementName=WorkerList}"/>
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </ListView>
-        <Button Content="Slet Bruger" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="56" Margin="139,513.597,0,0" VerticalAlignment="Top" Width="178" Command="{Binding RemoveWorkerCommand, Mode=TwoWay}" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="41" Margin="142,10,0,0" Text="Opret Ny Bruger" Width="347" FontSize="24" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="31" Margin="142,53,0,0" Text="Navn" Width="105" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="31" Margin="281,51,0,0" Text="Telefonnummer" Width="105" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="31" Margin="142,134,0,0" Text="Adresse" Width="105" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="31" Margin="142,251,0,0" Text="Brugernavn" Width="105" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="31" Margin="299,251,0,0" Text="Password" Width="105" Grid.Row="1"/>
-        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="0" Margin="137,89,0,0" Text="{Binding WorkerName, Mode=TwoWay}" Width="110" Grid.Row="1"/>
-        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="0" Margin="276,89,0,0" Text="{Binding WorkerTlf, Mode=TwoWay}" Width="110" Grid.Row="1"/>
-        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="0" Margin="137,186,0,0" Text="{Binding WorkerAddress, Mode=TwoWay}" Width="244" Grid.Row="1"/>
-        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="0" Margin="142,305,0,0" Text="{Binding WorkerUsername, Mode=TwoWay}" Width="110" Grid.Row="1"/>
-        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="0" Margin="294,305,0,0" Text="{Binding WorkerPassword, Mode=TwoWay}" Width="110" Grid.Row="1"/>
-        <CheckBox Content="Admin" HorizontalAlignment="Left" Height="36" Margin="139,364,0,0" VerticalAlignment="Top" Width="110" IsChecked="{Binding WorkerAdmin, Mode=TwoWay}" Grid.Row="1"/>
-        <Button Content="Opret Bruger" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="52" Margin="142,446.597,0,0" VerticalAlignment="Top" Width="147" Command="{Binding AddWorkerCommand, Mode=TwoWay}" Grid.Row="1"/>
-        <ListView x:Name="CustomerList" HorizontalAlignment="Left" Height="456" Margin="914,53,0,0" VerticalAlignment="Top" Width="222" ItemsSource="{Binding CustomerCatalogSingleton.Instance.Customers, Mode=TwoWay}" ItemTemplate="{StaticResource CustomerTemplate}" Grid.Row="1">
+        <Button Content="Slet Bruger" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="56" Margin="30,380,0,0" VerticalAlignment="Top" Width="178" Command="{Binding RemoveWorkerCommand, Mode=TwoWay}" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="0,15,0,0" Text="Opret Ny Bruger" FontSize="24" Grid.Row="1" HorizontalAlignment="Center"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="30,60,0,0" Text="Navn" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="200,60,0,0" Text="Telefonnummer" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="30,130,0,0" Text="Adresse" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="30,200,0,0" Text="Brugernavn" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="200,200,0,0" Text="Password" Grid.Row="1"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="0" Margin="30,80,0,0" Text="{Binding WorkerName, Mode=TwoWay}" Width="110" Grid.Row="1"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="0" Margin="200,80,0,0" Text="{Binding WorkerTlf, Mode=TwoWay}" Width="110" Grid.Row="1"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="0" Margin="30,150,0,0" Text="{Binding WorkerAddress, Mode=TwoWay}" Width="240" Grid.Row="1"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="0" Margin="30,220,0,0" Text="{Binding WorkerUsername, Mode=TwoWay}" Width="110" Grid.Row="1"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="0" Margin="200,220,0,0" Text="{Binding WorkerPassword, Mode=TwoWay}" Width="110" Grid.Row="1"/>
+        <CheckBox Content="Admin" HorizontalAlignment="Left" Height="36" Margin="30,270,0,0" VerticalAlignment="Top" Width="110" IsChecked="{Binding WorkerAdmin, Mode=TwoWay}" Grid.Row="1"/>
+        <Button Content="Opret Bruger" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="52" Margin="30,320,0,0" VerticalAlignment="Top" Width="147" Command="{Binding AddWorkerCommand, Mode=TwoWay}" Grid.Row="1"/>
+        <ListView x:Name="CustomerList" HorizontalAlignment="Center" Height="450" Margin="0,60,0,0" VerticalAlignment="Top" Width="230" ItemsSource="{Binding CustomerCatalogSingleton.Instance.Customers, Mode=TwoWay}" ItemTemplate="{StaticResource CustomerTemplate}" Grid.Row="1" Grid.Column="1">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
                     <core:InvokeCommandAction Command="{Binding SelectCustomerCommand}" CommandParameter="{Binding SelectedItem, ElementName=CustomerList}"/>
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </ListView>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="37" Margin="915,10,0,0" Text="Kunder" Width="138" FontSize="22" Grid.Row="1"/>
-        <Button Content="Slet Kunde" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="48" Margin="911,536.597,0,0" VerticalAlignment="Top" Width="145" Command="{Binding RemoveCustomerCommand}" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="0,15,0,0" Text="Kunder" FontSize="22" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"/>
+        <Button Content="Slet Kunde" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Center" Height="48" Margin="0,525,0,0" VerticalAlignment="Top" Width="145" Command="{Binding RemoveCustomerCommand}" Grid.Row="1" Grid.Column="1"/>
     </Grid>
 </Page>

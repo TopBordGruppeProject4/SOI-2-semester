@@ -14,32 +14,37 @@
     </Page.DataContext>
 
     <Grid Style="{StaticResource AppMainGrid}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
+
         <AppBarButton Style="{StaticResource AppBackButtonStyle}" Icon="Back" Command="{Binding NavigateBackCommand, Mode=OneWay}"/>
-        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0">
+        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0" Grid.Column="1" Margin="201,25,70,24">
             <Run Text="Logget ind som: "/>
             <LineBreak/>
             <Run Text="{Binding CurrentWorker.Name}"/>
         </TextBlock>
-        <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Grid.Row="0" Icon="Clear" Command="{Binding LogOutCommand}" />
-        
-        <ListView x:Name="OrderList" HorizontalAlignment="Left" Height="427" Margin="901,57.388,0,0" VerticalAlignment="Top" Width="235" ItemsSource="{Binding NewOrders, Mode=TwoWay}" ItemTemplate="{StaticResource OrderTemplate}" Grid.Row="1">
+        <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Grid.Row="0" Icon="Clear" Command="{Binding LogOutCommand}" Grid.Column="2" />
+
+        <ListView x:Name="OrderList" HorizontalAlignment="Center" Height="425" Margin="0,60,0,0" VerticalAlignment="Top" Width="235" ItemsSource="{Binding NewOrders, Mode=TwoWay}" ItemTemplate="{StaticResource OrderTemplate}" Grid.Row="1" Grid.Column="2">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
                     <core:InvokeCommandAction Command="{Binding SelectSavedOrderCommand}" CommandParameter="{Binding SelectedItem, ElementName=OrderList}"/>
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </ListView>
-        <Button Content="Fjern Ordre" Style="{StaticResource AppStandardButtonStyle}" Height="45" Margin="898,509.388,0,0" VerticalAlignment="Top" Width="153" Command="{Binding RemoveSavedOrderCommand}" Grid.Row="1"/>
-        <Button Content="Tag Ordre" Style="{StaticResource AppStandardButtonStyle}" Height="45" Margin="1079,509.388,0,0" VerticalAlignment="Top" Width="130" Command="{Binding AssignOrderCommand}" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="33" Margin="901,19.388,0,0" Text="Nye Ordre" Width="153" FontSize="22" Grid.Row="1"/>
-        <ListView HorizontalAlignment="Left" Height="427" Margin="484,57.388,0,0" VerticalAlignment="Top" Width="234" ItemsSource="{Binding TakenOrders, Mode=TwoWay}" ItemTemplate="{StaticResource OrderTemplate}" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="33" Margin="484,19.388,0,0" Text="Iganværende Ordre" Width="200" FontSize="22" Grid.Row="1"/>
-        <ListView HorizontalAlignment="Left" Height="427" Margin="144,57.388,0,0" VerticalAlignment="Top" Width="234" ItemsSource="{Binding OldOrders, Mode=TwoWay}" ItemTemplate="{StaticResource OrderTemplate}" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="33" Margin="144,19.388,0,0" Text="Gamle Ordre" Width="200" FontSize="22" Grid.Row="1"/>
+        <Button Content="Fjern Ordre" Style="{StaticResource AppStandardButtonStyle}" Height="45" Margin="30,510,0,0" VerticalAlignment="Top" Width="153" Command="{Binding RemoveSavedOrderCommand}" Grid.Row="1" Grid.Column="2"/>
+        <Button Content="Tag Ordre" Style="{StaticResource AppStandardButtonStyle}" Height="45" Margin="0,510,30,0" VerticalAlignment="Top" Width="130" Command="{Binding AssignOrderCommand}" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="0,15,0,0" Text="Nye Ordre" FontSize="22" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center"/>
+        <ListView HorizontalAlignment="Center" Height="425" Margin="0,60,0,0" VerticalAlignment="Top" Width="230" ItemsSource="{Binding TakenOrders, Mode=TwoWay}" ItemTemplate="{StaticResource OrderTemplate}" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="0,15,0,0" Text="Iganværende Ordre" FontSize="22" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"/>
+        <ListView HorizontalAlignment="Center" Height="425" Margin="0,60,0,0" VerticalAlignment="Top" Width="230" ItemsSource="{Binding OldOrders, Mode=TwoWay}" ItemTemplate="{StaticResource OrderTemplate}" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="0,15,0,0" Text="Gamle Ordre" FontSize="22" Grid.Row="1" HorizontalAlignment="Center"/>
     </Grid>
 </Page>

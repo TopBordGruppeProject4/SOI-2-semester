@@ -14,46 +14,50 @@
     </Page.DataContext>
 
     <Grid Style="{StaticResource AppMainGrid}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
+
         <AppBarButton Style="{StaticResource AppBackButtonStyle}" Icon="Back" Command="{Binding NavigateBackCommand, Mode=OneWay}" />
-        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0">
+        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0" Grid.ColumnSpan="2" Margin="605,25,604,24">
             <Run Text="Logget ind som: "/>
             <LineBreak/>
             <Run Text="{Binding CurrentWorker.Name}"/>
         </TextBlock>
-        <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Grid.Row="0" Icon="Clear" Command="{Binding LogOutCommand}" />
-        
-        <ListView x:Name="CustomerList" HorizontalAlignment="Left" Height="418" Margin="946,41.493,0,0" VerticalAlignment="Top" Width="227" ItemsSource="{Binding CustomerCatalogSingleton.Instance.Customers, Mode=TwoWay}" ItemTemplate="{StaticResource CustomerTemplate}" Grid.Row="1">
+        <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Grid.Row="0" Icon="Clear" Command="{Binding LogOutCommand}" Grid.Column="1" />
+
+        <ListView x:Name="CustomerList" HorizontalAlignment="Left" Height="350" Margin="250,50,0,0" VerticalAlignment="Top" Width="200" ItemsSource="{Binding CustomerCatalogSingleton.Instance.Customers, Mode=TwoWay}" ItemTemplate="{StaticResource CustomerTemplate}" Grid.Row="1" Grid.Column="1">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
                     <core:InvokeCommandAction Command="{Binding SelectCustomerCommand}" CommandParameter="{Binding SelectedItem, ElementName=CustomerList}"/>
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </ListView>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="36" Margin="946,5.493,0,0" Text="Kunder" Width="146" FontSize="22" Grid.Row="1"/>
-        <Button Content="Opret Kunde" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="41" Margin="943,492.493,0,0" VerticalAlignment="Top" Width="136" Command="{Binding AddCustomerCommand, Mode=TwoWay}" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="31" Margin="649,41.493,0,0" Text="Navn" Width="128" FontSize="22" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="31" Margin="649,140.493,0,0" Text="Adresse" Width="128" FontSize="22" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="31" Margin="649,241.493,0,0" Text="Telefonnummer" Width="169" FontSize="22" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="31" Margin="649,334.493,0,0" Text="Email" Width="128" FontSize="22" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="0,15,0,0" Text="Kunder" FontSize="22" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"/>
+        <Button Content="Opret Kunde" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="41" Margin="250,425,0,0" VerticalAlignment="Top" Width="136" Command="{Binding AddCustomerCommand, Mode=TwoWay}" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="30,50,0,0" Text="Navn" FontSize="22" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="30,140,0,0" Text="Adresse" FontSize="22" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="30,240,0,0" Text="Telefonnummer" FontSize="22" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="30,330,0,0" Text="Email" FontSize="22" Grid.Row="1" Grid.Column="1"/>
 
-        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="16" Margin="649,77.493,0,0" Text="{Binding CustomerName, Mode=TwoWay}" Width="169" Grid.Row="1"/>
-        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="16" Margin="649,171.493,0,0" Text="{Binding CustomerAddress, Mode=TwoWay}" Width="169" Grid.Row="1"/>
-        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="16" Margin="649,272.493,0,0" Text="{Binding CustomerTlf, Mode=TwoWay}" Width="169" Grid.Row="1"/>
-        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="16" Margin="649,370.493,0,0" Text="{Binding CustomerEmail, Mode=TwoWay}" Width="169" Grid.Row="1"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="16" Margin="30,80,0,0" Text="{Binding CustomerName, Mode=TwoWay}" Width="169" Grid.Row="1" Grid.Column="1"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="16" Margin="30,170,0,0" Text="{Binding CustomerAddress, Mode=TwoWay}" Width="169" Grid.Row="1" Grid.Column="1"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="16" Margin="30,270,0,0" Text="{Binding CustomerTlf, Mode=TwoWay}" Width="169" Grid.Row="1" Grid.Column="1"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="16" Margin="30,360,0,0" Text="{Binding CustomerEmail, Mode=TwoWay}" Width="169" Grid.Row="1" Grid.Column="1"/>
 
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="37" Margin="140,72.493,0,0" Text="Beskrivelse" Width="133" FontSize="22" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="37" Margin="140,21.493,0,0" Text="Opret Ordre" Width="133" FontSize="22" Grid.Row="1"/>
-        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="182" Margin="140,122.493,0,0" Text="{Binding SavedOrderDescription, Mode=TwoWay}" Width="263" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="37" Margin="140,345.493,0,0" Text="Pris" Width="133" FontSize="22" Grid.Row="1"/>
-        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="33" Margin="140,402.493,0,0" Text="{Binding SavedOrderPrice, Mode=TwoWay}" Width="119" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="37" Margin="123,475.493,0,0" Text="Deadline" Width="133" FontSize="22" Grid.Row="1"/>
-        <DatePicker HorizontalAlignment="Left" Height="36" Margin="123,517.493,0,0" VerticalAlignment="Top" Width="289" Date="{Binding SavedOrderDeadlineDate, Mode=TwoWay}" Grid.Row="1"/>
-        <TimePicker HorizontalAlignment="Left" Height="31" Margin="123,572.493,0,0" VerticalAlignment="Top" Width="287" Time="{Binding SavedORderDeadlineTime, Mode=TwoWay}" ClockIdentifier="24HourClock" RenderTransformOrigin="0.666,0.121" Grid.Row="1"/>
-        <Button Content="Opret Ordre" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="43" Margin="487,530.493,0,0" VerticalAlignment="Top" Width="125" Command="{Binding AddSavedOrderCommand}" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="30,60,0,0" Text="Beskrivelse" FontSize="22" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="0,15,0,0" Text="Opret Ordre" FontSize="22" Grid.Row="1" HorizontalAlignment="Center"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="180" Margin="30,100,0,0" Text="{Binding SavedOrderDescription, Mode=TwoWay}" Width="250" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="30,300,0,0" Text="Pris" FontSize="22" Grid.Row="1"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="33" Margin="30,330,0,0" Text="{Binding SavedOrderPrice, Mode=TwoWay}" Width="119" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="30,380,0,0" Text="Deadline" FontSize="22" Grid.Row="1"/>
+        <DatePicker HorizontalAlignment="Left" Height="36" Margin="30,420,0,0" VerticalAlignment="Top" Width="289" Date="{Binding SavedOrderDeadlineDate, Mode=TwoWay}" Grid.Row="1"/>
+        <TimePicker HorizontalAlignment="Left" Height="31" Margin="30,470,0,0" VerticalAlignment="Top" Width="287" Time="{Binding SavedORderDeadlineTime, Mode=TwoWay}" ClockIdentifier="24HourClock" RenderTransformOrigin="0.666,0.121" Grid.Row="1"/>
+        <Button Content="Opret Ordre" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="43" Margin="30,520,0,0" VerticalAlignment="Top" Width="125" Command="{Binding AddSavedOrderCommand}" Grid.Row="1"/>
     </Grid>
 </Page>

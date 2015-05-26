@@ -27,13 +27,13 @@
         </TextBlock>
         <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Icon="Clear" Grid.Row="0" Command="{Binding LogOutCommand}"/>
         
-        <ListView x:Name="OrderList" HorizontalAlignment="Left" Height="361" Margin="569,80.597,0,0" VerticalAlignment="Top" Width="398" ItemsSource="{Binding CurrentWorkerOrders, Mode=TwoWay}" ItemTemplate="{StaticResource OrderTemplate}" Grid.Row="1">
+        <ListView x:Name="OrderList" HorizontalAlignment="Center" Height="400" Margin="0" VerticalAlignment="Center" Width="350" ItemsSource="{Binding CurrentWorkerOrders, Mode=TwoWay}" ItemTemplate="{StaticResource OrderTemplate}" Grid.Row="1">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
                     <core:InvokeCommandAction Command="{Binding SelectSavedOrderCommand}" CommandParameter="{Binding SelectedItem, ElementName=OrderList}"/>
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </ListView>
-        <Button Content="Afslut Ordre" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="47" Margin="569,483.597,0,0" VerticalAlignment="Top" Width="132" Command="{Binding FinishOrderCommand, Mode=TwoWay}" Grid.Row="1"/>
+        <Button Content="Afslut Ordre" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Center" Height="47" Margin="0,480,0,0" VerticalAlignment="Center" Width="132" Command="{Binding FinishOrderCommand, Mode=TwoWay}" Grid.Row="1"/>
     </Grid>
 </Page>

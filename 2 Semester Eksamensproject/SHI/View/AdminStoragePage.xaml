@@ -14,52 +14,56 @@
     </Page.DataContext>
 
     <Grid Style="{StaticResource AppMainGrid}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
+
         <AppBarButton Style="{StaticResource AppBackButtonStyle}" Icon="Back" Command="{Binding NavigateBackCommand, Mode=OneWay}" />
-        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0">
+        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0" Grid.ColumnSpan="2" Margin="605,25,604,24">
             <Run Text="Logget ind som: "/>
             <LineBreak/>
             <Run Text="{Binding CurrentWorker.Name}"/>
         </TextBlock>
-        <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Grid.Row="0" Icon="Clear" Command="{Binding LogOutCommand}" />
-        
-        <ListView x:Name="RawList" HorizontalAlignment="Left" Height="410" Margin="400,57.731,0,0" VerticalAlignment="Top" Width="242" ItemsSource="{Binding RawMaterialCatalogSingleton.Instance.RawMaterials}" ItemTemplate="{StaticResource RawMaterialTemplate}" Grid.Row="1">
+        <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Grid.Row="0" Icon="Clear" Command="{Binding LogOutCommand}" Grid.Column="1" />
+
+        <ListView x:Name="RawList" HorizontalAlignment="Left" Height="410" Margin="400,120,0,0" VerticalAlignment="Top" Width="242" ItemsSource="{Binding RawMaterialCatalogSingleton.Instance.RawMaterials}" ItemTemplate="{StaticResource RawMaterialTemplate}" Grid.Row="1">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
                     <core:InvokeCommandAction Command="{Binding SelectRawMaterialCommand}" CommandParameter="{Binding SelectedItem, ElementName=RawList}"/>
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </ListView>
-        <ListView x:Name="ProductList" HorizontalAlignment="Left" Height="410" Margin="698,57.731,0,0" VerticalAlignment="Top" Width="242" ItemsSource="{Binding ProductCatalogSingleton.Instance.Products}" ItemTemplate="{StaticResource ProductTemplate}" Grid.Row="1">
+        <ListView x:Name="ProductList" HorizontalAlignment="Left" Height="410" Margin="20,120,0,0" VerticalAlignment="Top" Width="242" ItemsSource="{Binding ProductCatalogSingleton.Instance.Products}" ItemTemplate="{StaticResource ProductTemplate}" Grid.Row="1" Grid.Column="1">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
                     <core:InvokeCommandAction Command="{Binding SelectProductCommand}" CommandParameter="{Binding SelectedItem, ElementName=ProductList}"/>
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </ListView>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="35" Margin="92,89.731,0,0" Text="Navn" Width="116" FontSize="22" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="35" Margin="92,212.731,0,0" Text="Antal" Width="116" FontSize="22" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="35" Margin="92,334.731,0,0" Text="Beskrivelse" Width="116" FontSize="22" Grid.Row="1"/>
-        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="37" Margin="92,129.731,0,0" Text="{Binding RawMaterialName, Mode=TwoWay}" Width="116" Grid.Row="1"/>
-        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="111" Margin="92,403.731,0,0" Text="{Binding RawMaterialDescription, Mode=TwoWay}" Width="228" Grid.Row="1"/>
-        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="37" Margin="92,252.731,0,0" Text="{Binding RawMaterialAmount, Mode=TwoWay}" Width="116" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="35" Margin="1020,89.731,0,0" Text="Navn" Width="116" FontSize="22" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="35" Margin="1020,212.731,0,0" Text="Antal" Width="116" FontSize="22" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="35" Margin="1020,334.731,0,0" Text="Beskrivelse" Width="116" FontSize="22" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="35" Margin="1172,212.731,0,0" Text="Pris Per Enhed" Width="153" FontSize="22" Grid.Row="1"/>
-        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="37" Margin="1020,124.731,0,0" Text="{Binding ProductName, Mode=TwoWay}" Width="116" Grid.Row="1"/>
-        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="37" Margin="1020,252.731,0,0" Text="{Binding ProductAmount, Mode=TwoWay}" Width="116" Grid.Row="1"/>
-        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="37" Margin="1172,252.731,0,0" Text="{Binding ProductPrice, Mode=TwoWay}" Width="116" Grid.Row="1"/>
-        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="111" Margin="1020,403.731,0,0" Text="{Binding ProductDescription, Mode=TwoWay}" Width="268" Grid.Row="1"/>
-        <Button Content="Opret" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="38" Margin="89,553.731,0,0" VerticalAlignment="Top" Width="128" Command="{Binding AddRawMaterialCommand}" Grid.Row="1"/>
-        <Button Content="Opret" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="38" Margin="1017,553.731,0,0" VerticalAlignment="Top" Width="128" Command="{Binding AddProductCommand}" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="35" Margin="100,13.731,0,0" Text="Rå Materialer" Width="279" FontSize="22" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Height="35" Margin="1009,7.731,0,0" Text="Færdige Produkter" Width="279" FontSize="22" Grid.Row="1"/>
-        <Button Content="Slet" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="35" Margin="524,531.731,0,0" VerticalAlignment="Top" Width="121" Command="{Binding RemoveRawMaterialCommand}" Grid.Row="1"/>
-        <Button Content="Slet" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="35" Margin="695,531.731,0,0" VerticalAlignment="Top" Width="121" Command="{Binding RemoveProductCommand}" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="30,120,0,0" Text="Navn" FontSize="22" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="30,220,0,0" Text="Antal" FontSize="22" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="30,320,0,0" Text="Beskrivelse" FontSize="22" Grid.Row="1"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="37" Margin="30,160,0,0" Text="{Binding RawMaterialName, Mode=TwoWay}" Width="116" Grid.Row="1"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="170" Margin="30,360,0,0" Text="{Binding RawMaterialDescription, Mode=TwoWay}" Width="228" Grid.Row="1"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="37" Margin="30,260,0,0" Text="{Binding RawMaterialAmount, Mode=TwoWay}" Width="116" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="315,140,0,0" Text="Navn" FontSize="22" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="315,235,0,0" Text="Antal" FontSize="22" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="315,320,0,0" Text="Beskrivelse" FontSize="22" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="450,235,0,0" Text="Pris Per Enhed" FontSize="22" Grid.Row="1" Grid.Column="1"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="37" Margin="315,180,0,0" Text="{Binding ProductName, Mode=TwoWay}" Width="116" Grid.Row="1" Grid.Column="1"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="37" Margin="315,270,0,0" Text="{Binding ProductAmount, Mode=TwoWay}" Width="116" Grid.Row="1" Grid.Column="1"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="37" Margin="475,270,0,0" Text="{Binding ProductPrice, Mode=TwoWay}" Width="116" Grid.Row="1" Grid.Column="1"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="170" Margin="315,360,0,0" Text="{Binding ProductDescription, Mode=TwoWay}" Width="276" Grid.Row="1" Grid.Column="1"/>
+        <Button Content="Opret" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="38" Margin="30,550,0,0" VerticalAlignment="Top" Width="128" Command="{Binding AddRawMaterialCommand}" Grid.Row="1"/>
+        <Button Content="Opret" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="35" Margin="325,550,0,0" VerticalAlignment="Top" Width="128" Command="{Binding AddProductCommand}" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="0,15,0,0" Text="Rå Materialer" FontSize="22" Grid.Row="1" HorizontalAlignment="Center"/>
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="0,15,0,0" Text="Færdige Produkter" FontSize="22" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"/>
+        <Button Content="Slet" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="35" Margin="525,550,0,0" VerticalAlignment="Top" Width="121" Command="{Binding RemoveRawMaterialCommand}" Grid.Row="1"/>
+        <Button Content="Slet" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="35" Margin="20,550,0,0" VerticalAlignment="Top" Width="121" Command="{Binding RemoveProductCommand}" Grid.Row="1" Grid.Column="1"/>
     </Grid>
 </Page>
