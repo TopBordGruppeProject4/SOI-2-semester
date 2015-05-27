@@ -33,9 +33,13 @@
             <Setter Property="HorizontalAlignment" Value="Left"/>
         </Style>
         <Style x:Name="AppLoginTextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource AppStandardTextBoxStyle}">
-            <Setter Property="Height" Value="38"/>
-            <Setter Property="Width" Value="212"/>
+            <Setter Property="Height" Value="35"/>
             <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+        
+        <Style x:Name="AppLoginPasswordBoxStyle" TargetType="PasswordBox">
+            <Setter Property="Height" Value="35"/>
             <Setter Property="Margin" Value="0,0,0,10"/>
         </Style>
         
@@ -71,9 +75,8 @@
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
-        <Style x:Name="AppLoginStackpanelStyle" TargetType="StackPanel" BasedOn="{StaticResource AppCenteredStackPanelStyle}">
-            <Setter Property="Width" Value="250"/>
-            <Setter Property="Height" Value="250"/>
+        <Style x:Name="AppLoginStackPanelStyle" TargetType="StackPanel" BasedOn="{StaticResource AppCenteredStackPanelStyle}">
+            <Setter Property="Width" Value="210"/>
         </Style>
         
         <Style x:Name="AppLogoStyle" TargetType="Image">
@@ -82,12 +85,15 @@
                     <ImageSource>Assets/Billeder/logo2.png</ImageSource>
                 </Setter.Value>
             </Setter>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="100"/>
             <Setter Property="Stretch" Value="Fill"/>
+        </Style>
+        <Style x:Name="AppLogoLoginStyle" TargetType="Image" BasedOn="{StaticResource AppLogoStyle}">
+            <Setter Property="Margin" Value="0,0,0,10"/>
         </Style>
         <Style x:Name="AppLogoBottomStyle" TargetType="Image" BasedOn="{StaticResource AppLogoStyle}">
             <Setter Property="Margin" Value="15,0,0,15"/>
-            <Setter Property="Height" Value="100"/>
-            <Setter Property="Width" Value="150"/>
             <Setter Property="VerticalAlignment" Value="Bottom"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
         </Style>

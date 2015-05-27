@@ -12,10 +12,10 @@
     </Page.DataContext>
 
     <Grid Style="{StaticResource AppMainGrid}">
-        <StackPanel Style="{StaticResource AppLoginStackpanelStyle}">
-            <Image Style="{StaticResource AppLogoStyle}" Height="100" Margin="0,0,0,10"/>
+        <StackPanel Style="{StaticResource AppLoginStackPanelStyle}">
+            <Image Style="{StaticResource AppLogoLoginStyle}"/>
             <TextBox Style="{StaticResource AppLoginTextBoxStyle}" Text="{Binding LoginWorkerUsername, Mode=TwoWay}" PlaceholderText="Username"/>
-            <TextBox Style="{StaticResource AppLoginTextBoxStyle}" Text="{Binding LoginWorkerPassword, Mode=TwoWay}" PlaceholderText="Password"/>
+            <PasswordBox Style="{StaticResource AppLoginPasswordBoxStyle}" Password="{Binding LoginWorkerPassword, Mode=TwoWay}" PlaceholderText="Password"/>
             <Button Style="{StaticResource AppLoginButtonStyle}" Content="Login" Height="43" Width="133" Command="{Binding LoginWorkerCommand}"/>
         </StackPanel>
     </Grid>
