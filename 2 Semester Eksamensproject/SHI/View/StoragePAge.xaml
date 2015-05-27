@@ -32,6 +32,7 @@
         </TextBlock>
         <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Icon="Clear" Grid.Row="0" Command="{Binding LogOutCommand}" Grid.Column="2" />
 
+        <TextBlock Style="{StaticResource AppTitleTextBlockStyle}" Margin="0,15,0,0" Text="Rå Materialer" Grid.Row="1" HorizontalAlignment="Center"/>
         <ListView x:Name="RawList" HorizontalAlignment="Center" Height="411" Margin="0,60,0,0" VerticalAlignment="Top" Width="225" ItemsSource="{Binding RawMaterialCatalogSingleton.Instance.RawMaterials}" ItemTemplate="{StaticResource RawMaterialTemplate}" Grid.Row="1">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
@@ -39,6 +40,8 @@
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </ListView>
+        
+        <TextBlock Style="{StaticResource AppTitleTextBlockStyle}" Margin="0,15,0,0" Text="Færdige Produkter" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"/>
         <ListView x:Name="ProductList" HorizontalAlignment="Center" Height="411" Margin="0,60,0,0" VerticalAlignment="Top" Width="225" ItemsSource="{Binding ProductCatalogSingleton.Instance.Products}" ItemTemplate="{StaticResource ProductTemplate}" Grid.Row="1" Grid.Column="1">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
@@ -46,11 +49,10 @@
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </ListView>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="30,30,0,0" Text="Ændre Antal" FontSize="22" Grid.Row="1" Grid.Column="2"/>
-        <TextBox Style="{StaticResource AppLoginTextBoxStyle}" Height="40" Margin="30,70,0,0" Text="{Binding ProductAmount, Mode=TwoWay}" Width="160" RenderTransformOrigin="0.476,-0.343" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left"/>
-        <Button Content="Rå Materiale" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="51" Margin="30,130,0,0" VerticalAlignment="Top" Width="160" Command="{Binding ChangeRawMaterialCommand}" Grid.Row="1" Grid.Column="2"/>
-        <Button Content="Færdigt Produkt" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Left" Height="51" Margin="30,190,0,0" VerticalAlignment="Top" Width="160" Command="{Binding ChangeProductCommand}" Grid.Row="1" Grid.Column="2"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="0,15,0,0" Text="Rå Materialer" FontSize="22" Grid.Row="1" HorizontalAlignment="Center"/>
-        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="0,15,0,0" Text="Færdige Produkter" FontSize="22" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"/>
+        
+        <TextBlock Style="{StaticResource AppStandardTextBlockStyle}" Margin="30,30,0,0" Text="Ændre Antal" Grid.Row="1" Grid.Column="2"/>
+        <TextBox Style="{StaticResource AppStandardTextBoxStyle}" Height="40" Margin="30,70,0,0" Text="{Binding ProductAmount, Mode=TwoWay}" Width="160" RenderTransformOrigin="0.476,-0.343" Grid.Row="1" Grid.Column="2"/>
+        <Button Content="Rå Materiale" Style="{StaticResource AppStandardButtonStyle}" Height="51" Margin="30,130,0,0" Width="160" Command="{Binding ChangeRawMaterialCommand}" Grid.Row="1" Grid.Column="2"/>
+        <Button Content="Færdigt Produkt" Style="{StaticResource AppStandardButtonStyle}" Height="51" Margin="30,190,0,0" Width="160" Command="{Binding ChangeProductCommand}" Grid.Row="1" Grid.Column="2"/>
     </Grid>
 </Page>

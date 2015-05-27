@@ -9,12 +9,15 @@
             <Setter Property="VerticalAlignment" Value="Top"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="22"/>
         </Style>
         <Style x:Name="AppLoginStatusTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource AppStandardTextBlockStyle}">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Height" Value="51"/>
-            <Setter Property="FontSize" Value="22"/>
+        </Style>
+        <Style x:Name="AppTitleTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource AppStandardTextBlockStyle}">
+            <Setter Property="FontSize" Value="24"/>
         </Style>
         <Style x:Name="AppTemplateTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource AppStandardTextBlockStyle}">
             <Setter Property="Margin" Value="5"/>
@@ -37,6 +40,8 @@
         </Style>
         
         <Style x:Name="AppStandardButtonStyle" TargetType="Button">
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="BorderBrush" Value="Black"/>
         </Style>
