@@ -20,11 +20,21 @@
         </Grid.RowDefinitions>
         
         <AppBarButton Style="{StaticResource AppBackButtonStyle}" Icon="Back" Command="{Binding NavigateBackCommand, Mode=OneWay}" />
-        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0">
-            <Run Text="Logget ind som: "/>
-            <LineBreak/>
-            <Run Text="{Binding CurrentWorker.Name}"/>
-        </TextBlock>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Image Style="{StaticResource AppLogoStyle}" Height="100" Width="150" Margin="0,0,10,0"/>
+                <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Column="1">
+                    <Run Text="Logget ind som:"/>
+                    <LineBreak/>
+                    <Run Text="{Binding CurrentWorker.Name}"/>
+                </TextBlock>
+            </Grid>
+        </StackPanel>
         <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Icon="Clear" Grid.Row="0" Command="{Binding LogOutCommand}"/>
         
         <ListView x:Name="OrderList" HorizontalAlignment="Center" Height="400" Margin="0" VerticalAlignment="Center" Width="350" ItemsSource="{Binding CurrentWorkerOrders, Mode=TwoWay}" ItemTemplate="{StaticResource OrderTemplate}" Grid.Row="1">

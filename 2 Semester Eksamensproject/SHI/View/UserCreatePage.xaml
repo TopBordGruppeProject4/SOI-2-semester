@@ -24,11 +24,21 @@
         </Grid.RowDefinitions>
 
         <AppBarButton Style="{StaticResource AppBackButtonStyle}" Icon="Back" Command="{Binding NavigateBackCommand, Mode=OneWay}" />
-        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0" Grid.ColumnSpan="2" Margin="605,25,604,24">
-            <Run Text="Logget ind som: "/>
-            <LineBreak/>
-            <Run Text="{Binding CurrentWorker.Name}"/>
-        </TextBlock>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Image Style="{StaticResource AppLogoStyle}" Height="100" Width="150" Margin="0,0,10,0"/>
+                <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Column="1">
+                    <Run Text="Logget ind som:"/>
+                    <LineBreak/>
+                    <Run Text="{Binding CurrentWorker.Name}"/>
+                </TextBlock>
+            </Grid>
+        </StackPanel>
         <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Icon="Clear" Grid.Row="0" Command="{Binding LogOutCommand}" Grid.Column="1" />
 
         <TextBlock Style="{StaticResource AppTitleTextBlockStyle}" Margin="0,15,0,0" Text="Opret Ny Bruger" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center"/>
