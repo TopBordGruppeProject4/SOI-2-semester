@@ -15,30 +15,23 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition/>
+            <RowDefinition Height="130"/>
         </Grid.RowDefinitions>
 
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="0">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-
-                <Image Style="{StaticResource AppLogoStyle}" Height="100" Width="150" Margin="0,0,10,0"/>
-                <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Column="1">
+        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Row="0" Grid.Column="0">
                     <Run Text="Logget ind som:"/>
                     <LineBreak/>
                     <Run Text="{Binding CurrentWorker.Name}"/>
-                </TextBlock>
-            </Grid>
-        </StackPanel>
+        </TextBlock>
         <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Grid.Row="0" Icon="Clear" Command="{Binding LogOutCommand}" />
-        
+
         <StackPanel Style="{StaticResource AppCenteredStackPanelStyle}" Grid.Row="1">
             <Button Content="Min Ordre" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToOrderInformationPageCommand}" Grid.Row="1" Margin="0,0,0,10"/>
             <Button Content="Opret Ordre" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToCreateOrderPageCommand, Mode=OneWay}" Grid.Row="1" Margin="0,0,0,10"/>
             <Button Content="Se Ordre" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToOrderCatalogPageCommand, Mode=OneWay}" Grid.Row="1" Margin="0,0,0,10"/>
             <Button Content="Lager" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToStoragePageCommand, Mode=OneWay}" Grid.Row="1"/>
         </StackPanel>
+
+        <Image Style="{StaticResource AppLogoBottomStyle}" Grid.Row="2"/>
     </Grid>
 </Page>

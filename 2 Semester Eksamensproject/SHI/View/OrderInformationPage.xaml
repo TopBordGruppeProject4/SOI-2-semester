@@ -17,33 +17,26 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition/>
+            <RowDefinition Height="130"/>
         </Grid.RowDefinitions>
-        
-        <AppBarButton Style="{StaticResource AppBackButtonStyle}" Icon="Back" Command="{Binding NavigateBackCommand, Mode=OneWay}" />
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="0">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
 
-                <Image Style="{StaticResource AppLogoStyle}" Height="100" Width="150" Margin="0,0,10,0"/>
-                <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Column="1">
+        <AppBarButton Style="{StaticResource AppBackButtonStyle}" Icon="Back" Command="{Binding NavigateBackCommand, Mode=OneWay}" />
+        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Column="0" Grid.Row="0">
                     <Run Text="Logget ind som:"/>
                     <LineBreak/>
                     <Run Text="{Binding CurrentWorker.Name}"/>
-                </TextBlock>
-            </Grid>
-        </StackPanel>
+        </TextBlock>
         <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Icon="Clear" Grid.Row="0" Command="{Binding LogOutCommand}"/>
-        
-        <ListView x:Name="OrderList" HorizontalAlignment="Center" Height="400" Margin="0" VerticalAlignment="Center" Width="350" ItemsSource="{Binding CurrentWorkerOrders, Mode=TwoWay}" ItemTemplate="{StaticResource OrderTemplate}" Grid.Row="1">
+
+        <ListView x:Name="OrderList" Style="{StaticResource AppListViewTowerStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" ItemsSource="{Binding CurrentWorkerOrders, Mode=TwoWay}" ItemTemplate="{StaticResource OrderTemplate}" Grid.Row="1" Margin="0">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
                     <core:InvokeCommandAction Command="{Binding SelectSavedOrderCommand}" CommandParameter="{Binding SelectedItem, ElementName=OrderList}"/>
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </ListView>
-        <Button Content="Afslut Ordre" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Center" Height="47" Margin="0,480,0,0" VerticalAlignment="Center" Width="132" Command="{Binding FinishOrderCommand, Mode=TwoWay}" Grid.Row="1"/>
+        <Button Content="Afslut Ordre" Style="{StaticResource AppStandardButtonStyle}" HorizontalAlignment="Center" Height="47" Margin="0,0,0,20" VerticalAlignment="Bottom" Width="132" Command="{Binding FinishOrderCommand, Mode=TwoWay}" Grid.Row="1"/>
+
+        <Image Style="{StaticResource AppLogoBottomStyle}" Grid.Row="2"/>
     </Grid>
 </Page>

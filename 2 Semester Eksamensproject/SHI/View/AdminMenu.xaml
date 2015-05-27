@@ -15,29 +15,22 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition/>
+            <RowDefinition Height="130"/>
         </Grid.RowDefinitions>
-        
-        <AppBarButton Style="{StaticResource AppBackButtonStyle}" Icon="Back" Command="{Binding NavigateBackCommand, Mode=OneWay}"/>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="0">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
 
-                <Image Style="{StaticResource AppLogoStyle}" Height="100" Width="150" Margin="0,0,10,0"/>
-                <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Column="1">
+        <AppBarButton Style="{StaticResource AppBackButtonStyle}" Icon="Back" Command="{Binding NavigateBackCommand, Mode=OneWay}"/>
+        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Column="0" Grid.Row="0">
                     <Run Text="Logget ind som:"/>
                     <LineBreak/>
                     <Run Text="{Binding CurrentWorker.Name}"/>
-                </TextBlock>
-            </Grid>
-        </StackPanel>
+        </TextBlock>
         <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Grid.Row="0" Icon="Clear" Command="{Binding LogOutCommand}" />
-        
+
         <StackPanel Style="{StaticResource AppCenteredStackPanelStyle}" Grid.Row="1">
-            <Button Content="Bruger Administration" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToUserCreatePageCommand, Mode=OneWay}" Grid.Row="1" Margin="0,0,0,10"/>
-            <Button Content="Lager Administration" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToAdminStoragePageCommand, Mode=OneWay}" Grid.Row="1"/>
+            <Button Content="Bruger Administration" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToUserCreatePageCommand, Mode=OneWay}" Grid.Row="1"/>
+            <Button Content="Lager Administration" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToAdminStoragePageCommand, Mode=OneWay}" Grid.Row="1" Margin="0"/>
         </StackPanel>
+
+        <Image Style="{StaticResource AppLogoBottomStyle}" Grid.Row="2"/>
     </Grid>
 </Page>

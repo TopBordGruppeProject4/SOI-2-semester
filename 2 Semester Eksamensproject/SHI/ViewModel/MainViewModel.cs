@@ -675,7 +675,6 @@ namespace SHI.ViewModel
         public CommandHandler CommandHandler { get; set; }
 
         public static Worker CurrentWorker { get; set; }
-        
          
         public ObservableCollection<SavedOrder> CurrentWorkerOrders { get; set; }
         public ObservableCollection<SavedOrder> NewOrders { get; set; }
@@ -743,13 +742,10 @@ namespace SHI.ViewModel
             {
                 SavedOrderCatalogSingleton.AddOrdersToList(CurrentWorkerOrders, CurrentWorker.Id);
             }
-
-            
-            
-            
-            
             
         }
+
+        #region Property changed
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -759,5 +755,8 @@ namespace SHI.ViewModel
             PropertyChangedEventHandler handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        #endregion
+
     }
 }

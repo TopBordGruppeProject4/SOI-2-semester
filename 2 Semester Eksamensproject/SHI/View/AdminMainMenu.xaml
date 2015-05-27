@@ -15,31 +15,24 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition/>
+            <RowDefinition Height="130"/>
         </Grid.RowDefinitions>
 
         <AppBarButton Style="{StaticResource AppLogoutButtonStyle}" Grid.Row="0" Icon="Clear" Command="{Binding LogOutCommand}"/>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="0">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-
-                <Image Style="{StaticResource AppLogoStyle}" Height="100" Width="150" Margin="0,0,10,0"/>
-                <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Column="1">
+        <TextBlock Style="{StaticResource AppLoginStatusTextBlockStyle}" Grid.Column="1">
                     <Run Text="Logget ind som:"/>
                     <LineBreak/>
                     <Run Text="{Binding CurrentWorker.Name}"/>
-                </TextBlock>
-            </Grid>
-        </StackPanel>
-        
+        </TextBlock>
+
         <StackPanel Style="{StaticResource AppCenteredStackPanelStyle}" Grid.Row="1">
-            <Button Content="Min Ordre" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToOrderInformationPageCommand}" Margin="0,0,0,10"/>
-            <Button Content="Se Ordre" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToOrderCatalogPageCommand, Mode=OneWay}" Margin="0,0,0,10" />
-            <Button Content="Opret Ordre" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToCreateOrderPageCommand, Mode=OneWay}" Margin="0,0,0,10"/>
-            <Button Content="Lager" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToStoragePageCommand, Mode=OneWay}" Margin="0,0,0,10"/>
-            <Button Content="Admin Menu" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToAdminMenuCommand, Mode=OneWay}"/>
+            <Button Content="Min Ordre" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToOrderInformationPageCommand}"/>
+            <Button Content="Se Ordre" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToOrderCatalogPageCommand, Mode=OneWay}" />
+            <Button Content="Opret Ordre" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToCreateOrderPageCommand, Mode=OneWay}"/>
+            <Button Content="Lager" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToStoragePageCommand, Mode=OneWay}"/>
+            <Button Content="Admin Menu" Style="{StaticResource AppMenuButtonStyle}" Command="{Binding NavigateToAdminMenuCommand, Mode=OneWay}" Margin="0"/>
         </StackPanel>
+
+        <Image Style="{StaticResource AppLogoBottomStyle}" Grid.Row="2" />
     </Grid>
 </Page>

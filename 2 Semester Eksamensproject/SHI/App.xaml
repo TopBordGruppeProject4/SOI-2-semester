@@ -48,6 +48,7 @@
         <Style x:Name="AppMenuButtonStyle" TargetType="Button" BasedOn="{StaticResource AppStandardButtonStyle}">
             <Setter Property="Width" Value="257"/>
             <Setter Property="Height" Value="72"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
         </Style>
         <Style x:Name="AppLoginButtonStyle" TargetType="Button" BasedOn="{StaticResource AppStandardButtonStyle}">
             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -83,6 +84,13 @@
             </Setter>
             <Setter Property="Stretch" Value="Fill"/>
         </Style>
+        <Style x:Name="AppLogoBottomStyle" TargetType="Image" BasedOn="{StaticResource AppLogoStyle}">
+            <Setter Property="Margin" Value="15,0,0,15"/>
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
         
         <Style x:Name="AppMainGrid" TargetType="Panel">
             <Setter Property="Background">
@@ -90,6 +98,11 @@
                     <ImageBrush ImageSource="Assets/Billeder/bg.png" Stretch="UniformToFill"/>
                 </Setter.Value>
             </Setter>
+        </Style>
+        
+        <Style x:Name="AppListViewTowerStyle" TargetType="ListView">
+            <Setter Property="Width" Value="240"/>
+            <Setter Property="Height" Value="380"/>
         </Style>
         
         <!-- Templates -->
