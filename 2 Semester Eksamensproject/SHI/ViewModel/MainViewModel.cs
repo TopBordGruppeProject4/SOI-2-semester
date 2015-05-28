@@ -11,7 +11,7 @@ using _2.Iteration.ViewModel;
 
 namespace SHI.ViewModel
 {
-    class MainViewModel: INotifyPropertyChanged
+    public class MainViewModel: INotifyPropertyChanged
     {
         #region Placeholder Properties
 
@@ -617,8 +617,7 @@ namespace SHI.ViewModel
         {
             get
             {
-                return _loginWorkerCommand ??
-                       (_loginWorkerCommand = new RelayCommand(CommandHandler.InvokeLoginWorkerCommand));
+                return _loginWorkerCommand ?? (_loginWorkerCommand = new RelayCommand(CommandHandler.InvokeLoginWorkerCommand));
             }
             set { _loginWorkerCommand = value; }
         }

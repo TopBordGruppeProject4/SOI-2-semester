@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using SHI.Model.Persistency;
 
 namespace SHI.Model
 {
-    class RawMaterialCatalogSingleton
+    public class RawMaterialCatalogSingleton
     {
         private static RawMaterialCatalogSingleton _instance = new RawMaterialCatalogSingleton();
 

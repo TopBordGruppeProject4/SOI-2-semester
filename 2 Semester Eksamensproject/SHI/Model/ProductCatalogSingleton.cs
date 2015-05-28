@@ -8,7 +8,7 @@ using SHI.Model.Persistency;
 
 namespace SHI.Model
 {
-    class ProductCatalogSingleton
+    public class ProductCatalogSingleton
     {
         private static ProductCatalogSingleton _instance = new ProductCatalogSingleton();
 

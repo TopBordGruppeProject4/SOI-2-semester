@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.Devices.SmartCards;
+﻿using System.Collections.ObjectModel;
 using SHI.Model.Persistency;
 
 namespace SHI.Model
 {
-    class WorkerCatalogSingleton
+    public class WorkerCatalogSingleton
     {
         private static WorkerCatalogSingleton _instance = new WorkerCatalogSingleton();
 

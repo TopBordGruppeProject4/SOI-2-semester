@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using SHI.Model.Persistency;
 
 namespace SHI.Model
 {
-    class CustomerCatalogSingleton
+    public class CustomerCatalogSingleton
     {
         private static CustomerCatalogSingleton _instance = new CustomerCatalogSingleton();
 

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SHI.Model
+﻿namespace SHI.Model
 {
-    class RawMaterial
+    public class RawMaterial
     {
         public int Amount { get; set; }
         public string Description { get; set; }

@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Windows.UI.Popups;
 using SHI.Model;
 
 namespace SHI.ViewModel
 {
-    internal class CommandHandler
+    public class CommandHandler
     {
         public MainViewModel MainViewModel { get; set; }
 
@@ -185,18 +182,28 @@ namespace SHI.ViewModel
 
         public void InvokeLoginWorkerCommand()
         {
-            if (MainViewModel.WorkerCatalogSingleton.CheckWorker(MainViewModel.LoginWorkerUsername, MainViewModel.LoginWorkerPassword))
+            try
             {
-                MainViewModel.CurrentWorker =
-                    MainViewModel.WorkerCatalogSingleton.GetWorker(MainViewModel.LoginWorkerUsername);
-                if (MainViewModel.CurrentWorker.Admin)
+                if (MainViewModel.WorkerCatalogSingleton.CheckWorker(MainViewModel.LoginWorkerUsername, MainViewModel.LoginWorkerPassword))
                 {
-                    MainViewModel.NavigateToAdminMainMenuCommand.Execute(true);
+                    MainViewModel.CurrentWorker = MainViewModel.WorkerCatalogSingleton.GetWorker(MainViewModel.LoginWorkerUsername);
+                    if (MainViewModel.CurrentWorker.Admin)
+                    {
+                        MainViewModel.NavigateToAdminMainMenuCommand.Execute(true);
+                    }
+                    else
+                    {
+                        MainViewModel.NavigateToWorkerMainMenuCommand.Execute(true);
+                    }
                 }
                 else
                 {
-                    MainViewModel.NavigateToWorkerMainMenuCommand.Execute(true);
+                    throw new Exception("Bruger findes ikke, beklager...");
                 }
+            }
+            catch (Exception ex)
+            {
+                new MessageDialog(ex.Message).ShowAsync();
             }
         }
     }

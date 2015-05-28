@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SHI.Model
+﻿namespace SHI.Model
 {
-    class Customer: Person
+    public class Customer: Person
     {
         public override string Address { get; set; }
         public override int Id { get; set; }

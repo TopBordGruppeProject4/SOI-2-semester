@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SHI.Model
 {
-    class Product
+    public class Product
     {
 
         public int Amount { get; set; }
