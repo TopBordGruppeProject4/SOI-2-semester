@@ -3,14 +3,14 @@
   <SequenceDesignerModelMoniker Id="ca0793a4-227d-45cf-8d5f-3160fb1fa33a" />
   <nestedChildShapes>
     <lifelineShape Id="d17da40d-4492-45b9-afb6-aa55cd240ce6" absoluteBounds="1.78125, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="10decc74-f712-4376-9995-c0d282fe2922" LastKnownName=": View" />
+      <lifelineMoniker Id="10decc74-f712-4376-9995-c0d282fe2922" LastKnownName="Aktør" />
       <relativeChildShapes>
         <umlLifelineHeadShape Id="a70cf863-82db-492a-b8e3-50559e51a7a8" absoluteBounds="1.35625, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="10decc74-f712-4376-9995-c0d282fe2922" LastKnownName=": View" />
+          <lifelineMoniker Id="10decc74-f712-4376-9995-c0d282fe2922" LastKnownName="Aktør" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <lifelineHoverShape Id="94a6e2da-2964-481c-9e7c-0b6d95da1afc" absoluteBounds="1.78125, 1, 0, 7">
-          <lifelineMoniker Id="10decc74-f712-4376-9995-c0d282fe2922" LastKnownName=": View" />
+          <lifelineMoniker Id="10decc74-f712-4376-9995-c0d282fe2922" LastKnownName="Aktør" />
         </lifelineHoverShape>
       </relativeChildShapes>
     </lifelineShape>

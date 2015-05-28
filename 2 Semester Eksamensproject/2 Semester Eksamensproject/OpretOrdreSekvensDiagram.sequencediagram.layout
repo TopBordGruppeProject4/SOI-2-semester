@@ -3,14 +3,14 @@
   <SequenceDesignerModelMoniker Id="0a24ab25-697f-4564-a0f2-7f84e89656e1" />
   <nestedChildShapes>
     <lifelineShape Id="17c7272c-a3c1-46e3-869f-d1360f5a1c98" absoluteBounds="2.1145832538604736, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="1352c6ff-6760-410d-9347-d98ae3cc4c8a" LastKnownName=": View" />
+      <lifelineMoniker Id="1352c6ff-6760-410d-9347-d98ae3cc4c8a" LastKnownName="Aktør" />
       <relativeChildShapes>
         <umlLifelineHeadShape Id="13cdfdb1-ef27-47a5-abab-7d0bdd11117e" absoluteBounds="1.6895832538604736, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="1352c6ff-6760-410d-9347-d98ae3cc4c8a" LastKnownName=": View" />
+          <lifelineMoniker Id="1352c6ff-6760-410d-9347-d98ae3cc4c8a" LastKnownName="Aktør" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <lifelineHoverShape Id="8ddc7a04-c50f-4f24-8e11-ac35310ef770" absoluteBounds="2.1145832538604736, 1, 0, 7">
-          <lifelineMoniker Id="1352c6ff-6760-410d-9347-d98ae3cc4c8a" LastKnownName=": View" />
+          <lifelineMoniker Id="1352c6ff-6760-410d-9347-d98ae3cc4c8a" LastKnownName="Aktør" />
         </lifelineHoverShape>
       </relativeChildShapes>
     </lifelineShape>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="0a24ab25-697f-4564-a0f2-7f84e89656e1" name="OpretOrdreSekvensDiagram" linkedPackageId="a1dc6a68-90b9-48b8-b2ee-4834ced06f57" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="0a24ab25-697f-4564-a0f2-7f84e89656e1" name="OpretOrdreSekvensDiagram" linkedPackageId="a1dc6a68-90b9-48b8-b2ee-4834ced06f57" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="c0af90c9-20b6-4aeb-b434-6e762713e5b6" name="OpretOrdreSekvensDiagram" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -37,7 +37,7 @@
           <messageOccurrenceSpecification Id="30647810-74d6-4801-9fca-fddeb6d2a688" name="MessageOccurrenceSpecification1">
             <elementDefinition Id="f10006b9-cb3b-4b1f-a095-d21cf0d9ed77" />
             <covered>
-              <lifelineMoniker Id="1352c6ff-6760-410d-9347-d98ae3cc4c8a" LastKnownName=": View" />
+              <lifelineMoniker Id="1352c6ff-6760-410d-9347-d98ae3cc4c8a" LastKnownName="Aktør" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="296422f9-65ab-4233-80f9-fc8e1dfb9a24" name="MessageOccurrenceSpecification2">
@@ -333,7 +333,7 @@
           <messageOccurrenceSpecification Id="45458dbd-9c3c-40e2-b477-d73386700245" name="MessageOccurrenceSpecification4">
             <elementDefinition Id="a80cf1d7-0ada-4086-af37-e05f2098a462" />
             <covered>
-              <lifelineMoniker Id="1352c6ff-6760-410d-9347-d98ae3cc4c8a" LastKnownName=": View" />
+              <lifelineMoniker Id="1352c6ff-6760-410d-9347-d98ae3cc4c8a" LastKnownName="Aktør" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="ee6bc944-6491-4b79-9001-4a2fae4b677c" name="ExecutionOccurrenceSpecification2">
@@ -349,7 +349,7 @@
           </executionOccurrenceSpecification>
         </fragments>
         <lifelines>
-          <lifeline Id="1352c6ff-6760-410d-9347-d98ae3cc4c8a" name=": View" isActor="false" lifelineDisplayName=": View">
+          <lifeline Id="1352c6ff-6760-410d-9347-d98ae3cc4c8a" name="Aktør" isActor="false" lifelineDisplayName="Aktør">
             <elementDefinition Id="320c7c73-82ac-43a9-b337-d7846f464a4e" />
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker Id="30647810-74d6-4801-9fca-fddeb6d2a688" LastKnownName="MessageOccurrenceSpecification1" />

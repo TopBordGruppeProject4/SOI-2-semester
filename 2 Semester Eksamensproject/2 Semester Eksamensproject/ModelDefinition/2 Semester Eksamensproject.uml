@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="22affb23-e5f1-4d52-85e1-724762b0dcc1"
   name="2 Semester Eksamensproject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -1478,7 +1478,7 @@
             <covered>
               <lifelineMoniker
                 Id="320c7c73-82ac-43a9-b337-d7846f464a4e"
-                LastKnownName=": View"
+                LastKnownName="Aktør"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2004,7 +2004,7 @@
             <covered>
               <lifelineMoniker
                 Id="320c7c73-82ac-43a9-b337-d7846f464a4e"
-                LastKnownName=": View"
+                LastKnownName="Aktør"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2030,9 +2030,9 @@
         <lifelines>
           <lifeline
             Id="320c7c73-82ac-43a9-b337-d7846f464a4e"
-            name=": View"
+            name="Aktør"
             isActor="false"
-            lifelineDisplayName=": View">
+            lifelineDisplayName="Aktør">
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker
                 Id="f10006b9-cb3b-4b1f-a095-d21cf0d9ed77"
@@ -2735,7 +2735,7 @@
             <covered>
               <lifelineMoniker
                 Id="b2fbbf42-177c-4190-8831-1a5e6e4d4791"
-                LastKnownName=": View"
+                LastKnownName="Aktør"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2873,7 +2873,7 @@
             <covered>
               <lifelineMoniker
                 Id="b2fbbf42-177c-4190-8831-1a5e6e4d4791"
-                LastKnownName=": View"
+                LastKnownName="Aktør"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2899,9 +2899,9 @@
         <lifelines>
           <lifeline
             Id="b2fbbf42-177c-4190-8831-1a5e6e4d4791"
-            name=": View"
+            name="Aktør"
             isActor="false"
-            lifelineDisplayName=": View">
+            lifelineDisplayName="Aktør">
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker
                 Id="2fe6a506-9805-4df2-946c-32febceeb8f7"
@@ -3120,7 +3120,7 @@
             <covered>
               <lifelineMoniker
                 Id="9a1d8260-b682-4725-be55-a5e25e361bd3"
-                LastKnownName=": View"
+                LastKnownName="Aktør"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3319,22 +3319,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="7685ff1b-45be-40a6-9021-2e85f3a09e80"
-            name="MessageOccurrenceSpecification31">
-            <covered>
-              <lifelineMoniker
-                Id="9bdb2bd3-06ab-4262-8f9f-0e29fd24bc20"
-                LastKnownName=": ObservableCollection"
-                LastKnownLocation="2 Semester Eksamensproject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="9eaab38a-2810-4a00-bb0f-d19629dd91d5"
             name="MessageOccurrenceSpecification32">
             <covered>
               <lifelineMoniker
                 Id="610ff51c-47bf-4cc3-b7f1-91bbe71c602b"
                 LastKnownName=": UserCatalogSingleton"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7685ff1b-45be-40a6-9021-2e85f3a09e80"
+            name="MessageOccurrenceSpecification31">
+            <covered>
+              <lifelineMoniker
+                Id="9bdb2bd3-06ab-4262-8f9f-0e29fd24bc20"
+                LastKnownName=": ObservableCollection"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3371,12 +3371,12 @@
                 LastKnownName=": Worker"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
               <lifelineMoniker
-                Id="dcac2c88-0040-4500-bf4c-c93a2a3b4cfd"
-                LastKnownName="Database"
-                LastKnownLocation="2 Semester Eksamensproject.uml" />
-              <lifelineMoniker
                 Id="9bdb2bd3-06ab-4262-8f9f-0e29fd24bc20"
                 LastKnownName=": ObservableCollection"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+              <lifelineMoniker
+                Id="dcac2c88-0040-4500-bf4c-c93a2a3b4cfd"
+                LastKnownName="Database"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </coveredLifelines>
             <operands>
@@ -3393,12 +3393,12 @@
                     LastKnownName=": Worker"
                     LastKnownLocation="2 Semester Eksamensproject.uml" />
                   <lifelineMoniker
-                    Id="dcac2c88-0040-4500-bf4c-c93a2a3b4cfd"
-                    LastKnownName="Database"
-                    LastKnownLocation="2 Semester Eksamensproject.uml" />
-                  <lifelineMoniker
                     Id="9bdb2bd3-06ab-4262-8f9f-0e29fd24bc20"
                     LastKnownName=": ObservableCollection"
+                    LastKnownLocation="2 Semester Eksamensproject.uml" />
+                  <lifelineMoniker
+                    Id="dcac2c88-0040-4500-bf4c-c93a2a3b4cfd"
+                    LastKnownName="Database"
                     LastKnownLocation="2 Semester Eksamensproject.uml" />
                 </coveredLifelines>
                 <guard>
@@ -3453,12 +3453,12 @@
                     LastKnownName=": Worker"
                     LastKnownLocation="2 Semester Eksamensproject.uml" />
                   <lifelineMoniker
-                    Id="dcac2c88-0040-4500-bf4c-c93a2a3b4cfd"
-                    LastKnownName="Database"
-                    LastKnownLocation="2 Semester Eksamensproject.uml" />
-                  <lifelineMoniker
                     Id="9bdb2bd3-06ab-4262-8f9f-0e29fd24bc20"
                     LastKnownName=": ObservableCollection"
+                    LastKnownLocation="2 Semester Eksamensproject.uml" />
+                  <lifelineMoniker
+                    Id="dcac2c88-0040-4500-bf4c-c93a2a3b4cfd"
+                    LastKnownName="Database"
                     LastKnownLocation="2 Semester Eksamensproject.uml" />
                 </coveredLifelines>
                 <guard>
@@ -3843,26 +3843,6 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="f9fd5fc9-69e9-42ab-9bff-c4d13760d166"
-            name="OperandOccurrenceSpecification10">
-            <covered>
-              <lifelineMoniker
-                Id="90a1143d-810a-4da6-bdcd-c5f52e2db776"
-                LastKnownName=": Worker"
-                LastKnownLocation="2 Semester Eksamensproject.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="d570b500-775f-4344-914a-c2dcbcc19eca"
-            name="OperandOccurrenceSpecification14">
-            <covered>
-              <lifelineMoniker
-                Id="9bdb2bd3-06ab-4262-8f9f-0e29fd24bc20"
-                LastKnownName=": ObservableCollection"
-                LastKnownLocation="2 Semester Eksamensproject.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="79f411ff-dc70-40eb-b59b-a5d9170e4c0a"
             name="OperandOccurrenceSpecification4">
             <covered>
@@ -3879,6 +3859,26 @@
               <lifelineMoniker
                 Id="dcac2c88-0040-4500-bf4c-c93a2a3b4cfd"
                 LastKnownName="Database"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="f9fd5fc9-69e9-42ab-9bff-c4d13760d166"
+            name="OperandOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="90a1143d-810a-4da6-bdcd-c5f52e2db776"
+                LastKnownName=": Worker"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="d570b500-775f-4344-914a-c2dcbcc19eca"
+            name="OperandOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="9bdb2bd3-06ab-4262-8f9f-0e29fd24bc20"
+                LastKnownName=": ObservableCollection"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -4001,22 +4001,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
+            Id="e3fcaaaa-2ed6-47a4-9429-dc7f9bb8a93f"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="9a1d8260-b682-4725-be55-a5e25e361bd3"
+                LastKnownName="Aktør"
+                LastKnownLocation="2 Semester Eksamensproject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
             Id="de6b3adc-3cf8-4f2f-a01c-85367f1d7ca3"
             name="MessageOccurrenceSpecification3">
             <covered>
               <lifelineMoniker
                 Id="82ddd2ce-7cc0-49d0-9e82-d955444d4121"
                 LastKnownName=": CommandHandler"
-                LastKnownLocation="2 Semester Eksamensproject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="e3fcaaaa-2ed6-47a4-9429-dc7f9bb8a93f"
-            name="MessageOccurrenceSpecification4">
-            <covered>
-              <lifelineMoniker
-                Id="9a1d8260-b682-4725-be55-a5e25e361bd3"
-                LastKnownName=": View"
                 LastKnownLocation="2 Semester Eksamensproject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4042,9 +4042,9 @@
         <lifelines>
           <lifeline
             Id="9a1d8260-b682-4725-be55-a5e25e361bd3"
-            name=": View"
+            name="Aktør"
             isActor="false"
-            lifelineDisplayName=": View">
+            lifelineDisplayName="Aktør">
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker
                 Id="c4f6e7e9-b0ac-4e7e-aafb-93d2c2dc820b"

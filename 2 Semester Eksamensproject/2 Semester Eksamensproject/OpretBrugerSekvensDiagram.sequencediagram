@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="f66acb79-df9a-4200-88cd-e9d4919216f8" name="OpretBrugerSekvensDiagram" linkedPackageId="dfe29575-17ae-46bf-867e-270baaee2638" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="f66acb79-df9a-4200-88cd-e9d4919216f8" name="OpretBrugerSekvensDiagram" linkedPackageId="dfe29575-17ae-46bf-867e-270baaee2638" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="6ef30760-2ec0-4ed2-93d8-04b2a555a296" name="OpretBrugerSekvensDiagram" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -37,7 +37,7 @@
           <messageOccurrenceSpecification Id="599a6f30-e8f0-485d-98ce-bb68f224cb8d" name="MessageOccurrenceSpecification1">
             <elementDefinition Id="c4f6e7e9-b0ac-4e7e-aafb-93d2c2dc820b" />
             <covered>
-              <lifelineMoniker Id="bfcaca03-a016-48e5-a4e8-36b9e54de650" LastKnownName=": View" />
+              <lifelineMoniker Id="bfcaca03-a016-48e5-a4e8-36b9e54de650" LastKnownName="Aktør" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="09a8f51c-90dd-4bc8-9160-1ff703e55b2a" name="MessageOccurrenceSpecification2">
@@ -135,16 +135,16 @@
               <lifelineMoniker Id="eac8d2da-8cf5-43bb-b1cc-fc2e60b31234" LastKnownName=": UserCatalogSingleton" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="53a3d1d3-abba-421b-a03c-5da9c2e7d2f6" name="MessageOccurrenceSpecification31">
-            <elementDefinition Id="7685ff1b-45be-40a6-9021-2e85f3a09e80" />
-            <covered>
-              <lifelineMoniker Id="62d6efb8-30ca-42d4-84f9-e00e7193eb88" LastKnownName=": ObservableCollection" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="bc0a4761-a08e-4e42-888b-455167abb062" name="MessageOccurrenceSpecification32">
             <elementDefinition Id="9eaab38a-2810-4a00-bb0f-d19629dd91d5" />
             <covered>
               <lifelineMoniker Id="eac8d2da-8cf5-43bb-b1cc-fc2e60b31234" LastKnownName=": UserCatalogSingleton" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="53a3d1d3-abba-421b-a03c-5da9c2e7d2f6" name="MessageOccurrenceSpecification31">
+            <elementDefinition Id="7685ff1b-45be-40a6-9021-2e85f3a09e80" />
+            <covered>
+              <lifelineMoniker Id="62d6efb8-30ca-42d4-84f9-e00e7193eb88" LastKnownName=": ObservableCollection" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="8caee203-4ef6-41ef-8ad7-b65c25ae98b6" name="ExecutionOccurrenceSpecification20">
@@ -163,8 +163,8 @@
             <coveredLifelines>
               <lifelineMoniker Id="eac8d2da-8cf5-43bb-b1cc-fc2e60b31234" LastKnownName=": UserCatalogSingleton" />
               <lifelineMoniker Id="46e3a3ca-2743-4718-a9d2-3fd80777e749" LastKnownName=": Worker" />
-              <lifelineMoniker Id="c7b461c1-b4ff-477f-8e0d-b3b661e20152" LastKnownName="Database" />
               <lifelineMoniker Id="62d6efb8-30ca-42d4-84f9-e00e7193eb88" LastKnownName=": ObservableCollection" />
+              <lifelineMoniker Id="c7b461c1-b4ff-477f-8e0d-b3b661e20152" LastKnownName="Database" />
             </coveredLifelines>
             <operands>
               <interactionOperand Id="79f24f8f-7b41-4f03-a076-ebecb31fc181" name="InteractionOperand1">
@@ -172,8 +172,8 @@
                 <coveredLifelines>
                   <lifelineMoniker Id="eac8d2da-8cf5-43bb-b1cc-fc2e60b31234" LastKnownName=": UserCatalogSingleton" />
                   <lifelineMoniker Id="46e3a3ca-2743-4718-a9d2-3fd80777e749" LastKnownName=": Worker" />
-                  <lifelineMoniker Id="c7b461c1-b4ff-477f-8e0d-b3b661e20152" LastKnownName="Database" />
                   <lifelineMoniker Id="62d6efb8-30ca-42d4-84f9-e00e7193eb88" LastKnownName=": ObservableCollection" />
+                  <lifelineMoniker Id="c7b461c1-b4ff-477f-8e0d-b3b661e20152" LastKnownName="Database" />
                 </coveredLifelines>
                 <guard>
                   <interactionConstraint Id="16e5d780-4da0-4575-81fe-fbac26cd0a19">
@@ -196,8 +196,8 @@
                 <coveredLifelines>
                   <lifelineMoniker Id="eac8d2da-8cf5-43bb-b1cc-fc2e60b31234" LastKnownName=": UserCatalogSingleton" />
                   <lifelineMoniker Id="46e3a3ca-2743-4718-a9d2-3fd80777e749" LastKnownName=": Worker" />
-                  <lifelineMoniker Id="c7b461c1-b4ff-477f-8e0d-b3b661e20152" LastKnownName="Database" />
                   <lifelineMoniker Id="62d6efb8-30ca-42d4-84f9-e00e7193eb88" LastKnownName=": ObservableCollection" />
+                  <lifelineMoniker Id="c7b461c1-b4ff-477f-8e0d-b3b661e20152" LastKnownName="Database" />
                 </coveredLifelines>
                 <guard>
                   <interactionConstraint Id="855ec4b0-ec82-4ae5-a64f-277573024ee9">
@@ -414,18 +414,6 @@
               <lifelineMoniker Id="c7b461c1-b4ff-477f-8e0d-b3b661e20152" LastKnownName="Database" />
             </covered>
           </executionOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="79eb703f-5277-47f2-b100-7d25eae540f3" name="OperandOccurrenceSpecification10">
-            <elementDefinition Id="f9fd5fc9-69e9-42ab-9bff-c4d13760d166" />
-            <covered>
-              <lifelineMoniker Id="46e3a3ca-2743-4718-a9d2-3fd80777e749" LastKnownName=": Worker" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="19add297-48eb-4b46-bb4e-6f72a2d14ae3" name="OperandOccurrenceSpecification14">
-            <elementDefinition Id="d570b500-775f-4344-914a-c2dcbcc19eca" />
-            <covered>
-              <lifelineMoniker Id="62d6efb8-30ca-42d4-84f9-e00e7193eb88" LastKnownName=": ObservableCollection" />
-            </covered>
-          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="be036439-5da4-4bbf-996b-0c84b7b0cf78" name="OperandOccurrenceSpecification4">
             <elementDefinition Id="79f411ff-dc70-40eb-b59b-a5d9170e4c0a" />
             <covered>
@@ -436,6 +424,18 @@
             <elementDefinition Id="427485c6-8c73-4a69-9174-5139d7f86e28" />
             <covered>
               <lifelineMoniker Id="c7b461c1-b4ff-477f-8e0d-b3b661e20152" LastKnownName="Database" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="79eb703f-5277-47f2-b100-7d25eae540f3" name="OperandOccurrenceSpecification10">
+            <elementDefinition Id="f9fd5fc9-69e9-42ab-9bff-c4d13760d166" />
+            <covered>
+              <lifelineMoniker Id="46e3a3ca-2743-4718-a9d2-3fd80777e749" LastKnownName=": Worker" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="19add297-48eb-4b46-bb4e-6f72a2d14ae3" name="OperandOccurrenceSpecification14">
+            <elementDefinition Id="d570b500-775f-4344-914a-c2dcbcc19eca" />
+            <covered>
+              <lifelineMoniker Id="62d6efb8-30ca-42d4-84f9-e00e7193eb88" LastKnownName=": ObservableCollection" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="2891b294-8a28-4677-be0a-3110fcde6cb0" name="OperandOccurrenceSpecification11">
@@ -509,16 +509,16 @@
               <lifelineMoniker Id="eac8d2da-8cf5-43bb-b1cc-fc2e60b31234" LastKnownName=": UserCatalogSingleton" />
             </covered>
           </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="b1ab4d68-46d0-432f-a203-04eae4da176a" name="MessageOccurrenceSpecification4">
+            <elementDefinition Id="e3fcaaaa-2ed6-47a4-9429-dc7f9bb8a93f" />
+            <covered>
+              <lifelineMoniker Id="bfcaca03-a016-48e5-a4e8-36b9e54de650" LastKnownName="Aktør" />
+            </covered>
+          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="4f82a989-6de9-4b9e-8c5a-3ed278d51c5d" name="MessageOccurrenceSpecification3">
             <elementDefinition Id="de6b3adc-3cf8-4f2f-a01c-85367f1d7ca3" />
             <covered>
               <lifelineMoniker Id="0ab3a94f-9fda-4d92-8ff9-dbe28f3599a4" LastKnownName=": CommandHandler" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="b1ab4d68-46d0-432f-a203-04eae4da176a" name="MessageOccurrenceSpecification4">
-            <elementDefinition Id="e3fcaaaa-2ed6-47a4-9429-dc7f9bb8a93f" />
-            <covered>
-              <lifelineMoniker Id="bfcaca03-a016-48e5-a4e8-36b9e54de650" LastKnownName=": View" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="bfc87208-6f3f-4c6e-a3aa-2aaf811fa667" name="ExecutionOccurrenceSpecification2">
@@ -534,7 +534,7 @@
           </executionOccurrenceSpecification>
         </fragments>
         <lifelines>
-          <lifeline Id="bfcaca03-a016-48e5-a4e8-36b9e54de650" name=": View" isActor="false" lifelineDisplayName=": View">
+          <lifeline Id="bfcaca03-a016-48e5-a4e8-36b9e54de650" name="Aktør" isActor="false" lifelineDisplayName="Aktør">
             <elementDefinition Id="9a1d8260-b682-4725-be55-a5e25e361bd3" />
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker Id="599a6f30-e8f0-485d-98ce-bb68f224cb8d" LastKnownName="MessageOccurrenceSpecification1" />

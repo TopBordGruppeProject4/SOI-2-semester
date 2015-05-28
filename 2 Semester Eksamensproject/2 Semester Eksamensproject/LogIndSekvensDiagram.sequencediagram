@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="ca0793a4-227d-45cf-8d5f-3160fb1fa33a" name="LogIndSekvensDiagram" linkedPackageId="c83effcb-a199-45ff-95c5-69321314c0ed" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="d3e1ef82-1128-4b39-8e58-3352ac0ed572">
-      <profileInstance Id="3122f29b-0403-4b92-8718-0d2eaf6fbd51" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="e177a910-dd3d-404b-8dfc-37c16ad5d93d">
-      <profileInstance Id="ad926f69-bbcc-4be1-b37a-67e61dcf9d49" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="ca0793a4-227d-45cf-8d5f-3160fb1fa33a" name="LogIndSekvensDiagram" linkedPackageId="c83effcb-a199-45ff-95c5-69321314c0ed" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="a7856f2d-0667-4fd6-96d2-70ce62e56d45" name="LogIndSekvensDiagram" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -51,7 +37,7 @@
           <messageOccurrenceSpecification Id="3949fe5b-4076-4b0c-a860-6b1b56052dcc" name="MessageOccurrenceSpecification1">
             <elementDefinition Id="2fe6a506-9805-4df2-946c-32febceeb8f7" />
             <covered>
-              <lifelineMoniker Id="10decc74-f712-4376-9995-c0d282fe2922" LastKnownName=": View" />
+              <lifelineMoniker Id="10decc74-f712-4376-9995-c0d282fe2922" LastKnownName="Aktør" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="bd5f8aa2-5cd6-43a6-9068-7620ac8a6278" name="MessageOccurrenceSpecification2">
@@ -131,7 +117,7 @@
           <messageOccurrenceSpecification Id="3706af2c-eb8c-45c1-b7c0-d198fb9a46ec" name="MessageOccurrenceSpecification4">
             <elementDefinition Id="03b51d3e-da91-4533-94a8-b3dfcbe56a93" />
             <covered>
-              <lifelineMoniker Id="10decc74-f712-4376-9995-c0d282fe2922" LastKnownName=": View" />
+              <lifelineMoniker Id="10decc74-f712-4376-9995-c0d282fe2922" LastKnownName="Aktør" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="f1688a7a-f415-4553-b90c-dd79a27575bf" name="ExecutionOccurrenceSpecification2">
@@ -147,7 +133,7 @@
           </executionOccurrenceSpecification>
         </fragments>
         <lifelines>
-          <lifeline Id="10decc74-f712-4376-9995-c0d282fe2922" name=": View" isActor="false" lifelineDisplayName=": View">
+          <lifeline Id="10decc74-f712-4376-9995-c0d282fe2922" name="Aktør" isActor="false" lifelineDisplayName="Aktør">
             <elementDefinition Id="b2fbbf42-177c-4190-8831-1a5e6e4d4791" />
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker Id="3949fe5b-4076-4b0c-a860-6b1b56052dcc" LastKnownName="MessageOccurrenceSpecification1" />
@@ -232,5 +218,19 @@
   </packagedElements>
   <package Id="c83effcb-a199-45ff-95c5-69321314c0ed" name="2 Semester Eksamensproject">
     <elementDefinition Id="22affb23-e5f1-4d52-85e1-724762b0dcc1" />
+    <profileInstances>
+      <packageHasProfileInstances Id="d3e1ef82-1128-4b39-8e58-3352ac0ed572">
+        <profileInstance Id="3122f29b-0403-4b92-8718-0d2eaf6fbd51" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="e177a910-dd3d-404b-8dfc-37c16ad5d93d">
+        <profileInstance Id="ad926f69-bbcc-4be1-b37a-67e61dcf9d49" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </SequenceDesignerModel>
