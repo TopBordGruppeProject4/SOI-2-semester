@@ -33,15 +33,14 @@ namespace SHI.Model
 
         public bool CheckRawMaterial(string name)
         {
-            var check = true;
             foreach (var rawMaterial in RawMaterials)
             {
                 if (rawMaterial.Name == name)
                 {
-                    check = false;
+                    return true;
                 }
             }
-            return check;
+            return false;
         }
         public void AddRawMaterial(RawMaterial rawMaterial)
         {

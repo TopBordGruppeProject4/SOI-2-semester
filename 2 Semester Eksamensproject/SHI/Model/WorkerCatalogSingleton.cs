@@ -23,30 +23,28 @@ namespace SHI.Model
 
         public bool CheckWorker(string username, string password)
         {
-            var check = false;
             foreach (var worker in Workers)
             {
                 if (worker.Username == username && worker.Password == password)
                 {
-                    check = true;
+                    return true;
 
                 }
             }
 
-            return check;
+            return false;
         }
 
         public bool CheckWorker(string username)
         {
-            var check = true;
             foreach (var worker in Workers)
             {
                 if (worker.Username == username)
                 {
-                    check = false;
+                    return true;
                 }
             }
-            return check;
+            return false;
         }
         public Worker GetWorker(string username)
         {

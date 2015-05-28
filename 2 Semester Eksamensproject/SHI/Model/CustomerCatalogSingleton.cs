@@ -33,16 +33,15 @@ namespace SHI.Model
 
         public bool CheckCustomer(string name)
         {
-            var check = true;
             foreach (var customer in Customers)
             {
                 if (customer.Name == name)
                 {
-                    check = false;
+                    return true;
                 }
             }
 
-            return check;
+            return false;
         }
 
         public void AddCustomer(Customer customer)
