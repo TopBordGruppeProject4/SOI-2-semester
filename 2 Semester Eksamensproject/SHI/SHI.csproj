@@ -107,6 +107,7 @@
     </Compile>
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\CustomerCatalogSingleton.cs" />
+    <Compile Include="Model\MessageHandler.cs" />
     <Compile Include="Model\Persistency\PersistencyService.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\Product.cs" />
