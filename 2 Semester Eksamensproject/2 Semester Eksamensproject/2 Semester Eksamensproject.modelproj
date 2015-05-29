@@ -22,6 +22,13 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="DCD 2iteration updated.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DCD 2iteration updated.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DCD 2iteration updated.classdiagram</DependentUpon>
+    </Content>
     <Content Include="DCD CreateUser 1Iteration.classdiagram">
       <SubType>Content</SubType>
     </Content>
