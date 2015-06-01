@@ -137,9 +137,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SHI\SHI %283 Iteration%29.csproj">
+    <ProjectReference Include="..\SHI\SHI.csproj">
       <Project>{c09f91d9-bc8f-4c08-bf89-74afa17d6282}</Project>
-      <Name>SHI %283 Iteration%29</Name>
+      <Name>SHI</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
