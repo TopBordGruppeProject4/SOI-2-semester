@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.Iteration", "2.Iteration\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerWebservice", "WorkerWebservice\WorkerWebservice.csproj", "{1D7BCD91-F8FA-44F0-9929-3E789AD71597}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHI", "SHI\SHI.csproj", "{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHI (3 Iteration)", "SHI\SHI (3 Iteration).csproj", "{C09F91D9-BC8F-4C08-BF89-74AFA17D6282}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{4A1E6C56-9478-4E04-AA75-285AB41924C9}"
 EndProject
